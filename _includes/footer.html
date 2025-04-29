@@ -1,0 +1,142 @@
+<footer class="link-footer">
+  <div class="footer-grid">
+      <!-- Social Links -->
+      <a href="#" class="link-box">
+          <img src="images/Image1.png" alt="Box" class="box-image">
+          <span class="box-text">box</span>
+      </a>
+      <a href="#" class="link-box" style="--box-width: 120px">
+          <img src="images/Image1.png" alt="Box" class="box-image">
+          <span class="box-text">box</span>
+      </a>
+      <a href="#" class="link-box large">
+          <img src="{{site.baseurl}}/images/Image1.png" alt="Box" class="box-image">
+          <span class="box-text">box</span>
+      </a>
+      
+      <!-- Message Boxes -->
+      <div class="link-box" onclick="showMessage('Analytics')" style="--box-height: 60px">
+          <img src="{{site.baseurl}}/images/Image1.png" alt="Analytics" class="box-image">
+          <span class="box-text">analytics</span>
+      </div>
+      
+      <!-- Repeat pattern for other boxes -->
+      <!-- Add images to remaining boxes following the same structure -->
+      
+  </div>
+
+  <div class="credits">
+      <p>TheBestBlogEver - Chemslepro & 3vasily & Blueboy</p>
+      
+      <div class="webrings">
+          <a href="#">Un lien potentiel</a><br>
+          <a href="#">Un autre lien potentiel</a>
+      </div>
+  </div>
+</footer>
+
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1482b0;
+  --box-border: #404040;
+  --box-hover: #cb1f7e;
+  --box-width: 100px;  /* Default width */
+  --box-height: 40px;  /* Default height */
+}
+
+.link-footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1.5rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  justify-content: center;
+}
+
+.link-box {
+  position: relative;
+  width: var(--box-width);
+  height: var(--box-height);
+  border: 1px solid var(--box-border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: var(--bg-color);
+}
+
+.box-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.box-text {
+  position: relative;
+  z-index: 2;
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  padding: 4px;
+  mix-blend-mode: multiply;
+}
+
+.link-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.link-box:hover .box-image {
+  transform: scale(1.05);
+}
+
+/* Size modifiers */
+.link-box.large {
+  --box-width: 150px;
+  --box-height: 60px;
+}
+
+.link-box.small {
+  --box-width: 80px;
+  --box-height: 30px;
+}
+
+.credits {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.webrings {
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.webrings a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.webrings a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<script>
+function showMessage(message) {
+  alert(message);
+}
+</script>

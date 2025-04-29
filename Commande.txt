@@ -1,0 +1,19 @@
+bundle exec jekyll serve
+
+git add .
+git commit -m "metadata for prose"
+git push origin main
+
+
+# 1. Pull remote changes and merge them
+git pull origin main
+
+# 2. Resolve any merge conflicts if they appear
+# (Open conflicted files, remove <<<<<<< markers)
+
+# 3. Commit the merge
+git add .
+git commit -m "Merge remote changes"
+
+# 4. Push the merged version
+git push origin main

@@ -1,0 +1,204 @@
+---
+layout: layout1
+---
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+<style>
+.terminal {
+  background-color: #1a1a1a;
+  color: #caceca;
+  font-family: 'Courier New', monospace;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,255,0,0.1);
+  margin: 2rem auto;
+  margin-top: auto;
+}
+
+.terminal-nav {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.terminal-nav a {
+  color: #50fa7b;
+  text-decoration: none;
+  margin-right: 2rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #3a3a3a;
+  transition: all 0.3s ease;
+}
+
+.terminal-nav a:hover {
+  background: #3a3a3a;
+  color: #ff79c6;
+  border-color: #50fa7b;
+}
+
+.terminal-header {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal-title {
+  color: #c773e3;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #8be9fd;
+  margin-top: 0.5rem;
+}
+
+time {
+  color: #6272a4;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.terminal-controls span {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.terminal-content {
+  line-height: 1.6;
+  margin-top: 2rem;
+}
+
+.terminal-command {
+  color: #00ff00;
+  margin: 1rem 0;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+  margin-right: 0.5rem;
+}
+
+.terminal-output {
+  color: #caceca;
+  margin-top: 0.5rem;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+
+.container{
+  background-color: #1a1a1a;
+  max-width: 1000px;
+}
+
+.persistent-image {
+  text-align: left;
+  margin: -1rem -1rem 1rem -1rem;
+  border-bottom: 2px solid var(--win-dark-gray);
+}
+
+.retro-header-img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin-left: 2rem;
+}
+
+.comments {
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+</style>
+
+
+<article class="terminal">
+  <div class="container">
+    <nav class="terminal-nav">
+      <a href="/">HOME</a>
+      <a href="/about">ABOUT</a>
+    </nav>
+
+    <div class="terminal-header">
+      <header>
+        <div class="persistent-image">
+          <img src="{{ '/images/Image1.png' | relative_url }}" 
+               alt="Blog Header"
+               class="retro-header-img">
+        </div>
+        <h1 class="terminal-title">{{ page.title }} ICI</h1>
+        <p class="subtitle">{{ page.subtitle }}</p>
+        <time>{{ page.date | date: "%B %d, %Y" }}</time>
+      </header>
+      <div class="terminal-controls">
+        <span style="color: #ff5555">●</span>
+        <span style="color: #ffb86c">●</span>
+        <span style="color: #50fa7b">●</span>
+      </div>
+    </div>
+
+    <div class="terminal-content">
+      <div class="terminal-command">
+        <span class="terminal-prompt">visitor@blog:~$</span> cat post_details.txt
+        <div class="terminal-output">
+          Author: {{ page.author | default: "Anonymous" }}<br>
+          Date: {{ page.date | date: "%Y-%m-%d %H:%M" }}
+        </div>
+      </div>
+
+      {{ content }}
+
+      <span class="cursor">_</span>
+    </div>
+  </div>  
+</article>
+
+<script>
+document.querySelectorAll('code').forEach((block) => {
+  const text = block.textContent;
+  block.textContent = '';
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      block.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 20);
+    }
+  }
+  typeWriter();
+});
+</script>
+
+
+<section class="comments">
+  <h3>Comments</h3>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="YOUR_APP_ID"
+    data-page-id="{{ page.url }}"
+    data-page-url="{{ site.url }}{{ page.url }}"
+    data-page-title="{{ page.title }}"
+    data-theme="auto">
+  </div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
