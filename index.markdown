@@ -18,6 +18,25 @@ layout: default
     }
   </script>
 
+  <section class="music-section">
+    <h3>Music of the Week</h3>
+    <div class="music-player">
+      {% for track in site.data.music %}
+      <div class="album-art">
+        <img src="{{ track.cover }}" alt="{{ track.title }} album cover" width="150" height="150">
+      </div>
+      <div class="track-info">
+        <h4>{{ track.title }}</h4>
+        <p>{{ track.artist }}</p>
+        <audio controls>
+          <source src="{{ track.audio }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
   <h2>Blog</h2>
   {% for post in site.posts %}
   <article class="post">
