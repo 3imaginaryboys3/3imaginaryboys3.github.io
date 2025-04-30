@@ -22,8 +22,8 @@ layout: default
   {% for post in site.posts %}
   <article class="post">
     <time>{{ post.date | date: "%B %d, %Y" }}</time>
-    {% if post.writer %}
-    <author-text>- written by {{ post.author }}</author-text>
+    {% if post.author %}
+    <author-text>- by {{ post.author }}</author-text>
     {% endif %} 
     <h3>
     {% if post.logo %}

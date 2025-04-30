@@ -1,7 +1,7 @@
 ---
 title: "Premier post : test"
 subtitle: "Là on met une description et on fait en sorte que le petit perso soit à coté"
-logo: "perso1.jpg"
+logo: "Perso_Chems.png"
 layout: "layout1"
 author: "Chems"
 ---

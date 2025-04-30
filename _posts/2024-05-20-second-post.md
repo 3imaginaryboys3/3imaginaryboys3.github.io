@@ -2,7 +2,7 @@
 author: "Chems"
 title: "Ohlalala deuxième post ou quoi"
 subtitle: "Ceci est une description"
-logo: "perso1.jpg"
+logo: "Perso_Noé.png"
 layout: "layout5"
 ---
 
