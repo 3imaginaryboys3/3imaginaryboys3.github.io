@@ -19,7 +19,7 @@ layout: default
   </script>
 
   <section class="music-section">
-    <h3>Music of the Week</h3>
+    <h3>Music of the Week :</h3>
     <div class="music-player">
       {% for track in site.data.music %}
       <div class="album-art">
@@ -27,7 +27,11 @@ layout: default
       </div>
       <div class="track-info">
         <h4>{{ track.title }}</h4>
+        {% if track.ref %}
+        <a href = "{{ track.ref }}" ><p>{{ track.artist }}</p></a>
+        {% else %}
         <p>{{ track.artist }}</p>
+        {% endif %}
         <audio controls>
           <source src="{{ track.audio }}" type="audio/mpeg">
           Your browser does not support the audio element.
