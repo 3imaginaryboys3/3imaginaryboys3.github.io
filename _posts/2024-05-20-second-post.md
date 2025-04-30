@@ -3,7 +3,8 @@ author: "Chems"
 title: "Ohlalala deuxième post ou quoi"
 subtitle: "Ceci est une description"
 logo: "Perso_Noé.png"
-layout: "layout5"
+layout: "old_internet"
+show : true
 ---
 
 ![Vanilluxe Animation]({{ '/images/vanilluxe.gif' | relative_url }})

@@ -1,0 +1,354 @@
+---
+layout: old_internet
+---
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+<style>
+:root {
+  --win-blue: #000080;
+  --win-gray: #c0c0c0;
+  --win-dark-gray: #808080;
+  --win-white: #ffffff;
+  --win-red: #ff0000;
+  --win-cyan: #009dff;
+  --win-yellow: #ffff00;
+  --win-green: #00ff00;
+}
+
+.win98-container {
+  background: #ffffff;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  font-family: 'Jazz LET', fantasy;
+}
+
+.paint-frame {
+  background: var(--win-gray);
+  border: 3px solid;
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+.title-bar {
+  background: linear-gradient(to right, #240073, #240073);
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--win-white);
+  text-shadow: 1px 1px var(--win-blue);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.retro-header-img {
+  width: 70px;
+  max-width: 100%;
+  height: auto;
+}
+
+.window-controls span {
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+  margin-left: 4px;
+  text-align: center;
+  line-height: 14px;
+  cursor: pointer;
+  color: black;
+}
+
+.menu-bar {
+  background: var(--win-gray);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-item {
+  position: relative;
+  padding: 2px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  background: var(--win-blue);
+  color: var(--win-white);
+}
+
+.canvas-container {
+  flex-grow: 1;
+  background: #faf8e0;
+  border: 2px inset;
+  min-height: 500px;
+  padding: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  position: relative;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  background: var(--win-gray);
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+}
+
+.win98-link {
+  color: var(--win-blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.win98-link:hover {
+  background: var(--win-blue);
+  color: var(--win-white);
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.disabled {
+  color: var(--win-dark-gray);
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Comment Section */
+.comment-section {
+  background: var(--win-white);
+  border: 2px solid;
+  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
+  height: 600px; /* Fixed height for full window */
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-title-bar {
+  background: linear-gradient(to right, #040b88, #040b88);
+  padding: 4px 8px;
+  color: var(--win-white);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cusdis_thread {
+  font-family: 'MS Sans Serif', sans-serif;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#cusdis_thread iframe {
+  height: 100% !important;
+  width: 100% !important;
+  border: none !important;
+}
+
+/* Compact form fields */
+#cusdis_thread input,
+#cusdis_thread textarea {
+  width: 200px !important;
+  padding: 2px !important;
+  margin: 2px 0 !important;
+  font-size: 12px !important;
+}
+
+#cusdis_thread button[type="submit"] {
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  margin: 4px 0 !important;
+}
+
+/* Force comments to appear first */
+#cusdis_thread > div {
+  order: 1;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#cusdis_thread form {
+  order: 2;
+  border-top: 2px solid var(--win-dark-gray);
+  padding: 8px;
+  background: var(--win-gray);
+}
+</style>
+
+<div class="win98-container">
+  <div class="paint-frame">
+    <div class="title-bar">
+      <span>{{ page.title | default: "Untitled Document" }} - {{ page.author | default: "Anonymous" }}</span>
+      <div class="window-controls">
+        <span>_</span>
+        <span>□</span>
+        <span>×</span>
+      </div>
+    </div>
+
+    <div class="menu-bar">
+      <div class="menu-item">
+        <a href="/">
+          <img src="{{ 'images/Personnages-ligne.png' | relative_url }}" 
+               alt="Blog Header"
+               class="retro-header-img">
+        </a>
+      </div>
+      <a href="/about" class="menu-item">About</a>
+      <div class="menu-item">Edit</div>
+      <div class="menu-item">View</div>
+      <div class="menu-item">Help</div>
+    </div>
+
+    <div class="canvas-container">
+      {{ content }}
+      <span class="cursor">_</span>
+    </div>
+
+    <div class="post-navigation">
+      <div class="nav-links">
+        {% assign posts = site.posts | where: "show", true | sort: 'date' %}
+        
+        {% for post in posts %}
+          {% if post.id == page.id %}
+            {% assign current_index = forloop.index0 %}
+          {% endif %}
+        {% endfor %}
+    
+        <span class="nav-button">
+          {% if current_index > 0 %}
+            {% assign previous = current_index | minus: 1 %}
+            <a href="{{ posts[previous].url }}" class="win98-link">
+              <img src="{{ 'images/left_arrow.png' | relative_url }}" class="nav-icon">
+              Previous
+            </a>
+          {% else %}
+            <span class="disabled">
+              <img src="{{ 'images/left_arrow.png' | relative_url }}" class="nav-icon">
+              Previous
+            </span>
+          {% endif %}
+        </span>
+    
+        <span class="nav-button">
+          <a href="/" class="win98-link">
+            <img src="{{ 'images/home.png' | relative_url }}" class="nav-icon">
+            Home
+          </a>
+        </span>
+    
+        <span class="nav-button">
+          {% assign next = current_index | plus: 1 %}
+          {% if posts[next] %}
+            <a href="{{ posts[next].url }}" class="win98-link">
+              Next
+              <img src="{{ 'images/right_arrow.png' | relative_url }}" class="nav-icon">
+            </a>
+          {% else %}
+            <span class="disabled">
+              Next
+              <img src="{{ 'images/right_arrow.png' | relative_url }}" class="nav-icon">
+            </span>
+          {% endif %}
+        </span>
+      </div>
+    </div>
+
+    <div class="comment-section">
+      <div class="comment-title-bar">
+        <span>Commentaires</span>
+        <div class="window-controls">
+          <span>_</span>
+          <span>□</span>
+          <span>×</span>
+        </div>
+      </div>
+      <div id="cusdis_thread" 
+           data-host="https://cusdis.com"
+           data-app-id="140b4ed8-8d4e-4089-9141-ff03b4a4f43e"
+           data-page-id="{{ page.url | slugify }}"
+           data-page-url="{{ page.url | absolute_url }}"
+           data-page-title="{{ page.title }}"
+           data-theme="light">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Window controls
+  document.querySelectorAll('.window-controls span').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      if(index === 2) {
+        document.querySelector('.paint-frame').style.display = 'none';
+      }
+    });
+  });
+
+  // Cusdis initialization and ordering
+  const cusdisObserver = new MutationObserver(() => {
+    const commentThread = document.querySelector('#cusdis_thread');
+    const commentForm = document.querySelector('#cusdis_thread form');
+    const commentList = document.querySelector('[data-testid="comment-list"]');
+    
+    if (commentForm && commentList) {
+      commentThread.insertBefore(commentList, commentForm);
+      cusdisObserver.disconnect();
+    }
+  });
+
+  cusdisObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  if(window.CUSDIS) {
+    CUSDIS.init();
+  }
+});
+</script>
+<script defer src="https://cusdis.com/js/cusdis.es.js"></script>

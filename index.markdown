@@ -38,19 +38,20 @@ layout: default
   </section>
 
   <h2>Blog</h2>
-  {% for post in site.posts %}
-  <article class="post">
-    <time>{{ post.date | date: "%B %d, %Y" }}</time>
-    {% if post.author %}
-    <author-text>- by {{ post.author }}</author-text>
-    {% endif %} 
-    <h3>
+  {% assign visible_posts = site.posts | where: "show", true | sort: "date" | reverse %}
+  {% for post in visible_posts %}
+  <article class="post"> 
+    <h3-post>
     {% if post.logo %}
     <img src="{{ '/images/post-logos/' | relative_url }}{{ post.logo }}"  
         class="post-logo">
     {% endif %} 
-    <a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p>{{ post.subtitle }} </p>
+    <time>{{ post.date | date: "%B %d, %Y" }}</time>
+    {% if post.author %}
+    <author-text>- by {{ post.author }}</author-text>
+    {% endif %}
+    <a href="{{ post.url }}">{{ post.title }}</a></h3-post>
+    <p-post>{{ post.subtitle }} </p-post>
   </article>
   {% endfor %}
 </section>

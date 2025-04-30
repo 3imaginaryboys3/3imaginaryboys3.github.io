@@ -1,7 +1,7 @@
 bundle exec jekyll serve
 
 git add .
-git commit -m "metadata for prose"
+git commit -m "General Update"
 git push origin main
 
 

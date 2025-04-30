@@ -20,6 +20,12 @@ prose:
   #rooturl: '_posts'  # Default folder to open
   metadata:
     _posts:
+
+      - name: "show"
+        field:
+          element: "text"
+          label: "Afficher dans la liste ? si oui : true"
+
       - name: "author"
         field:
           element: "text"
@@ -38,12 +44,12 @@ prose:
       - name: "layout"
         field:
           element: "text"
-          label: "Quel layout ?"
+          label: "Quel layout ? : old_internet"
 
       - name: "logo"
         field:
           element: "text"
-          label: "L'image à afficher à coté du post"
+          label: "Ptit perso : Perso_Chems.png | Perso_Max.png | Perso_Noé.png"
 
 
       
