@@ -54,7 +54,10 @@ layout: default
     {% if post.author %}
     <author-text>- by {{ post.author }}</author-text>
     {% endif %}
-    <a href="{{ post.url }}">{{ post.title }}</a></h3-post>
+    </h3-post>
+    <h3-post>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h3-post>
     <p-post>{{ post.subtitle }} </p-post>
   </article>
   {% endfor %}
