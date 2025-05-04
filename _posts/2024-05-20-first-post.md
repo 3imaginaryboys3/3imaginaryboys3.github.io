@@ -4,7 +4,7 @@ subtitle: Là on met une description et on fait en sorte que le petit perso soit
 logo: Perso_Chems.png
 layout: old_internet
 author: Chems
-show: 'true'
+show: 'false'
 ---
 
 
