@@ -1,26 +1,12 @@
 ---
-author: "Chems"
-title: "Ohlalala deuxième post ou quoi"
-subtitle: "Ceci est une description"
-logo: "Perso_Noé.png"
-layout: "old_internet"
-show : true
+author: Chems
+title: Ohlalala deuxième post ou quoi
+subtitle: Ceci est une description
+logo: Perso_Noé.png
+layout: old_internet
+show: 'true'
 ---
 
-![Vanilluxe Animation]({{ '/images/vanilluxe.gif' | relative_url }})
-
-<iframe 
-  style="border-radius:12px; margin: 2rem 0;" 
-  src="https://open.spotify.com/embed/track/40UlFC0dIxv7lAEJaPZLnm?utm_source=generator&theme=0" 
-  frameBorder="0" 
-  allowfullscreen="" 
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-  loading="lazy"
-  width="50%" 
-  height="100" 
-  frameborder="0" 
-  allowfullscreen>
-</iframe>
 
 Un blog, ou blogue[1],[2], est un type de site web — ou une partie d'un site web — utilisé pour la publication périodique et régulière d'articles personnels, généralement succincts, rendant compte d'une actualité autour d'une thématique particulière. À la manière d'un journal intime, ces articles — appelés billets — publiés par son/ses propriétaire(s) ou son/ses webmaster(s), sont généralement datés, signés et présentés dans un ordre rétrochronologique, c'est-à-dire du plus récent au plus ancien. Ils permettent à l'auteur, appelé blogueur, d’exprimer une opinion et sont la plupart du temps ouverts aux commentaires des lecteurs[3].
 
