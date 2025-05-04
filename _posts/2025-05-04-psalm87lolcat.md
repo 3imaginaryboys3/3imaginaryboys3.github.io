@@ -58,5 +58,3 @@ darknez R my closest fren k?
 
 ![Capture d’écran 2025-05-05 002950.png]({{site.baseurl}}/assets/img/Capture d’écran 2025-05-05 002950.png)
 
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
