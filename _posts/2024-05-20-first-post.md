@@ -1,11 +1,32 @@
 ---
-title: "Premier post : test"
-subtitle: "Là on met une description et on fait en sorte que le petit perso soit à coté"
-logo: "Perso_Chems.png"
-layout: "old_internet"
-author: "Chems"
-show : true
+title: 'Premier post : test'
+subtitle: Là on met une description et on fait en sorte que le petit perso soit à coté
+logo: Perso_Chems.png
+layout: old_internet
+author: Chems
+show: 'true'
 ---
+
+
+![Vanilluxe Animation]({{ '/images/vanilluxe.gif' | relative_url }})
+
+<iframe 
+  style="border-radius:12px; margin: 2rem 0;" 
+  src="https://open.spotify.com/embed/track/40UlFC0dIxv7lAEJaPZLnm?utm_source=generator&theme=0" 
+  frameBorder="0" 
+  allowfullscreen="" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="lazy"
+  width="50%" 
+  height="100" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
+
+
+
+
+
 OK La mise en page, ou mise en pages, est l'opération de disposition graphique d'un contenu informationnel dans un espace donné (feuille de papier, planche de bande dessinée, pages web, etc.).
 
 Elle succède au travail de collecte et de composition du contenu (composition de texte « au kilomètre », collection des composants) et précède souvent le travail d'impression. Elle peut le précéder dans la mesure où elle est prédéfinie (dimensions des colonnes, styles du texte, placement des illustrations, etc.).
