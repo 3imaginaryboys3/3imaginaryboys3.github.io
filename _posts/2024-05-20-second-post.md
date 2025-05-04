@@ -1,5 +1,5 @@
 ---
-author: Chems
+author: chems
 title: Ohlalala deuxième post ou quoi
 subtitle: Ceci est une description
 logo: Perso_Noé.png
