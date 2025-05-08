@@ -26,6 +26,6 @@ You can put a triton over a regular chord and only stick to this for several wee
 Break the whole thing so you will never be afraid of breaking the whole thing anymore\
 Be innocent
 
-I might talk about him once I finish reading “Récoltes et Semailles “… well I don’t think I will finish it but my ideas are to vague, for the moment.
+I might talk about him once I finish reading “Récoltes et Semailles“  … well I don’t think I will finish it but my ideas are too vague, for the moment.
 
 I’m definitely amazed.
