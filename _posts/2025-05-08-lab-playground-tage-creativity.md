@@ -5,7 +5,7 @@ author: chems
 layout: old_internet
 logo: Perso_Chems.png
 ---
-
+## Lab, Playground, $tage & Creativity
 
 He came in very simply, felt very authentic. Funny style tho, made me think of the sloth from zootopia. 
 
@@ -24,7 +24,7 @@ Put yourself under pressure\
 Let your unconscious work for you\
 You can put a triton over a regular chord and only stick to this for several weeks, until you’ve explored enough. it’s not only playground.\
 Break the whole thing so you will never be afraid of breaking the whole thing anymore\
-Be innocent
+**Be innocent**
 
 I might talk about him once I finish reading “Récoltes et Semailles“  … well I don’t think I will finish it but my ideas are too vague, for the moment.
 
