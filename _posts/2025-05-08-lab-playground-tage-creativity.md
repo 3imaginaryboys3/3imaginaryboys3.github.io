@@ -7,9 +7,9 @@ logo: Perso_Chems.png
 ---
 ## Lab, Playground, $tage & Creativity
 
-He came in very simply, it felt authentic. Funny style tho, made me think of the sloth from zootopia. 
+He came in very simply, it felt authentic. Funny style, made me think of the sloth from zootopia. 
 
-So swinging between the lab and the playground right ? And wow those ninths sound great and …well I’m not able recognize what this is ( it’s been 4 years since I’ve stopped doing theory ) and my mind is stuck to the note’s names, the atmospheres he managed to create were charming tho. There’s absolutely no structure to this, he came with a couple of concepts and just explored them with us. But he mastered this, it’s perfectly unprepared; he is actually in this “open mode”.
+So swinging between the lab and the playground ? And those ninths sound great …well I’m not able recognize what this is ( it’s been 4 years since I’ve stopped doing theory ) and my mind is stuck to the note’s names, the atmospheres he managed to create were charming. There’s absolutely no structure, he came with a couple of concepts and just explored them with us. But he mastered this, it’s perfectly unprepared; he is actually in this “open mode”.
 
 Process of making :
 
