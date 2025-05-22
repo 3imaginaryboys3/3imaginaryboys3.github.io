@@ -10,14 +10,14 @@ author: Chems
 
 Je suis actuellement en train de travailler sur le devoir de mon cours de microcontrôleurs et ça m'a fait pensé au petit projet qu'on avait dû réaliser le semestre dernier. 
 
-Le but était, entre autres, de se familiariser avec les technologies **CPLD/FPGA** ( en gros des [circuits logiques reprogrammables](https://fr.wikipedia.org/wiki/Circuit_logique_programmable) )
+Le but était, entre autres, de se familiariser avec les technologies **CPLD/FPGA** (en gros des [circuits logiques reprogrammables](https://fr.wikipedia.org/wiki/Circuit_logique_programmable))
 
 Bref : Je m'étais pas mal amusé à implémenter un circuit qui jouait des musiques, seulement, **on ne disposait que d'un seul buzzer !** C'est à dire qu'on était restreints à produire une seule note à la fois sur un périphérique bon marché.
 Donc pas vraiment les moyens de faire du Dolby Atmos.	
 
 _J'ai néanmoins pensé à envoyer un signal analogique contenant plusieurs fréquences au buzzer mais ceci n'était pas possible_
 
-Je pense que j'ai réussi à produire quelque chose de pas trop mal ( comparé à ce qu'on trouve sur youtube comme musique produite avec 1 seul buzzer (nul) )
+Je pense que j'ai réussi à produire quelque chose de pas trop mal (comparé à ce qu'on trouve sur youtube comme musique produite avec 1 seul buzzer (nul))
 
 **Voilà un extrait de Take On Me commandé par la FPGA Altera MAX 10 sur une carte DE10-Lite**
 
