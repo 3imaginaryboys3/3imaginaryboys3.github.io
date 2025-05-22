@@ -4,17 +4,13 @@ show: 'true'
 layout: old_internet
 logo: Perso_Chems.png
 author: Chems
-subtitle: >-
-  Je suis actuellement en train de travailler sur le devoir de mon cours de
-  microcontrôleurs et ça m'a fait pensé au petit projet qu'on avait dû réaliser
-  le semestre dernier.
 ---
 
 ## TakeOnMeFPGA
 
 Je suis actuellement en train de travailler sur le devoir de mon cours de microcontrôleurs et ça m'a fait pensé au petit projet qu'on avait dû réaliser le semestre dernier. 
 
-Le but était, entre autres, de se familiariser avec les technologies **CPLD/FPGA** ( en gros des circuits logiques reprogrammables ) 
+Le but était, entre autres, de se familiariser avec les technologies **CPLD/FPGA** ( en gros des [circuits logiques reprogrammables](https://fr.wikipedia.org/wiki/Circuit_logique_programmable) )
 
 Bref : Je m'étais pas mal amusé à implémenter un circuit qui jouait des musiques, seulement, **on ne disposait que d'un seul buzzer !** C'est à dire qu'on était restreints à produire une seule note à la fois sur un périphérique bon marché.
 Donc pas vraiment les moyens de faire du Dolby Atmos.	
@@ -64,4 +60,4 @@ Et voilà la partition :
 11 1d 11 1d 21 21 22 24 22 16 22 1d 0a 1b 0a 1f 
 0f 1f 13 1f 1d 1d 1f 1b
 
-Pas si longue au final 
+Pas si longue au final
