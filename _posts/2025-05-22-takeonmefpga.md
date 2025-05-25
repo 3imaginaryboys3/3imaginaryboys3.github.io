@@ -8,7 +8,7 @@ author: chems
 
 ## TakeOnMeFPGA
 
-Je suis actuellement en train de travailler sur le devoir de mon cours de microcontrôleurs et ça m'a fait pensé au petit projet qu'on avait dû réaliser le semestre dernier. 
+Je suis actuellement en train de travailler sur le devoir de mon cours de microcontrôleurs et ça m'a fait penser au petit projet qu'on avait dû réaliser le semestre dernier. 
 
 Le but était, entre autres, de se familiariser avec les technologies **CPLD/FPGA** (en gros des [circuits logiques reprogrammables](https://fr.wikipedia.org/wiki/Circuit_logique_programmable))
 
