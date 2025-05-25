@@ -10,7 +10,7 @@ show: 'true'
 
 <iframe 
   style="border-radius:12px; margin: 2rem 0;" 
-  src="https://open.spotify.com/intl-fr/track/6drC7tBnx8AiYfTfBmDPVO?si=06aa88cedaaa4db3" 
+  src="https://open.spotify.com/embed/track/6drC7tBnx8AiYfTfBmDPVO?utm_source=generator" 
   frameBorder="0" 
   allowfullscreen="" 
   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
