@@ -1,12 +1,24 @@
 ---
-title: ''
-show: 'true'
+title: 'Prélude, moments de vie pêchés à l''épuisette'
 author: noé
 subtitle: Introduction à la rubrique de mes souvenirs
 layout: old_internet
 logo: Perso_Noé.png
 ---
 ## Prélude, moments de vie pêchés à l’épuisette
+
+<iframe 
+  style="border-radius:12px; margin: 2rem 0;" 
+  src="https://open.spotify.com/intl-fr/track/6drC7tBnx8AiYfTfBmDPVO?si=06aa88cedaaa4db3" 
+  frameBorder="0" 
+  allowfullscreen="" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="lazy"
+  width="50%" 
+  height="100" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
 
 Bonjour, … ?
 
