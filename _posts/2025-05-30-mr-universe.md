@@ -1,5 +1,9 @@
 ---
 title: Mr. Universe
+show: 'true'
+author: maxime
+layout: old_internet
+logo: Perso_Max.png
 ---
 ## Mr. Universe
 
