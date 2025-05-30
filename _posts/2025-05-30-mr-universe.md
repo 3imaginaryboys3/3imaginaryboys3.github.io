@@ -5,8 +5,6 @@ author: maxime
 layout: old_internet
 logo: Perso_Max.png
 ---
-## Mr. Universe
-
 Je voulais parler de Steven Universe, c’est une des choses qui m’a le plus marqué récemment en fait..  
 Je sais pas avec qui en parler. Je peux plus trop parler à la personne qui me l’a conseillée; j’ai commencé trop tard pour elle. En fait à ce moment là j'avais regardé les saisons 4 et 5 parce qu'elles sont disponibles sur Netflix -ça me dérange pas trop de regarder dans un ordre ou des conditions bizarres ça s’accorde assez bien avec mes takes sur l’art (je développerai un jour maybe)- puis quelques épisodes de la première saison où j’ai fini par décrocher parce que c’est vrai, ils sont pas très bien ceux là.
 (L’ordre de visionnage que je conseil: voir les épisodes 01; 02; 07; 09; 10; 12; 16 pour ne manquer aucun élément de lore important puis poursuivre dans l’ordre chronologique, le ton de la série s’affirme progressivement jusqu’à l’épisode 25.)  
