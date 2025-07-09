@@ -17,14 +17,22 @@ _______
 
 Une forte partie des images qui m’ont traversé l’esprit en ce moment sont dûs à certains concepts que j’ai découverts (ou re-découvert) en binge-apprenant mes différents cours, 2 à 3 jours précédant l’examen concerné. 
 
-Je pense que le truc qui m’a le plus matrixé sont les fractales de Newton :
+Je pense que le truc qui m'est le plus revenu sont les [fractales de Newton](https://fr.wikipedia.org/wiki/Fractale_de_Newton) :
 
-Cette figure presque psychédélique est donc une fractale qu'on peut obtenir en coloriant chaque point de l'ensemble de départ avec une couleur associée à la racine vers laquelle on converge, lorsqu’on applique l’algorithme de Newton sur une fonction de ℂ dans ℂ, avec une certaine régularité (qui admet plusieurs racines, holomorphe mais pas trop plate, sinon l’algorithme pose problème).
+Cette figure presque psychédélique est donc une fractale qu'on peut obtenir en coloriant chaque point de l'ensemble de départ avec une couleur associée à la racine vers laquelle on converge, lorsqu’on applique l’algorithme de Newton sur une fonction de ℂ dans ℂ, avec une certaine régularité (qui admet plusieurs racines, holomorphe mais pas trop plate sinon l’algorithme pose problème).
 Simplement, l’algorithme de Newton permet de trouver les zéros d’une fonction en procédant de manière itérative : on commence par choisir un point de départ, puis, à chaque étape, on approxime la fonction au point courant par sa tangente (un développement au premier ordre). On utilise ensuite cette approximation pour avancer vers le point où la tangente s’annule, c’est-à-dire l’endroit où elle coupe l’axe des abscisses. On répète ce processus jusqu’à se rapprocher suffisamment d’un zéro de la fonction de départ.
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="image1.png" style="width: 30%;">
+  <img src="image2.png" style="width: 30%;">
+  <img src="image3.png" style="width: 30%;">
+</div>
 
 Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un algorithme qui, a priori, semble assez clair et prévisible peut avoir un comportement complètement non trivial et produire une structure qui semble aléatoire, mais qui est pourtant bien ordonnée, car elle se répète à l'infini.
 
+Les images sont tirées des sites [https://ryhl.io/blog/newton-intro/](https://ryhl.io/blog/newton-intro/) et [https://paulbourke.net/fractals/newtonraphson/](https://paulbourke.net/fractals/newtonraphson/)
 
+_______
 
 J’ai développé une sorte d’obsession pour cette vidéo :
 
