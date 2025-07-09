@@ -6,8 +6,6 @@ subtitle: Finalement je me contenterai d'écrire ce que me passe par la tête
 layout: old_internet
 logo: Perso_Chems.png
 ---
-
-
 Je suis actuellement de passage chez mes parents, après avoir fini mes examens, le temps de respirer un coup avant de reprendre mes différentes activités d’été. Et à mesure que je revois mes amis d’ici je sens une transition dans mon état émotionnel, mes pensée, mes réflexion : le passage d’un état post-examen à (enfin) le début de l’été.
 
 Alors voilà ce post servira à ajouter du contenu à ce blog qui depuis quelques semaines est bien peu dynamique, il ne cherche pas à être spécialement travaillé ou intéressant, si ce n'est afin de briser cette possible pression (bon le mort est fort) associée à la volonté de faire le "bon post", comme on a pu l'évoquer en discutant avec Max tout à l'heure.
