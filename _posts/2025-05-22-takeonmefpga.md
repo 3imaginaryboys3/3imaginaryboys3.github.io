@@ -1,6 +1,6 @@
 ---
 title: TakeOnMeFPGA
-show: 'true'
+show: 'false'
 layout: old_internet
 logo: Perso_Chems.png
 author: chems
