@@ -1,12 +1,12 @@
 ---
-title: Untitled
+title: Pretty rave girl
 show: 'true'
 author: chems
 logo: Perso_Chems.png
 layout: old_internet
 subtitle: Finalement je me contenterai d'écrire ce que me passe par la tête
 ---
-## A New Post
+
 
 Je suis actuellement de passage chez mes parents, après avoir fini mes examens, le temps de respirer un coup avant de reprendre mes différentes activités d’été. Et à mesure que je revois mes amis d’ici je sens une transition dans mon état émotionnel, mes pensée, mes réflexion : le passage d’un état post-examen à (enfin) le début de l’été.
 
