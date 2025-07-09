@@ -26,7 +26,9 @@ Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un al
 
 
 
-J’ai développé une sorte d’obsession pour cette vidéo : …
+J’ai développé une sorte d’obsession pour cette vidéo :
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=BiH8DAVdKME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Je ne sais pas ce qui capture le plus mon intérêt : ces deux (lycéens ?) et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
 
