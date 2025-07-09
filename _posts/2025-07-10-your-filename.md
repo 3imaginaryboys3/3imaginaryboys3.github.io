@@ -37,4 +37,4 @@ https://www.youtube.com/watch?v=1IIPioL6rqw
 https://www.youtube.com/watch?v=P1L9q1TLIko
 
 
-C’est quand même je pense la seule topline qui à ma connaissance a été autant reprise et essorée, et pourtant je ne m’en lasse pas. Pour en revenir à la vidéo ça doit faire 2-3 semaines que j'y retourne régulièrement, je trouve que tout y est génial, sans vraiment comprendre pourquoi.(à part la fin qui me met particulièrement mal à l'aise)
+C’est quand même je pense la seule topline qui à ma connaissance a été autant reprise et essorée, et pourtant je ne m’en lasse pas. Pour en revenir à la vidéo ça doit faire 2-3 semaines que j'y retourne régulièrement, je trouve que tout y est génial, sans vraiment comprendre pourquoi (à part la fin qui me met particulièrement mal à l'aise).
