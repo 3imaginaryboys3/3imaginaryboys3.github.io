@@ -23,3 +23,18 @@ Cette figure presque psychédélique est donc une fractale qu'on peut obtenir en
 Simplement, l’algorithme de Newton permet de trouver les zéros d’une fonction en procédant de manière itérative : on commence par choisir un point de départ, puis, à chaque étape, on approxime la fonction au point courant par sa tangente (un développement au premier ordre). On utilise ensuite cette approximation pour avancer vers le point où la tangente s’annule, c’est-à-dire l’endroit où elle coupe l’axe des abscisses. On répète ce processus jusqu’à se rapprocher suffisamment d’un zéro de la fonction de départ.
 
 Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un algorithme qui, a priori, semble assez clair et prévisible peut avoir un comportement complètement non trivial et produire une structure qui semble aléatoire, mais qui est pourtant bien ordonnée, car elle se répète à l'infini.
+
+
+
+J’ai développé une sorte d’obsession pour cette vidéo : …
+
+Je ne sais pas ce qui capture le plus mon intérêt : ces deux (lycéens ?) et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
+
+https://www.youtube.com/watch?v=flL_2awF-QI
+https://www.youtube.com/watch?v=qTsaS1Tm-Ic
+https://www.youtube.com/watch?v=P3CxhBIrBho
+https://www.youtube.com/watch?v=1IIPioL6rqw
+https://www.youtube.com/watch?v=P1L9q1TLIko
+
+
+C’est quand même je pense la seule topline qui à ma connaissance a été autant reprise et essorée, et pourtant je ne m’en lasse pas. Pour en revenir à la vidéo ça doit faire 2-3 semaines que j'y retourne régulièrement, je trouve que tout y est génial, sans vraiment comprendre pourquoi.(à part la fin qui me met particulièrement mal à l'aise)
