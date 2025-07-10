@@ -2,7 +2,7 @@
 title: Pretty rave girl
 show: 'true'
 author: chems
-subtitle: Finalement je me contenterai d'écrire ce que me passe par la tête
+subtitle: Finalement je me contenterai d'écrire ce qui me passe par la tête
 layout: old_internet
 logo: Perso_Chems.png
 ---
