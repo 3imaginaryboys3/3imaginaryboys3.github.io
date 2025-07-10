@@ -16,7 +16,7 @@ _______
 
 Une forte partie des images qui m’ont traversé l’esprit en ce moment sont dûs à certains concepts que j’ai découverts (ou re-découvert) en binge-apprenant mes différents cours, 2 à 3 jours précédant l’examen concerné. 
 
-Je pense que le truc qui m'est le plus revenu sont les [fractales de Newton](https://fr.wikipedia.org/wiki/Fractale_de_Newton) :
+Je pense que le truc qui m'est le plus revenu sont les [fractales de Newton](https://fr.wikipedia.org/wiki/Fractale_de_Newton):
 
 ![newton-thumb.png]({{site.baseurl}}/assets/img/newton-thumb.png)
 
@@ -40,15 +40,19 @@ _______
 
 J’ai développé une sorte d’obsession pour cette vidéo :
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=BiH8DAVdKME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=BiH8DAVdKME" title="YouTube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Je ne sais pas ce qui capture le plus mon intérêt : ces deux (lycéens ?) et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
 
-https://www.youtube.com/watch?v=flL_2awF-QI
-https://www.youtube.com/watch?v=qTsaS1Tm-Ic
-https://www.youtube.com/watch?v=P3CxhBIrBho
-https://www.youtube.com/watch?v=1IIPioL6rqw
-https://www.youtube.com/watch?v=P1L9q1TLIko
+[https://www.youtube.com/watch?v=flL_2awF-QI](https://www.youtube.com/watch?v=flL_2awF-QI)
+
+[https://www.youtube.com/watch?v=qTsaS1Tm-Ic](https://www.youtube.com/watch?v=qTsaS1Tm-Ic)
+
+[https://www.youtube.com/watch?v=P3CxhBIrBho](https://www.youtube.com/watch?v=P3CxhBIrBho)
+
+[https://www.youtube.com/watch?v=1IIPioL6rqw](https://www.youtube.com/watch?v=1IIPioL6rqw)
+
+[https://www.youtube.com/watch?v=P1L9q1TLIko](https://www.youtube.com/watch?v=P1L9q1TLIko)
 
 
 C’est quand même je pense la seule topline qui à ma connaissance a été autant reprise et essorée, et pourtant je ne m’en lasse pas. Pour en revenir à la vidéo ça doit faire 2-3 semaines que j'y retourne régulièrement, je trouve que tout y est génial, sans vraiment comprendre pourquoi (à part la fin qui me met particulièrement mal à l'aise).
