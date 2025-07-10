@@ -10,7 +10,7 @@ Je suis actuellement de passage chez mes parents, après avoir fini mes examens,
 
 Alors voilà ce post servira à ajouter du contenu à ce blog qui depuis quelques semaines est bien peu dynamique, il ne cherche pas à être spécialement travaillé ou intéressant, si ce n'est afin de briser cette possible pression (bon le mort est fort) associée à la volonté de faire le "bon post", comme on a pu l'évoquer en discutant avec Max tout à l'heure.
 
-J’aime l’idée de pouvoir imprimer cette “sensation” post-exam avant qu’elle ne se dissipe complètement, et ce, dans l’espoir de réussir à reproduire ou du moins à renvoyer, à mon futur moi (ou bien à toi), à cet ensemble de sensations qui régissent mon état. Idéalement j’aimerai que le contenu de ce post puisse renvoyer à un souvenir non seulement accompagné d’une image mais aussi d’un son, d’une odeur et d’un goût. Je ne sais pas à quel point il m’est possible de partager mon état actuel, ni à quel point un quelconque lecteur pourra se mettre à ma place et s’imaginer quelque chose de proche. **Finalement je me contenterai d'écrire ce qui me passe par la tête**, en espérant que cela sucite une quelconque émotion au lecteur.
+J’aime l’idée de pouvoir imprimer cette “sensation” post-exam avant qu’elle ne se dissipe complètement, et ce, dans l’espoir de réussir à reproduire ou du moins à renvoyer, à mon futur moi (ou bien à toi), à cet ensemble de sensations qui régissent mon état. Idéalement j’aimerai que le contenu de ce post puisse renvoyer à un souvenir non seulement accompagné d’une image mais aussi d’un son, d’une odeur et d’un goût. Je ne sais pas à quel point il m’est possible de partager mon état actuel, ni à quel point un quelconque lecteur pourra se mettre à ma place et s’imaginer quelque chose de proche. **Finalement je me contenterai d'écrire ce qui me passe par la tête**, en espérant que cela suscite une quelconque émotion au lecteur.
 
 _______
 
@@ -40,7 +40,15 @@ _______
 
 J’ai développé une sorte d’obsession pour cette vidéo :
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=BiH8DAVdKME" title="YouTube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/BiH8DAVdKME"
+        title="YouTube player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe>
+
 
 Je ne sais pas ce qui capture le plus mon intérêt : ces deux lycéens et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
 
