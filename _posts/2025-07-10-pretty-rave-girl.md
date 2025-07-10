@@ -50,7 +50,7 @@ J’ai développé une sorte d’obsession pour cette vidéo :
 </iframe>
 
 
-Je ne sais pas ce qui capture le plus mon intérêt : ces deux lycéens et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
+Je ne sais pas ce qui capture le plus mon intérêt : ces deux lycéens et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissais; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque cette même mélodie : 
 
 [https://www.youtube.com/watch?v=flL_2awF-QI](https://www.youtube.com/watch?v=flL_2awF-QI)
 
