@@ -32,7 +32,7 @@ Simplement, l’algorithme de Newton permet de trouver les zéros d’une foncti
 </div>
 
 
-Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un algorithme qui, a priori, semble assez clair et prévisible peut avoir un comportement complètement non trivial et produire une structure qui semble aléatoire, mais qui est pourtant bien ordonnée, car elle se répète à l'infini.
+Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un algorithme qui, à priori, semble assez clair et prévisible peut avoir un comportement complètement non trivial et produire une structure qui semble aléatoire, mais qui est pourtant bien ordonnée, car elle se répétant à l'infini.
 
 Les images sont tirées des sites [https://ryhl.io/blog/newton-intro/](https://ryhl.io/blog/newton-intro/) et [https://paulbourke.net/fractals/newtonraphson/](https://paulbourke.net/fractals/newtonraphson/)
 
@@ -42,7 +42,7 @@ J’ai développé une sorte d’obsession pour cette vidéo :
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=BiH8DAVdKME" title="YouTube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Je ne sais pas ce qui capture le plus mon intérêt : ces deux (lycéens ?) et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
+Je ne sais pas ce qui capture le plus mon intérêt : ces deux lycéens et leur manière un peu geek et bizarre de bouger (surtout en ce qui concerne Ryan) qui m’évoque quelque chose d’assez familier, un peu comme si je les connaissait; ou la musique faisant partie de ce club prestigieux dans lequel toutes les mélodies sont des exactes copies de “Dota” par Basshunter (Je ne sais même pas si c’est bien celle-ci l’originale mais c’est la première que j’ai découvert). Alors voilà quelques “chansons” qui ont exactement ou presque la même mélodie : 
 
 [https://www.youtube.com/watch?v=flL_2awF-QI](https://www.youtube.com/watch?v=flL_2awF-QI)
 
