@@ -4,6 +4,9 @@ show: 'true'
 author: chems
 layout: old_internet
 logo: Perso_Chems.png
+subtitle: >-
+  c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain
+  nombre de tas de sable...
 ---
 ## Du problème de transport à la distance de Gromov-Wassertein
 
