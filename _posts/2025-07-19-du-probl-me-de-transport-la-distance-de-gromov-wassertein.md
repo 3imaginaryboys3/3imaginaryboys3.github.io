@@ -73,10 +73,12 @@ $$
 
 C'est à dire que T determine une manière de transporter chaque tas de sable vers un unique trou tout en conservant la masse initiale.
 
-Alors que T donne un plan de déplacement d'une masse ponctuel de sable vers un trou, $T_{\#}$ est l'opérateur associé à T qui à une mesure quelconque associe sa mesure image par la fonction T. ($T_{\#} \alpha = \beta$ signifie donc que déplacer $\alpha$ en utilisant T donne la mesure $\beta$)
+Alors que $T$ donne un plan de déplacement d'une masse ponctuelle de sable vers un trou, $T_{\#}$ est l'opérateur associé à $T$ qui, à une mesure quelconque, associe sa mesure image par la fonction $T$. ($T_{\#} \alpha = \beta$ signifie donc que déplacer $\alpha$ en utilisant $T$ donne la mesure $\beta$.)
 
 
 De manière plus générale on écrira le problème de Monge pour deux mesures arbitraires :
+
+
 $$
 \min_{T} \int_{X} c(x, T(x)) \, d\alpha(x) \quad \text{tel que} \quad T_{\#} \alpha = \beta
 $$
@@ -168,7 +170,7 @@ $$
 \, d\pi(x, y) \, d\pi(x', y')\right)^{1/2}
 $$
 
-Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel point il est coûteux de déplacer mesure d'un espace de la même manière que la mesure de l'autre espace, ce qui revient à chercher des similarité dans la structure de chaque mesure dans leur espace respectif.
+Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel point il est coûteux de déplacer la mesure d'un espace de la même manière que la mesure de l'autre espace, ce qui revient à chercher des similarité dans la structure de chaque mesure dans leur espace respectif.
 
 ## Miscellaneous
 
