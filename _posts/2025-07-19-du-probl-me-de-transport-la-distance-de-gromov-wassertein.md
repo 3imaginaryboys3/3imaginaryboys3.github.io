@@ -46,7 +46,7 @@ Tout comme une densité de probabilité est une mesure, elle n’est sondée qu�
 
 ## Formulation de Monge
 
-Une formulation très simple du problème est d’imaginer un certain nombre n de tas de sable chacun ayant une quantité $a_i$, $i \in \llbracket 0, n \rrbracket$ de sable et un même nombre m = n de trous pouvant contenir chacun une quantité $b_j$, $j \in \llbracket 0, m \rrbracket$ de sable. Et pour chaque couple de trous et de tas sable, on associe un coefficient $c(i,j)$ qui représente le coût de transportation du tas de sable i jusqu’au trou j. Le but est de trouver la meilleure manière de boucher tous les trous and déplaçant chaque tas de sable vers un des trous i.e le meilleur plan de transport de la distribution des tas de sables vers la distribution des trous (vus comme des mesures)
+Une formulation très simple du problème est d’imaginer un certain nombre n de tas de sable chacun ayant une quantité $a_i$,  $i \in \{0, \dots, n\}$ de sable et un même nombre m = n de trous pouvant contenir chacun une quantité $b_j$, avec $j \in \{0, \dots, m\}$ de sable. Et pour chaque couple de trous et de tas sable, on associe un coefficient $c(i,j)$ qui représente le coût de transportation du tas de sable i jusqu’au trou j. Le but est de trouver la meilleure manière de boucher tous les trous and déplaçant chaque tas de sable vers un des trous i.e le meilleur plan de transport de la distribution des tas de sables vers la distribution des trous (vus comme des mesures)
 
 En réécrivant les coefficient de coût dans une matrice $(C_{i,j})_{i,j} = c(i,j)$,
 
@@ -143,7 +143,8 @@ $$
 
 La théorie du transport optimal permet de poser un cadre quant à la recherche de la transformation d’une mesure à une autre qui minimise un certain coût. On peu alors naturellement se demander si on peut quantifier à quel point une certaine mesure est différente d’une autre en utilisant les outils que l’on vient d’évoquer. Il est clair que cette quantification sera dépendante du coût associé au transport. C’est ceci que réalise la distance de Wasserstein, pour deux distribution. 
 
-En supposant que $c(x, y) = d(x, y)^p$.
+En supposant que $c(x, y) = d(x, y)^p$, 
+
 On défini : 
 $$
 W_p(\alpha, \beta) := \left( \min_{\pi \in U(\alpha, \beta)} \int_{X \times Y} d(x, y)^p \, d\pi(x, y) \right)^{1/p}
