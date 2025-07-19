@@ -118,11 +118,11 @@ U(\alpha, \beta) = \left\{ P \in \mathbb{R}_+^{n \times m} \;\middle|\;
 $$
 
 
-Etendu à des mesures arbitraires, on défini $\pi \in \mathcal{M}_+(X \times Y)$ une distribution jointe entre la mesure de départ et d’arrivée (c'est à dire que $\pi(A\timesY) = \alpha(A)$ et $\pi( X\timesB) = \beta(B)$) c’est une mesure qui encode nos plans de transports. On défini l’ensemble des pi admissible vérifiant la conservation de la masse par 
+Etendu à des mesures arbitraires, on défini $\pi \in \mathcal{M}_+(X \times Y)$ une distribution jointe entre la mesure de départ et d’arrivée (c'est à dire que $\pi(A \times Y) = \alpha(A)$ et $\pi(X \times B) = \beta(B)$) c’est une mesure qui encode nos plans de transports. On défini l’ensemble des pi admissible vérifiant la conservation de la masse par 
 
 
 $$
-U(\alpha, \beta) \coloneqq \left\{ \pi \in \mathcal{M}_+^1(X \times Y) \;\middle|\; (P_X)_\# \pi = \alpha \;\text{et}\; (P_Y)_\# \pi = \beta \right\}
+U(\alpha, \beta) := \left\{ \pi \in \mathcal{M}_+^1(X \times Y) \;\middle|\; (P_X)_\# \pi = \alpha \;\text{et}\; (P_Y)_\# \pi = \beta \right\}
 $$
 \\
 où $(P_Y)_\# \pi(B) := \pi(X \times B)$ resp. $(P_X)_\# \pi(A) := \pi(A \times Y)$ sont les ensembles images de la distribution de départ, respectivement d'arrivée par $\pi$.
