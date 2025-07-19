@@ -17,7 +17,7 @@ Cette fois-ci, au lieu de glander sur internet, je préfère partager un petit p
 Alors voilà, le point de départ et le suivant : c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain nombre de tas de sable, agencés aléatoirement, et un certain nombre de trous de profondeur égale à la quantité totale de sable présent dans les tas. Vous voulez remplir les trous avec le sable présent dans les tas (et uniquement dans les tas) en minimisant la dépense d’énergie nécessaire pour effectuer la tâche.
 
 <figure>
-  <img src="{{site.baseurl}}/assets/img/e4490e16d51be190f2b9dd9e48070c31_850x630.png" alt="Illustration de tas de sable et de trous" width="50%">
+  <img src="{{site.baseurl}}/assets/img/e4490e16d51be190f2b9dd9e48070c31_850x630.png" alt="Illustration de tas de sable et de trous" width="60%">
   <figcaption></figcaption>
 </figure>
 
@@ -172,12 +172,12 @@ Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie d
 
 <figure>
   <img src="{{site.baseurl}}/assets/img/optimal-transport-3d-interpolation.png" alt="3D interpolation" width="50%">
-  <figcaption></figcaption>
+  <figcaption>Sûrement une déformation qui minimise la distance entre les deux objets</figcaption>
 </figure>
 
 <figure>
   <img src="{{site.baseurl}}/assets/img/images.jpeg" alt="Bouddha" width="50%">
-  <figcaption></figcaption>
+  <figcaption>Projection de Bouddha sur un disque</figcaption>
 </figure>
 
 
