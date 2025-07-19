@@ -59,9 +59,10 @@ Ce problème est communément appelé problème d’affectation.
 
 En généralisant le problème d’affectation à des mesures discrètes quelquconques alpha et beta telles que : 
 
-$$\alpha, \beta \in \mathcal{M}(X)$$
+$$\alpha \in \mathcal{M}(X)$$
+$$\beta \in \mathcal{M}(Y)$$
 $$\alpha = \sum_{i=1}^{n} a_i \delta{x_i} $$
-$$\beta = \sum_{i=1}^{n} b_i \delta{x_i} $$
+$$\beta = \sum_{i=1}^{n} b_i \delta{y_i} $$
 
 On tombe sur ce qu’on appelle le problème de Monge pour mesures discrètes et on peut formaliser le problème en
 
