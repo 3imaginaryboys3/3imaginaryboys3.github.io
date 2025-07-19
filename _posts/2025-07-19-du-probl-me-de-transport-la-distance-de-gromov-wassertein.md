@@ -118,20 +118,23 @@ U(\alpha, \beta) = \left\{ P \in \mathbb{R}_+^{n \times m} \;\middle|\;
 $$
 
 
-Etendu à des mesures arbitraires, on défini $\pi \in \mathcal{M}_+(X \times Y)$ une distribution jointe entre la mesure de départ et d’arrivée (c'est à dire que $\pi(A \times Y) = \alpha(A)$ et $\pi(X \times B) = \beta(B)$) c’est une mesure qui encode nos plans de transports. On défini l’ensemble des pi admissible vérifiant la conservation de la masse par 
+Étendu à des mesures arbitraires, on définit $\pi \in \mathcal{M}_+(X \times Y)$ comme une distribution jointe entre la mesure de départ et la mesure d’arrivée,  c’est-à-dire que $\pi(A \times Y) = \alpha(A)$ et $\pi(X \times B) = \beta(B)$. Cette mesure encode nos plans de transport.
 
+On définit l’ensemble des plans admissibles, c’est-à-dire les $\pi$ qui respectent la conservation de la masse, par :
 
 $$
 U(\alpha, \beta) := \left\{ \pi \in \mathcal{M}_+^1(X \times Y) \;\middle|\; (P_X)_\# \pi = \alpha \;\text{et}\; (P_Y)_\# \pi = \beta \right\}
 $$
-\\
-où $(P_Y)_\# \pi(B) := \pi(X \times B)$ resp. $(P_X)_\# \pi(A) := \pi(A \times Y)$ sont les ensembles images de la distribution de départ, respectivement d'arrivée par $\pi$.
-\\
-La formulation de Kantorovich s’écrit :
+
+où $(P_Y)_\# \pi(B) := \pi(X \times B)$ et $(P_X)_\# \pi(A) := \pi(A \times Y)$ désignent les mesures images de $\pi$ par les projections sur $Y$ et $X$ respectivement.
+
+La formulation de Kantorovich s’écrit alors :
 
 $$
-\mathcal{L}_c(\alpha, \beta) \coloneqq \min_{\pi \in U(\alpha, \beta)} \int_{X \times Y} c(x, y) \, d\pi(x, y)
+\mathcal{L}_c(\alpha, \beta) := \min_{\pi \in U(\alpha, \beta)} \int_{X \times Y} c(x, y)\, d\pi(x, y)
 $$
+
+
 
 
 ## Distance de Wasserstein
