@@ -159,7 +159,7 @@ $$
 
 Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel point il est coûteux de déplacer mesure d'un espace de la même manière que la mesure de l'autre espace, ce qui revient à chercher des similarité dans la structure de chaque mesure dans leur espace respectif.
 
-## Miscalleanous
+## Miscellaneous
 
 Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie du transport optimal ont pleins d'application notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes qui suivent ce principe : 
 
@@ -172,4 +172,3 @@ Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une 
 
 
 Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai au moins une idée à peine plus élaborée de ce que représente une mesure haha.
-
