@@ -140,7 +140,7 @@ $$
 
 désignent les mesures images de $\pi$ par les projections sur $Y$ et $X$, respectivement.
 
-La formulation de Kantorovich s’écrit alors :
+La solution du problème de Kantorovich s’écrit alors :
 
 $$
 \mathcal{L}_c(\alpha, \beta) := \min_{\pi \in U(\alpha, \beta)} \int_{X \times Y} c(x, y)\, d\pi(x, y)
