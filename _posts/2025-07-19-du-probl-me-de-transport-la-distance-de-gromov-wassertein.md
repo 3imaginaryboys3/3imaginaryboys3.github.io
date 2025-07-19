@@ -169,7 +169,7 @@ Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel p
 
 ## Miscellaneous
 
-Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie du transport optimal ont pleins d'application notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes qui suivent ce principe : 
+Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie du transport optimal ont plein d'applications notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes qui suivent ce principe : 
 
 
 <figure>
