@@ -31,7 +31,7 @@ En reprenant l’analogie des tas de sable, il nous faut trouver une manière de
 Dans le cas d’une distribution discrète (c’est à dire prenant un nombre fini, raisonnable de valeurs) on considèrera des mesures de la forme 
 $$\alpha \in \mathcal{M}(X)$$
 $$\alpha = \sum_{i=1}^{n} a_i \delta{x_i} $$
-→ où $\delta(x_i)$ défini une masse de dirac, c'est à dire $\delta{x_i} = 1 $ si $x = x_i$ et 0 sinon, pour $ \forall x \in X$
+→ où $\delta(x_i)$ est défini une masse de dirac, c'est à dire $\delta{x_i} = 1 $ si $x = x_i$ et 0 sinon, pour $ \forall x \in X \subset \mathbb{R}$
 
 Dans le cas plus général notre tas de sable sera représenté comme une densité $\rho_\alpha(x)$ définie par rapport à la mesure de Lebesgue et vérifiant la relation
 
@@ -49,16 +49,19 @@ Tout comme une densité de probabilité est une mesure, elle n’est sondée qu�
 Une formulation très simple du problème est d’imaginer un certain nombre n de tas de sable chacun ayant une quantité $a_i$,  $i \in \{0, \dots, n\}$ de sable et un même nombre m = n de trous pouvant contenir chacun une quantité $b_j$, avec $j \in \{0, \dots, m\}$ de sable. Et pour chaque couple de trous et de tas sable, on associe un coefficient $c(i,j)$ qui représente le coût de transportation du tas de sable i jusqu’au trou j. Le but est de trouver la meilleure manière de boucher tous les trous and déplaçant chaque tas de sable vers un des trous i.e le meilleur plan de transport de la distribution des tas de sables vers la distribution des trous (vus comme des mesures)
 
 En réécrivant les coefficient de coût dans une matrice $(C_{i,j})_{i,j} = c(i,j)$,
-
-Trouver une solution à ce problème est équivalent à trouver une permutation $\sigma$ des n tas de sables :
+trouver une solution à ce problème est équivalent à trouver une permutation $\sigma$ des n tas de sables :
 
 $$
 \min_{\sigma \in \text{Perm}(n)} \sum_{i=1}^{n} C_{i, \sigma(i)}
 $$
 
-Ce problème est communément appelé problème d’assignement
+Ce problème est communément appelé problème d’affectation.
 
-En généralisant le problème d’assignement à des mesures discrètes quelquconques alpha et beta telles que :
+En généralisant le problème d’affectation à des mesures discrètes quelquconques alpha et beta telles que : 
+
+$$\alpha, \beta \in \mathcal{M}(X)$$
+$$\alpha = \sum_{i=1}^{n} a_i \delta{x_i} $$
+$$\beta = \sum_{i=1}^{n} b_i \delta{x_i} $$
 
 On tombe sur ce qu’on appelle le problème de Monge pour mesures discrètes et on peut formaliser le problème en
 
