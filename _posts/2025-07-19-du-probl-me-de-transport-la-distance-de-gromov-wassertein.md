@@ -103,7 +103,7 @@ $$
 = \min_{P} \langle C, P \rangle
 $$
 
-Où P est une matrice telle que $P_{i,j}$ définit la masse du point $x_i$ à envoyer au point $y_j$. Par conservation de la masse, P doit donc être de telle sorte que $\sum_{j}P_{i,j} = a_i$ et $\sum_{i}P_{i,j} = b_j$. Le produit scalaire correspond à celui de Frobenius (extension au produit scalaire euclidien à l'espace des matrices).
+Où P est une matrice telle que $P_{i,j}$ définit la masse du point $x_i$ à envoyer au point $y_j$. Par conservation de la masse, P doit donc être de telle sorte que $\sum_{j}P_{i,j} = a_i$ et $\sum_{i}P_{i,j} = b_j$. Le produit scalaire correspond à celui de Frobenius (extension du produit scalaire euclidien à l'espace des matrices).
 
 Formellement le problème de kantorovich pour des mesures discrètes s'écrit : 
 
