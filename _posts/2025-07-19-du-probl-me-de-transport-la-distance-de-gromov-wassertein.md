@@ -33,11 +33,13 @@ $$\alpha \in \mathcal{M}(X)$$
 $$\alpha = \sum_{i=1}^{n} a_i \delta{x_i} $$
 → où $\delta(x_i)$ défini une masse de dirac, c'est à dire $\delta{x_i} = 1 $ si $x = x_i$ et 0 sinon, pour $ \forall x \in X$
 
-Dans le cas plus général notre tas de sable sera représenté comme une densité $\rho_\alpha(x)$ définie par rapport à la mesure de Lebesgue et vérifiant la relation …
+Dans le cas plus général notre tas de sable sera représenté comme une densité $\rho_\alpha(x)$ définie par rapport à la mesure de Lebesgue et vérifiant la relation
+
 $$
 \forall f \in C^0(X), \quad 
 \int_{X} h(x) \, d\alpha(x) = \int_{X} h(x) \, \rho_\alpha(x) \, dx
 $$
+
 A noter que la mesure ne se traduit qu’à travers l’intégrale d’une fonction par cette même mesure, sur un sous-ensemble de l’espace de définition.
 
 Tout comme une densité de probabilité est une mesure, elle n’est sondée qu’à travers une intégrale recouvrant un sous ensemble de l’espace des issues pour y assigner une valeur que l’on interprète comme probabilité.
@@ -48,16 +50,17 @@ Une formulation très simple du problème est d’imaginer un certain nombre n d
 
 En réécrivant les coefficient de coût dans une matrice $(C_{i,j})_{i,j} = c(i,j)$,
 
-Trouver une solution à ce problème est équivalent à trouver une permutation $\sigma$ des n tas de sables : 
+Trouver une solution à ce problème est équivalent à trouver une permutation $\sigma$ des n tas de sables :
+
 $$
 \min_{\sigma \in \text{Perm}(n)} \sum_{i=1}^{n} C_{i, \sigma(i)}
 $$
 
 Ce problème est communément appelé problème d’assignement
 
-En généralisant le problème d’assignement à des mesures discrètes quelquconques alpha et beta telles que :…
+En généralisant le problème d’assignement à des mesures discrètes quelquconques alpha et beta telles que :
 
-On tombe sur ce qu’on appelle le problème de Monge pour mesures discrètes et on peut formaliser le problème en …
+On tombe sur ce qu’on appelle le problème de Monge pour mesures discrètes et on peut formaliser le problème en
 
 $$
 \min_{T} \sum_i c(x_i, T(x_i)) \quad \text{tel que} \quad T_{\#} \alpha = \beta
@@ -115,8 +118,7 @@ U(\alpha, \beta) = \left\{ P \in \mathbb{R}_+^{n \times m} \;\middle|\;
 $$
 
 
-Etendu à des mesures arbitraires, on défini $
-\pi \in \mathcal{M}_+(X \times Y)$ une distribution jointe entre la mesure de départ et d’arrivée (c'est à dire que $\pi( A\timesY) = \alpha(A)$ et $\pi( X\timesB) = \beta(B)$) c’est une mesure qui encode nos plans de transports. On défini l’ensemble des pi admissible vérifiant la conservation de la masse par 
+Etendu à des mesures arbitraires, on défini $\pi \in \mathcal{M}_+(X \times Y)$ une distribution jointe entre la mesure de départ et d’arrivée (c'est à dire que $\pi(A\timesY) = \alpha(A)$ et $\pi( X\timesB) = \beta(B)$) c’est une mesure qui encode nos plans de transports. On défini l’ensemble des pi admissible vérifiant la conservation de la masse par 
 
 
 $$
