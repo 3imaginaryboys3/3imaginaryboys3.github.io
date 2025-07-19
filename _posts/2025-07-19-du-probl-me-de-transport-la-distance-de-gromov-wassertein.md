@@ -5,7 +5,7 @@ author: chems
 layout: old_internet
 logo: Perso_Chems.png
 subtitle: >-
-  c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain
+  C’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain
   nombre de tas de sable...
 ---
 ## Du problème de transport à la distance de Gromov-Wassertein
@@ -15,6 +15,12 @@ Bon ça fait quelques jours que j’ai un rythme de vie assez minable, je me dis
 Cette fois-ci, au lieu de glander sur internet, je préfère partager un petit peu ce sur quoi je galère en ce moment, dans le cadre du projet de recherche que je mène cet été. Ce dernier porte sur l'étude de propriété de graphs dans le cadre notamment des Graph Neural Network et un point central de cet étude et l'utilisation de la distance de Gromov-Wassertein et ses variantes. En bref ce post est une sorte de checkpoint sur ce qu'est Gromov-Wasserstein essayant de donner du contexte à ces outils. Le but n'est pas de produire un texte très rigoureux, plusieurs hypothèses (que j'avoue ne pas toujours très bien comprendre) seront omises. 
 
 Alors voilà, le point de départ et le suivant : c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain nombre de tas de sable, agencés aléatoirement, et un certain nombre de trous de profondeur égale à la quantité totale de sable présent dans les tas. Vous voulez remplir les trous avec le sable présent dans les tas (et uniquement dans les tas) en minimisant la dépense d’énergie nécessaire pour effectuer la tâche.
+
+<figure>
+  <img src="{{site.baseurl}}/assets/img/e4490e16d51be190f2b9dd9e48070c31_850x630.png" alt="Illustration de tas de sable et de trous" width="50%">
+  <figcaption></figcaption>
+</figure>
+
 
 C'est ce qu'on appellera problème du transport, la théorie mathématique fondée sur ce problème est appelée théorie du Transport Optimal.
 
@@ -164,11 +170,25 @@ Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel p
 Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie du transport optimal ont pleins d'application notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes qui suivent ce principe : 
 
 
+<figure>
+  <img src="{{site.baseurl}}/assets/img/optimal-transport-3d-interpolation.png" alt="3D interpolation" width="50%">
+  <figcaption></figcaption>
+</figure>
 
+<figure>
+  <img src="{{site.baseurl}}/assets/img/images.jpeg" alt="Bouddha" width="50%">
+  <figcaption></figcaption>
+</figure>
 
 
 
 Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une mesure discrète faite de masses de Dirac, genre qu'est ce qui leur ont pris mdrrr ?
 
+<figure>
+  <img src="{{site.baseurl}}/assets/img/e4490e16d51be190f2b9dd9e48070c31_850x630.png" alt="Illustration de tas de sable et de trous" width="50%">
+  <figcaption></figcaption>
+</figure>
 
 Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai au moins une idée à peine plus élaborée de ce que représente une mesure haha.
+
+ Le contenu de ce post est grandement inspiré du livre "Computational Optimal Transport" de G.Peyré et M.Cuturi
