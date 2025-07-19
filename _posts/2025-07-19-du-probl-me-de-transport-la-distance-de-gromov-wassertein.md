@@ -73,7 +73,7 @@ $$
 
 C'est à dire que T determine une manière de transporter chaque tas de sable vers un unique trou tout en conservant la masse initiale.
 
-Alors que $T$ donne un plan de déplacement d'une masse ponctuelle de sable vers un trou, $T_{\#}$ est l'opérateur associé à $T$ qui, à une mesure quelconque, associe sa mesure image par la fonction $T$. ($T_{\#} \alpha = \beta$ signifie donc que déplacer $\alpha$ en utilisant $T$ donne la mesure $\beta$.)
+Alors que $T$ donne un plan de déplacement d'une masse ponctuelle de sable vers un trou, $T_{\sharp}$ est l'opérateur associé à $T$ qui, à une mesure quelconque, associe sa mesure image par la fonction $T$. ($T_{\sharp} \alpha = \beta$ signifie donc que déplacer $\alpha$ en utilisant $T$ donne la mesure $\beta$.)
 
 
 De manière plus générale on écrira le problème de Monge pour deux mesures arbitraires :
