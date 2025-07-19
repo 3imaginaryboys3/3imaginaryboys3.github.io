@@ -17,7 +17,7 @@ Cette fois-ci, au lieu de glander sur internet, je préfère partager un petit p
 Alors voilà, le point de départ et le suivant : c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain nombre de tas de sable, agencés aléatoirement, et un certain nombre de trous de profondeur égale à la quantité totale de sable présent dans les tas. Vous voulez remplir les trous avec le sable présent dans les tas (et uniquement dans les tas) en minimisant la dépense d’énergie nécessaire pour effectuer la tâche.
 
 <figure>
-  <img src="{{site.baseurl}}/assets/img/e4490e16d51be190f2b9dd9e48070c31_850x630.png" alt="Illustration de tas de sable et de trous" width="60%">
+  <img src="{{site.baseurl}}/assets/img/chateau-de-sable-plage.jpg" alt="Illustration de tas de sable et de trous" width="60%">
   <figcaption></figcaption>
 </figure>
 
