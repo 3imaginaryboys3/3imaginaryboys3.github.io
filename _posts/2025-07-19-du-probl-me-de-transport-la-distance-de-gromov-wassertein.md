@@ -158,7 +158,7 @@ Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel p
 
 ## Miscalleanous
 
-Les distances de Wasserstein de de Gromov ont pleins d'application notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes de déformations qui suivent une géodisique suivant la distance de Gromov (c'est à dire une transformation d'un objet en un autre qui prends le plus court chemin de déformation au sens de Gromov) : 
+Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie du transport optimal ont pleins d'application notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes qui suivent ce principe : 
 
 
 
@@ -168,5 +168,5 @@ Les distances de Wasserstein de de Gromov ont pleins d'application notamment en 
 Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une mesure discrète faite de masses de Dirac, genre qu'est ce qui leur ont pris mdrrr ?
 
 
-Il y a quasiment un an jour pour jour, je faisait un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai une idée un peine plus élaborée de ce que représente une mesure au moins haha.
+Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai au moins une idée à peine plus élaborée de ce que représente une mesure haha.
 
