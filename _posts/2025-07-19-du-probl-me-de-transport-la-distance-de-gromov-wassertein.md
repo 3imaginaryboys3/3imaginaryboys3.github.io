@@ -9,9 +9,9 @@ logo: Perso_Chems.png
 
 Bon ça fait quelques jours que j’ai un rythme de vie assez minable, je me dis que j’irai lire puis dormir aux alentours de 23h et au final je me perds sur internet jusqu’à 2 voire 3h du matin, moment auquel je m’endors naturellement d’épuisement. Le matin je me réveille aux alentours de 7h30 puis je rentre dans un cycle où je m’endors, chaque fois le temps d’un rêve, me réveille puis recommence le processus jusqu’à ce que je sois vraiment obligé de me lever pour me rendre à un rendez-vous ou pour me mettre à travailler si je souhaite faire quelque chose de ma matinée.
 
-Cette fois-ci, au lieu de 
+Cette fois-ci, au lieu de glander sur internet, je préfère partager un petit peu ce sur quoi je galère en ce moment, dans le cadre du projet de recherche que je mène cet été. Ce dernier porte sur l'étude de propriété de graphs dans le cadre notamment des Graph Neural Network et un point central de cet étude et l'utilisation de la distance de Gromov-Wassertein et ses variantes. En bref ce post est une sorte de checkpoint sur ce qu'est Gromov-Wasserstein essayant de donner du contexte à ces outils. Le but n'est pas de produire un texte très rigoureux, plusieurs hypothèses (que j'avoue ne pas toujours très bien comprendre) seront omises. 
 
-Dire conservation de la masse
+Alors voilà, le point de départ et le suivant : c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain nombre de tas de sable, agencés aléatoirement, et un certain nombre de trous de profondeur égale à la quantité totale de sable présent dans les tas. Vous voulez remplir les trous avec le sable présent dans les tas (et uniquement dans les tas) en minimisant la dépense d’énergie nécessaire pour effectuer la tâche.
 
 ## Mesure
 
@@ -76,7 +76,7 @@ Deuxièmement, T, tel qu'il est formulé ne permet que de déplacer "toute la ma
 
 ## Formulation de Kantorovich
 
-Une solution à nos problèmes précédement évoquée est de s’autoriser à envoyer une certaine quantité de masse présente à un point de l’espace, vers plusieurs points différents. C’est l’idée derrière la méthode de Kantorovich. Cette fois ci, nous n’utiliserons plus un objet qui pour chaque point de l’espace de départ spécifie un seul point de l’espace d’arrivée mais plutôt ce qu’on appelle un “coupling” qui encode une manière de déplacer la masse de chaque point de l’espace de départ vers un ou plusieurs points de l’espace d’arrivée. 
+Une solution à nos problèmes précédement évoquée est de s’autoriser à envoyer la quantité de masse présente à un point de l’espace, vers plusieurs points différents. C’est l’idée derrière la méthode de Kantorovich. Cette fois ci, nous n’utiliserons plus un objet qui pour chaque point de l’espace de départ spécifie un seul point de l’espace d’arrivée mais plutôt ce qu’on appelle un “coupling” qui encode une manière de déplacer la masse de chaque point de l’espace de départ vers un ou plusieurs points de l’espace d’arrivée. 
 
 Dans le cas discret on peut simplement encoder ce mapping dans une matrice P dans laquelle chaque entrée Pij spécifie la proportion de masse envoyée du point i au point j. Par construction il nous faut $P1_m = a $ et $P^\top1_m = b $. Où a respectivement b sont le distributions discrètes de départ resp. d'arrivée, econdées dans un vecteur de taille n resp. m.
 
