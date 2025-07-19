@@ -128,7 +128,7 @@ $$
 U(\alpha, \beta) := \left\{ \pi \in \mathcal{M}_+^1(X \times Y) \;\middle|\; (P_X)_\# \pi = \alpha \;\text{et}\; (P_Y)_\# \pi = \beta \right\}
 $$
 
-où $(P_Y)_{\sharp} \pi(B) := \pi(X \times B)$ et $(P_X)_{\sharp} \pi(A) := \pi(A \times Y)$ désignent les mesures images de $\pi$ par les projections sur $Y$ et $X$ respectivement.
+où $(P_Y)_{\sharp} \pi(B) := \pi(X \times B)$ et $(P_X)_{\sharp} \pi(A) := \pi(A \times Y)$ désignent les mesures images de $\pi$ par les projections sur $Y$ et $X$, respectivement.
 
 La formulation de Kantorovich s’écrit alors :
 
