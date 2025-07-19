@@ -13,6 +13,8 @@ Cette fois-ci, au lieu de glander sur internet, je préfère partager un petit p
 
 Alors voilà, le point de départ et le suivant : c’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain nombre de tas de sable, agencés aléatoirement, et un certain nombre de trous de profondeur égale à la quantité totale de sable présent dans les tas. Vous voulez remplir les trous avec le sable présent dans les tas (et uniquement dans les tas) en minimisant la dépense d’énergie nécessaire pour effectuer la tâche.
 
+C'est ce qu'on appellera problème du transport, la théorie mathématique fondée sur ce problème est appelée théorie du Transport Optimal.
+
 ## Mesure
 
 En reprenant l’analogie des tas de sable, il nous faut trouver une manière de représenter ces distribution, de sable. Ceci se fera à partir de la notion de mesure que l’on peut voir comme une distribution de poids réparti sur l’espace considéré. 
@@ -153,4 +155,18 @@ $$
 $$
 
 Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel point il est coûteux de déplacer mesure d'un espace de la même manière que la mesure de l'autre espace, ce qui revient à chercher des similarité dans la structure de chaque mesure dans leur espace respectif.
+
+## Miscalleanous
+
+Les distances de Wasserstein de de Gromov ont pleins d'application notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes de déformations qui suivent une géodisique suivant la distance de Gromov (c'est à dire une transformation d'un objet en un autre qui prends le plus court chemin de déformation au sens de Gromov) : 
+
+
+
+
+
+
+Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une mesure discrète faite de masses de Dirac, genre qu'est ce qui leur ont pris mdrrr ?
+
+
+Il y a quasiment un an jour pour jour, je faisait un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai une idée un peine plus élaborée de ce que représente une mesure au moins haha.
 
