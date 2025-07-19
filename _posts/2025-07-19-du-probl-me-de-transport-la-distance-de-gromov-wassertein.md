@@ -185,7 +185,7 @@ Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie d
 Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une mesure discrète faite de masses de Dirac, genre qu'est ce qui leur ont pris mdrrr ?
 
 <figure>
-  <img src="{{site.baseurl}}/assets/img/e4490e16d51be190f2b9dd9e48070c31_850x630.png" alt="Illustration de tas de sable et de trous" width="50%">
+  <img src="{{site.baseurl}}/assets/img/8989b6acf5d468d89b6acf5d45199bv-960x640.jpg" alt="Distribution de sable" width="50%">
   <figcaption></figcaption>
 </figure>
 
