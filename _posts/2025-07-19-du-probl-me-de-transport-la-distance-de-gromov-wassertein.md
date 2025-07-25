@@ -96,7 +96,7 @@ T, tel qu'il est formulé ne permet que de déplacer "toute la masse présente �
 
 Une solution à notre problème précédement évoquée est de s’autoriser à envoyer la quantité de masse présente à un point de l’espace, vers plusieurs points différents. C’est l’idée derrière la méthode de Kantorovich. Cette fois ci, nous n’utiliserons plus un objet qui pour chaque point de l’espace de départ spécifie un seul point de l’espace d’arrivée mais plutôt ce qu’on appelle un “coupling” qui encode une manière de déplacer la masse de chaque point de l’espace de départ vers un ou plusieurs points de l’espace d’arrivée. 
 
-Dans le cas discret on peut simplement encoder ce mapping dans une matrice P dans laquelle chaque entrée Pij spécifie la proportion de masse envoyée du point i au point j. Par construction il nous faut $P1_m = a $ et $P^\top1_m = b $. Où a respectivement b sont le distributions discrètes de départ resp. d'arrivée, econdées dans un vecteur de taille n resp. m.
+Dans le cas discret on peut simplement encoder ce mapping dans une matrice P dans laquelle chaque entrée Pij spécifie la quantité de masse envoyée du point i au point j. Par construction il nous faut $P1_m = a $ et $P^\top1_m = b $. Où a respectivement b sont le distributions discrètes de départ resp. d'arrivée, econdées dans un vecteur de taille n resp. m.
 
 Si on encode le cout de chaque déplacement dans une matrice C, le problème de transport sous le prisme de Kantorovich s’écrit :
 
