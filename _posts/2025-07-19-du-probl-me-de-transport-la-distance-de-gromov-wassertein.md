@@ -110,7 +110,7 @@ Où P est une matrice telle que $P_{i,j}$ définit la masse du point $x_i$ à en
 Formellement le problème de kantorovich pour des mesures discrètes s'écrit : 
 
 $$
-\min_{P \in U(\alpha, \beta)} \langle C, P \rangle = \operatorname{Tr}(C^\top P)
+\min_{P \in U(\alpha, \beta)} \langle C, P \rangle = \min_{P \in U(\alpha, \beta)} \operatorname{Tr}(C^\top P)
 $$
 
 
