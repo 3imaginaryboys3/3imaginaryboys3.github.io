@@ -21,7 +21,7 @@ Je pense que le truc qui m'est le plus revenu sont les [fractales de Newton](htt
 ![newton-thumb.png]({{site.baseurl}}/assets/img/newton-thumb.png)
 
 Cette figure presque psychédélique est donc une fractale qu'on peut obtenir en coloriant chaque point de l'ensemble de départ avec une couleur associée à la racine vers laquelle on converge, lorsqu’on applique l’algorithme de Newton sur une fonction de ℂ dans ℂ, avec une certaine régularité (qui admet plusieurs racines, holomorphe mais pas trop plate sinon l’algorithme pose problème).
-Simplement, l’algorithme de Newton permet de trouver les zéros d’une fonction en procédant de manière itérative : on commence par choisir un point de départ, puis, à chaque étape, on approxime la fonction au point courant par sa tangente (un développement au premier ordre). On utilise ensuite cette approximation pour avancer vers le point où la tangente s’annule, c’est-à-dire l’endroit où elle coupe l’axe des abscisses. On répète ce processus jusqu’à se rapprocher suffisamment d’un zéro de la fonction de départ.
+Simplement, l’algorithme de Newton permet de trouver les zéros d’une fonction en procédant de manière itérative : on commence par choisir un point de départ, puis, à chaque étape, on approxime la fonction au point courant par sa tangente (un développement au premier ordre). On utilise ensuite cette approximation pour avancer vers le point où la tangente s’annule, (Dans R ça serait l’endroit où elle coupe l’axe des abscisses). On répète ce processus jusqu’à se rapprocher suffisamment d’un zéro de la fonction de départ.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="/assets/img/2_m0.52_0.52_0.6_s.png" style="width: 30%;">
