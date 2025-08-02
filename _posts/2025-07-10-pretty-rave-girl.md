@@ -32,7 +32,7 @@ Simplement, l’algorithme de Newton permet de trouver les zéros d’une foncti
 </div>
 
 
-Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un algorithme qui, à priori, semble assez clair et prévisible peut avoir un comportement complètement non trivial et produire une structure qui semble aléatoire, mais qui est pourtant bien ordonnée, car elle se répétant à l'infini.
+Au-delà du fait que ce soit très joli, ça m’évoque surtout que même un algorithme qui, à priori, semble assez clair et prévisible peut avoir un comportement complètement non trivial et produire une structure qui semble aléatoire, mais qui est pourtant bien ordonnée, car se répétant à l'infini.
 
 Les images sont tirées des sites [https://ryhl.io/blog/newton-intro/](https://ryhl.io/blog/newton-intro/) et [https://paulbourke.net/fractals/newtonraphson/](https://paulbourke.net/fractals/newtonraphson/)
 
