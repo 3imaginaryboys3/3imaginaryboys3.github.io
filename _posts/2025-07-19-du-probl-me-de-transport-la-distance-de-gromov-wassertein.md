@@ -31,7 +31,7 @@ En reprenant l’analogie des tas de sable, il nous faut trouver une manière de
 Dans le cas d’une distribution discrète (c’est à dire prenant un nombre fini, raisonnable de valeurs) on considèrera des mesures de la forme 
 $$\alpha \in \mathcal{M}(X)$$
 $$\alpha = \sum_{i=1}^{n} a_i \delta{x_i} $$
-→ où $\delta(x_i)$ est défini une masse de dirac, c'est à dire $\delta{x_i} = 1 $ si $x = x_i$ et 0 sinon, pour $ \forall x \in X \subset \mathbb{R^n}$
+→ où $\delta(x_i)$ est défini une masse de dirac, c'est à dire $\delta{x_i} = 1 $ si $x = x_i$ et 0 sinon, pour $ \forall x \in X \subset \mathbb{R}^n$
 
 Dans le cas plus général notre tas de sable sera représenté comme une densité $\rho_\alpha(x)$ définie par rapport à la mesure de Lebesgue et vérifiant la relation
 
