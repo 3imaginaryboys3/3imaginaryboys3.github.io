@@ -4,6 +4,7 @@ show: 'true'
 author: chems
 layout: old_internet
 logo: Perso_Chems.png
+subtitle: Comme l’absence d’une vision "relative" des choses
 ---
 ## Les gens qui se prennent au sérieux
 
@@ -40,4 +41,3 @@ Sinon j’ai acheté des Actimels et j’écris ce post en tabassant le paquet, 
 
 
 PS : J'ai pensé à prendre l'exemple facile de l'inspiration artistique et des tendances mais je trouvais que ça ne capturais que trop mal un concept que je veux vraiment plus général, c'est aussi pour ça que j'ai préféré des termes assez larges.
-
