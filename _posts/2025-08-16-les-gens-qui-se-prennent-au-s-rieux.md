@@ -24,7 +24,7 @@ J’entends enfaite par “se prendre au sérieux” le fait profondément et in
 
 Je pense raisonnable dire que à chacun de ces concepts peut-être associé une fonction et que la manière dont sont définis les concepts et la manière dont la fonction est mise en place pour passer du concept à son but n’est pas une chose absolue en soit. Alors on pourrait faire du cas par cas et quantifier la pertinence de la manière dont l’objet et la fonction permettent de réaliser l’objectif mais ce que je veux plutôt souligner c’est cet acte inconscient d’accepter à la fois l’objet et la fonction sans en considérer sa dimension totalement relative. 
 
-Et j’en viens à celà : au fil du temps, il me semble de plus en plus que la créativité est un attribut important, même fondamental. 
+Et j’en viens à celà : au fil du temps, il me semble de plus en plus que **la créativité** est un attribut important, même fondamental. 
 
 J’écris ceci car je pense que se prendre au sérieux est une atteinte directe à sa créativité. C’est s’enfermer soit même dans une prison sans le savoir.
 
