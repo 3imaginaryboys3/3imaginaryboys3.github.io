@@ -208,3 +208,14 @@ Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une 
 Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai au moins une idée à peine plus élaborée de ce que représente une mesure haha.
 
  Le contenu de ce post est grandement inspiré du livre "Computational Optimal Transport" de G.Peyré et M.Cuturi
+ 
+ 
+ 
+<figure>
+  <img src="{{site.baseurl}}/assets/img/ot_geodesic.gif" alt="Géodésique Wasserstein" width="70%">
+  <figcaption></figcaption>
+</figure>
+
+ 
+ 
+ 
