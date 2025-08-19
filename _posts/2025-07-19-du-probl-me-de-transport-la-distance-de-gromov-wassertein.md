@@ -210,7 +210,7 @@ Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et 
  Le contenu de ce post est grandement inspiré du livre "Computational Optimal Transport" de G.Peyré et M.Cuturi
  
 <br><br>
-Edit 19/08 : Je m'amusais à faire des animations de transformations optimales (géodésiques) d'une mesure à une autre. Voilà pour illustrer un "transport optimal" entre un "gros tas de sable" et plusieurs "petits autres tas de sable (ou trous mais là en l'occurence ils sont dans le mauvais sens)"
+Edit 19/08/2025 : Je m'amusais à faire des animations de transformations optimales (géodésiques) d'une mesure à une autre. Voilà pour illustrer un "transport optimal" entre un "gros tas de sable" et plusieurs "petits autres tas de sable (ou trous mais là en l'occurence ils sont dans le mauvais sens)"
 <figure>
   <img src="{{site.baseurl}}/assets/img/plutotpasmal.gif" alt="Géodésique Wasserstein" width="70%">
   <figcaption></figcaption>
