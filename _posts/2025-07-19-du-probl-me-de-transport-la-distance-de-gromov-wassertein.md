@@ -212,10 +212,6 @@ Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et 
 <br><br>
 Edit 19/08 : Je m'amusais à faire des animations de transformations optimales (géodésiques) d'une mesure à une autre. Voilà pour illustrer un "transport optimal" entre un "gros tas de sable" et plusieurs "petits autres tas de sable"
 <figure>
-  <img src="{{site.baseurl}}/assets/img/ot_geodesic.gif" alt="Géodésique Wasserstein" width="70%">
+  <img src="{{site.baseurl}}/assets/img/plutotpasmal.gif" alt="Géodésique Wasserstein" width="70%">
   <figcaption></figcaption>
 </figure>
-
- 
- 
- 
