@@ -12,8 +12,8 @@ Si j’en extrait des bouts peut-être, c’est déjà une réécriture, voilà.
 
 04/05
 cassé le bras, mon quotidien de nerd érudit est légitime. j’étends mon Obsidian.
-05/05
 
+05/05
 *"Seigneur dieu de mon salut je crie jour et nuit en ta présence 
 Que ma prière parvienne jusqu'à’ toi prête l’oreille à mes plaintes,
 Car mon âme est rassasiée de maux, et ma vie s’approche au séjour des morts,
