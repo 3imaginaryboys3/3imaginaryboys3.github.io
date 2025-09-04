@@ -1,5 +1,5 @@
 ---
-title: journaling curation 1
+title: Journaling curation 1
 show: 'true'
 author: maxime
 subtitle: mai & juin
