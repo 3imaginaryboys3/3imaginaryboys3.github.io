@@ -183,28 +183,6 @@ Intuitivement, Gromov revient à chercher dans chaque espace respectif à quel p
 
 ## Miscellaneous
 
-Les distances de Wasserstein, de Gromov et les autres dérivée de la théorie du transport optimal ont plein d'applications notamment en traitement d'image et Machine Learning. J'ai d'ailleurs trouvé quelques images marrantes qui suivent ce principe : 
-
-
-<figure>
-  <img src="{{site.baseurl}}/assets/img/optimal-transport-3d-interpolation.png" alt="3D interpolation" width="50%">
-  <figcaption>Sûrement une déformation qui minimise la distance entre les deux objets</figcaption>
-</figure>
-
-<figure>
-  <img src="{{site.baseurl}}/assets/img/images.jpeg" alt="Bouddha" width="50%">
-  <figcaption>Projection de Bouddha sur un disque</figcaption>
-</figure>
-
-
-
-Aussi j'ai hésité à mettre cette image là dans l'intro afin d'illustrer une mesure discrète faite de masses de Dirac, genre qu'est ce qui leur a pris mdrrr ?
-
-<figure>
-  <img src="{{site.baseurl}}/assets/img/8989b6acf5d468d89b6acf5d45199bv-960x640.jpg" alt="Distribution de sable" width="50%">
-  <figcaption></figcaption>
-</figure>
-
 Il y a quasiment un an jour pour jour, je faisais un stage dans le labo DOLA et ce jour là il n'y avait que moi et Alex (un post-doc) présent au labo. A la pause midi, il m'expliquait en quoi consistait ses recherches, je me rappellle n'y avoir quasiment rien compris, il travaillait sur des problèmes de transport optimal. Je suis content d'y voir légèrement plus clair maintenant. Si on reprenait la discussion aujourd'hui j'aurai au moins une idée à peine plus élaborée de ce que représente une mesure haha.
 
  Le contenu de ce post est grandement inspiré du livre "Computational Optimal Transport" de G.Peyré et M.Cuturi
