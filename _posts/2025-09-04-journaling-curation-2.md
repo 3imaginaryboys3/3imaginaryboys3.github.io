@@ -18,6 +18,7 @@ Pouvoir magique du repas: tout le monde croit – Je dirais constate, puisque j�
 *Perhaps the World Ends Here*
 
 \* Après en avoir discuté avec M, la sacralité s’est peut être simplement déplacée, fécale, dans les flux, la transmission plutôt que qu’en des lieux, des points clés. (Baudrillard, Simondon)
+
 Herbes aromatiques, thé, théière, bouillon, kombucha, recette de pain, marché, brocante.
 
 18/07
