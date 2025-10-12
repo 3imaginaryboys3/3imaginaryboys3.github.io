@@ -1,5 +1,5 @@
 ---
-title: Post 2 Noé Petrouchka d'Igor Stravinsky
+title: Petrouchka d'Igor Stravinsky
 show: 'true'
 author: Noé
 subtitle: 'Exposé sur Petrouchka, sans nécéssité d''être musicien.ne pour lire'
@@ -80,9 +80,9 @@ J'espère que ce post vous donnera envie d'écouter l'oeuvre dans son entiereté
 
 <https://www.radiofrance.fr/francemusique/podcasts/musicopolis/1911-igor-stravinsky-compose-petrouchka-5854510>
 
-<https://www.youtube.comwatchv=t0rtlQz9q3U&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjY>
-
 <https://www.radiofrance.fr/francemusique/podcasts/igor-stravinsky-chroniques-de-sa-vie>
+
+https://www.youtube.com/watch?time_continue=3&v=7Vrm1DrCWyU&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjY
 
 
 
