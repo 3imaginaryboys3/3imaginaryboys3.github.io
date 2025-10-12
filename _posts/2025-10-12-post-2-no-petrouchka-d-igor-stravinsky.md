@@ -80,9 +80,11 @@ J'espère que ce post vous donnera envie d'écouter l'oeuvre dans son entiereté
 
 <https://www.radiofrance.fr/francemusique/podcasts/musicopolis/1911-igor-stravinsky-compose-petrouchka-5854510>
 
-<https://www.youtube.com/watch?v=t0rtlQz9q3U&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjY>
+<https://www.youtube.comwatchv=t0rtlQz9q3U&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjY>
 
-[_https://www.youtube.com/watch?v=t0rtlQz9q3U&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjY_](https://www.youtube.com/watch?v=t0rtlQz9q3U&embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjY)\*
+<https://www.radiofrance.fr/francemusique/podcasts/igor-stravinsky-chroniques-de-sa-vie>
+
+
 
 A dans 6 mois public, mon amour.
 
