@@ -2,7 +2,7 @@
 title: Petrouchka d'Igor Stravinsky
 show: 'true'
 author: Noé
-subtitle: 'Exposé sur Petrouchka, sans nécéssité d''être musicien.ne pour lire'
+subtitle: 'Exposé sur Petrouchka, sans nécessité d''être musicien.ne pour lire'
 layout: old_internet
 logo: Perso_Noé.png
 ---
@@ -12,7 +12,8 @@ Cher.es lecteurs, lectrices, belges, belges, monsieur le président, monsieur le
 
 Et oui, je pourrais vous dire qu'après un premier post, j'avais besoin de vacances, d'une pause de 5 mois bientôt, pour trouver l'inspiration, pour envoyer un second classique à propos de cette crise existentielle qu'on traverse tous, mais il n'en est rien. (si vous n'avez pas compris je vous renvoie à la lecture de mon premier post sur ce blog, ou blogue). Public, si je n'ai rien écrit, c'est parce que tu ne m'as pas manqué, je m'explique. Ecrire le premier moment de vie a été un véritable exutoire, et m'a inspiré beaucoup d'autres posts qui ont mûri dans ma tête, mais rien n'a transcendé la paresse qui m'empêche de les écrire. Il a fallu que je déclare à monsieur Hamdi (preuve à l'appui) que « Je suis un moins que rien si ce soir avant minuit vous n'avez de mes nouvelles sur ce blog ! »
 
-Ainsi, avant de vous embarquer dans la suite de mes pérégrinations au travers de mes souvenirs je souhaite vous divertir, avec l'aide d'un pantin boiteux et moche : le fameux Petrouchka d'Igor Stravinsky.
+Ainsi, avant de vous embarquer dans la suite de mes pérégrinations au travers de mes souvenirs je souhaite vous divertir, avec l'aide d'un pantin boiteux et moche : le fameux Petrouchka d'Igor Stravinsky. 
+Certains termes sont destinés à des personnes maîtrisant le vocabulaire de la musique de tradition européenne de conservatoire, néanmoins j'ai essayé de vulgariser la plupart des éléments pour les rendre compréhensible pour des lecteur.ices non-initiée.es ! 
 
 Dans le cadre de mon cours d'analyse 2ème année au conservatoire régional de Paris (CRR), classe d'Aurélie Bouchard, j'ai réalisé un exposé sur cette œuvre. Ainsi, pouvons nous en tirer un support sur lequel s'appuyer durant la lecture de ce post : je vais en effet apporter des compléments d'informations et des explications pour essayer de répondre à une question posée.
 
