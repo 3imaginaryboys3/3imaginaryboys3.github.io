@@ -15,20 +15,22 @@ Je crois que ce qui m’a pris le plus de temps pour ce post au final,c’était
 « Il est neuf heures du soir et tous les cul-cirés de la planète sont vautrés dans leurs pantoufles en sirotant leur xérès, mais pendant ce temps là ceux qui aiment le rock’n roll vont encore une fois monter dans le grand huit du rock ! Vous écoutez radio rock, Je suis le comte et je compte sur vous pour le compte à rebours vers l’extase, _All day, and all of the Night »_
   
 <iframe 
-        style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/1mfV2kv9RwFKVI8kEQlmOJ?utm_source=generator" 
-        width="100%" 
-        height="352" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy">
+  style="border-radius:12px; margin: 2rem 0;" 
+  src="https://open.spotify.com/embed/track/1mfV2kv9RwFKVI8kEQlmOJ?utm_source=generator" 
+  frameBorder="0" 
+  allowfullscreen="" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="lazy"
+  width="50%" 
+  height="100" 
+  frameborder="0" 
+  allowfullscreen>
 </iframe>
 
 
 J’espère sincèrement que comme moi, vous trouvez que ça en jette. A part ça, je sais ce que vous vous dites, « toujours ce même style vaseux et ces longueurs.. » Et je n’oserais vous contredire : voilà bien longtemps que je parle sans être entré dans le vif du sujet : mais que voulez vous, quand on passe d’un post par semestre, à un tous les 10 jours, il faut savoir broder, se faire désirer…
 
-Evidemment, avant de commencer, pour que cela vous paraisse un tant soit peu cohérent, je vous renvoie à la lecture de mon [_prélude](https://3imaginaryboys3.github.io/2025/05/25/your-filename.html)_,_si ce n’est pas déjà fait.
+Evidemment, avant de commencer, pour que cela vous paraisse un tant soit peu cohérent, je vous renvoie à la lecture de mon [_prélude_](https://3imaginaryboys3.github.io/2025/05/25/your-filename.html)_,_si ce n’est pas déjà fait.
 
 Le premier souvenir que j’aimerais vous raconter, c’est celui d’une journée vécue il n’y a pas si longtemps, c’est étonnant d’en parler là parce qu’au final j’en garde pour le moment une trace plus ou moins intacte dans les tiroirs/couloirs de mon crâne. Je vais essayer de le raconter avec fidélité, sans rien exagérer, certain.es trouvent que j’ai tendance à maxer un peu les anecdotes et ça les agace. Ils ont raison, c’est souvent vrai. Mais dans cette mégalomanie folle qui me pousse à écrire, je fais un pacte avec vous lecteur.ices, tout ce que je raconte sur ce blog est 4real.
 
