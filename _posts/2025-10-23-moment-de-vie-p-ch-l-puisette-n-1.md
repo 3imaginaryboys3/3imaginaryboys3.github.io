@@ -15,16 +15,13 @@ Je crois que ce qui m’a pris le plus de temps pour ce post au final,c’était
 « Il est neuf heures du soir et tous les cul-cirés de la planète sont vautrés dans leurs pantoufles en sirotant leur xérès, mais pendant ce temps là ceux qui aiment le rock’n roll vont encore une fois monter dans le grand huit du rock ! Vous écoutez radio rock, Je suis le comte et je compte sur vous pour le compte à rebours vers l’extase, _All day, and all of the Night »_
   
 <iframe 
-  style="border-radius:12px; margin: 2rem 0;" 
-  src="https://open.spotify.com/embed/track/1mfV2kv9RwFKVI8kEQlmOJ?utm_source=generator" 
-  frameBorder="0" 
-  allowfullscreen="" 
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-  loading="lazy"
-  width="50%" 
-  height="100" 
-  frameborder="0" 
-  allowfullscreen>
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/1mfV2kv9RwFKVI8kEQlmOJ?utm_source=generator" 
+        width="50%" 
+        height="352" 
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
 </iframe>
 
 
