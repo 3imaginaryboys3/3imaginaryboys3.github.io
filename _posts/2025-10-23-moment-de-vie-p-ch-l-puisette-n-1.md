@@ -28,7 +28,7 @@ Je crois que ce qui m’a pris le plus de temps pour ce post au final,c’était
 
 J’espère sincèrement que comme moi, vous trouvez que ça en jette. A part ça, je sais ce que vous vous dites, « toujours ce même style vaseux et ces longueurs.. » Et je n’oserais vous contredire : voilà bien longtemps que je parle sans être entré dans le vif du sujet : mais que voulez vous, quand on passe d’un post par semestre, à un tous les 10 jours, il faut savoir broder, se faire désirer…
 
-Evidemment, avant de commencer, pour que cela vous paraisse un tant soit peu cohérent, je vous renvoie à la lecture de mon [_prélude_](https://3imaginaryboys3.github.io/2025/05/25/your-filename.html)_,_si ce n’est pas déjà fait.
+Evidemment, avant de commencer, pour que cela vous paraisse un tant soit peu cohérent, je vous renvoie à la lecture de mon [_prélude_](https://3imaginaryboys3.github.io/2025/05/25/your-filename.html) si ce n’est pas déjà fait.
 
 Le premier souvenir que j’aimerais vous raconter, c’est celui d’une journée vécue il n’y a pas si longtemps, c’est étonnant d’en parler là parce qu’au final j’en garde pour le moment une trace plus ou moins intacte dans les tiroirs/couloirs de mon crâne. Je vais essayer de le raconter avec fidélité, sans rien exagérer, certain.es trouvent que j’ai tendance à maxer un peu les anecdotes et ça les agace. Ils ont raison, c’est souvent vrai. Mais dans cette mégalomanie folle qui me pousse à écrire, je fais un pacte avec vous lecteur.ices, tout ce que je raconte sur ce blog est 4real.
 
