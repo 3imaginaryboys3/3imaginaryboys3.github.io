@@ -19,7 +19,8 @@ Je crois que ce qui m’a pris le plus de temps pour ce post au final,c’était
         src="https://open.spotify.com/embed/track/1mfV2kv9RwFKVI8kEQlmOJ?utm_source=generator" 
         width="50%" 
         height="352" 
-        frameBorder="0" allowfullscreen=""
+        frameBorder="0" 
+        allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy">
 </iframe>
