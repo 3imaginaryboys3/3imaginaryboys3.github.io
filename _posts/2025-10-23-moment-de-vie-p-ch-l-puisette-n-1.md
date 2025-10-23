@@ -18,7 +18,7 @@ Je crois que ce qui m’a pris le plus de temps pour ce post au final,c’était
         style="border-radius:12px" 
         src="https://open.spotify.com/embed/track/1mfV2kv9RwFKVI8kEQlmOJ?utm_source=generator" 
         width="50%" 
-        height="352" 
+        height="100" 
         frameBorder="0" 
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
