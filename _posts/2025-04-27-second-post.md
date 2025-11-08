@@ -4,7 +4,7 @@ title: Ohlalala deuxième post ou quoi
 subtitle: Ceci est une description
 logo: Perso_Chems.png
 layout: old_internet
-show: 'true'
+show: 'false'
 ---
 
 
