@@ -1,6 +1,6 @@
 ---
 title: Pensées en vrac
-show: 'false'
+show: 'true'
 author: chems
 layout: old_internet
 logo: Perso_Chems.png
@@ -26,4 +26,7 @@ LE SKATE VA REVENIR ! mdrrrr, j'ai remis tre et après je me suis ramassé. Je m
 
 Ptetre qu'au prochain post j'apprendrai quelque chose. Mais au final je m'en fout d'apprendre, c'est pas ça qui m'intéresse, à la limite je profite de l'illusion. Moi je veux découvrir de beaux paysages et les dessiner, mais mes outils ne sont pas assez bons. Pas encore, j'aimerai ne pas me contenter de l'annecdote.
 
-
+<figure>
+  <img src="{{site.baseurl}}/assets/img/scraggy.gif" alt="scraggy" width="70%">
+  <figcaption></figcaption>
+</figure>
