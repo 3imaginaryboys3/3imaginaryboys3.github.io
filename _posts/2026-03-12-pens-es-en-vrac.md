@@ -7,10 +7,12 @@ logo: Perso_Chems.png
 ---
 
 - C'est traverser ce tunnel, mais cette fois on a libéré les yeux et finalement on y voit plus rien. 
+
 - Et t'as personne à qui vraiment parler ou personne à aimer.
+
 - Mais on continue à marcher n'est-ce pas ? Bah ouais sinon on meurt
 
-Mais j'ai mal à la tête et je vois flou
+- Mais j'ai mal à la tête et je vois flou
 
 - Je continue à boire mon café, alors ça va ? 
 - Et tant que je dis bonjour aux gens alors ça va. 
