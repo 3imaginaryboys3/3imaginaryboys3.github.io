@@ -8,7 +8,8 @@ logo: Perso_Chems.png
 
 - C'est traverser ce tunnel, mais cette fois on a libéré les yeux et finalement on y voit plus rien. 
 - Et t'as personne à qui vraiment parler ou personne à aimer.
-- Mais on continue à marcher n'est-ce pas ? Bah ouais sinon on meurt 
+- Mais on continue à marcher n'est-ce pas ? Bah ouais sinon on meurt
+
 Mais j'ai mal à la tête et je vois flou
 
 - Je continue à boire mon café, alors ça va ? 
@@ -27,6 +28,6 @@ LE SKATE VA REVENIR ! mdrrrr, j'ai remis tre et après je me suis ramassé. Je m
 Ptetre qu'au prochain post j'apprendrai quelque chose. Mais au final je m'en fout d'apprendre, c'est pas ça qui m'intéresse, à la limite je profite de l'illusion. Moi je veux découvrir de beaux paysages et les dessiner, mais mes outils ne sont pas assez bons. Pas encore, j'aimerai ne pas me contenter de l'annecdote.
 
 <figure>
-  <img src="{{site.baseurl}}/assets/img/scraggy.gif" alt="scraggy" width="70%">
+  <img src="{{site.baseurl}}/assets/img/scraggy.gif" alt="scraggy" width="20%">
   <figcaption></figcaption>
 </figure>
