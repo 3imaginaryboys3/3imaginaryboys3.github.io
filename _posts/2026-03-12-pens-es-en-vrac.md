@@ -1,6 +1,6 @@
 ---
 title: Pensées en vrac
-show: 'true'
+show: 'false'
 author: chems
 layout: old_internet
 logo: Perso_Chems.png
