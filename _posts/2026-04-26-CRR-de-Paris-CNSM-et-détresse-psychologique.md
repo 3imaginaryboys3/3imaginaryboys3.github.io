@@ -1,4 +1,3 @@
-<!-- Ceci est un commentaire, utiliser ces balises pour donner des indications-->
 ---
 title: CRR de Paris, CNSM et détresse psychologique
 show: 'true' 
@@ -6,9 +5,6 @@ author: Noé
 layout: old_internet 
 logo: Perso_Noé.png 
 ---
-<!-- Ici, directement écrire le texte -->
-
-  
 
 Chères lectrices, chers lecteurs, j’espère que vous allez bien. Vous n’avez sans doute pas espéré de mes nouvelles, pas plus que celles d’un autre rédacteur ou rédactrice de ce weblog, mais, en cette matinée du 26 Avril 2025, j’ai la chance de cumuler 2 facteurs essentiels selon moi pour écrire :
 
