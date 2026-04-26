@@ -3,10 +3,9 @@
 title: CRR de Paris, CNSM et détresse psychologique
 show: 'true' 
 author: Noé 
-layout: old_internet <!-- Pour l'instant seulement ce layout est dispo -->
-logo: Perso_Noé.png <!-- Perso_Chems.png Perso_Noé.png Perso_Cla.png Perso_Max.png -->
+layout: old_internet 
+logo: Perso_Noé.png 
 ---
-
 <!-- Ici, directement écrire le texte -->
 
   
