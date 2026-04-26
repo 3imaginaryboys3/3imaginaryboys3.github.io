@@ -30,7 +30,7 @@ layout: default
         {% if track.ref %}
         <a href = "{{ track.ref }}" ><p>{{ track.artist }}</p></a>
         {% else %}
-        <h2>{{ track.artist }}</h2>
+        <p>{{ track.artist }}</p>
         {% endif %}
         {% if track.subtitle %}
         <p>{{ track.subtitle }}</p>
