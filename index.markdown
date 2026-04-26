@@ -26,11 +26,14 @@ layout: default
         <img src="{{ track.cover }}" alt="{{ track.title }} album cover" width="150" height="150">
       </div>
       <div class="track-info">
-        <h4>{{ track.title }}</h4>
+        <h3>{{ track.title }}</h3>
         {% if track.ref %}
         <a href = "{{ track.ref }}" ><p>{{ track.artist }}</p></a>
         {% else %}
-        <p>{{ track.artist }}</p>
+        <h2>{{ track.artist }}</h2>
+        {% endif %}
+        {% if track.subtitle %}
+        <p>{{ track.subtitle }}</p>
         {% endif %}
         <audio controls>
           <source src="{{ track.audio }}" type="audio/mpeg">
