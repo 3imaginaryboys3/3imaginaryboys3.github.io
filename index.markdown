@@ -26,11 +26,9 @@ layout: default
         <img src="{{ track.cover }}" alt="{{ track.title }} album cover" width="150" height="150">
       </div>
       <div class="track-info">
-        <h3>{{ track.title }}</h3>
+        <h3>{{ track.title }} - <span>{{ track.artist }}</span></h3>
         {% if track.ref %}
         <a href = "{{ track.ref }}" ><p>{{ track.artist }}</p></a>
-        {% else %}
-        <p>{{ track.artist }}</p>
         {% endif %}
         {% if track.subtitle %}
         <p>{{ track.subtitle }}</p>
