@@ -6,7 +6,7 @@ subtitle : '3 ans de scolarité dans un établissement toxique'
 layout: old_internet 
 logo: Perso_Noé.png 
 ---
-#CRR de Paris, CNSM et détresse psychologique
+## CRR de Paris, CNSM et détresse psychologique
 
 Chères lectrices, chers lecteurs, j’espère que vous allez bien. Vous n’avez sans doute pas espéré de mes nouvelles, pas plus que celles d’un autre rédacteur ou rédactrice de ce weblog, mais, en cette matinée du 26 Avril 2025, j’ai la chance de cumuler 2 facteurs essentiels selon moi pour écrire :
 
