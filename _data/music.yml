@@ -1,5 +1,5 @@
-- title: "Wuthering Heights"
-  artist: "Kate Bush"
+- title: "Castelmaure"
+  artist: "Flavien Berger"
   ref : #
-  cover: "assets/img/katebush.jpg"
-  audio: " assets/audio/WutheringHeights.mp3 "
+  cover: "assets/img/castelmaure.jpeg"
+  audio: " assets/audio/Castelmaure.mp3 "
