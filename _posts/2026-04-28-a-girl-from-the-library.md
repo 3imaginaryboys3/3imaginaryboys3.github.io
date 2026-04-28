@@ -21,7 +21,7 @@ En naviguant une littérature peu théorique de l’IA je me suis vraiment fait 
 
 J’aime l’idée de créer une sorte de groupe aligné, une sorte de *Kawiarnia Szkocka* (en plus j’adore le café), mais c’est encore flou.
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;">
   <img src="/assets/img/unil.png" style="width: 50%;">
   <img src="/assets/img/scraggy.gif" style="width: 20%;">
 </div>
