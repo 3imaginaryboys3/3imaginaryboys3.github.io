@@ -1,6 +1,6 @@
-- title: "Castelmaure"
-  artist: "Flavien Berger"
-  subtitle: "(50 secondes d'intro mais je vous assure que c'est un classique)"
+- title: "Des excuses"
+  artist: "Pomme"
+  subtitle: "On m'a fait découvrir pomme et j'aime beaucoup"
   ref : # 
-  cover: "assets/img/castelmaure.jpg"
-  audio: " assets/audio/Castelmaure.mp3 "
+  cover: "assets/img/pomme.png"
+  audio: " assets/audio/des excuses.mp3 "
