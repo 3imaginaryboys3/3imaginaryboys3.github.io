@@ -9,7 +9,7 @@ logo: Perso_Chems.png
 
 Le titre est là pour faire du clic (à notre échelle mdrrr) parce que j'ai remarqué que Pretty Rave Girl avait justement fait plus de clic que mes autres posts, on verra si cette tendance se confirme. 
 
-Initialement, j’avais prévu de préparer le TP de télécom ou bien de faire les exos sur les produits libres amalgamés mais finalement le TP n’est pas encore dispo. Et je ferais les exos après.
+Initialement, j’avais prévu de préparer le TP de télécom ou bien de faire les exos sur les produits libres amalgamés mais finalement le TP n’est pas encore dispo. Et je ferai les exos après.
 
 Il y a déjà un certain nombre de semaines, le bâtiment de la RTS (Radio Télévision Suisse), situé juste à côté de la bibliothèque, à été mis en service. J’ai pas encore réussi à tout visiter, notamment à m’introduire à l’étage du haut car il nécessite un badge et je suis pas vraiment un employé de la télé. J’attends donc très passivement qu’une occasion se présente. J’aime bien tout de même m’incruster dans leur cafétéria, le café est pas terrible mais les croissants sont moins chers. Je n’y ai jamais vu aucun étudiant (et je compte bien gate-keep le spot), seulement des employés, cinquantenaires qui ont comme des discussions de lycéens de 50 ans. En gros on pourrait y distinguer les populaires, les faux-culs, les commères, les moins populaires, mais ptêtre que je force l’analyse. Quand j’y passe je profite également des toilettes, ou plutôt du complexe sanitaire de la RTS, je place très facilement celles-ci parmi les meilleures du campus.
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
