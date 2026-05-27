@@ -1,6 +1,6 @@
-- title: "Des excuses"
-  artist: "Pomme"
-  subtitle: "On m'a fait découvrir pomme et j'aime beaucoup"
+- title: "The Happy Dictator"
+  artist: "Gorillaz"
+  subtitle:
   ref : # 
-  cover: "assets/img/pomme.png"
-  audio: " assets/audio/des excuses.mp3 "
+  cover: "assets/img/gorillaz.png"
+  audio: " assets/audio/gorillaz.mp3 "
