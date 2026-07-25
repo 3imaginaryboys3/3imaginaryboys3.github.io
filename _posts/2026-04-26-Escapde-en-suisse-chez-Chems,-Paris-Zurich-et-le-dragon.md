@@ -1,6 +1,6 @@
 ---
 title: Escapade en suisse chez Chems, Paris-Zurich, et le dragon
-show: 'true' 
+show: 'false' 
 author: Noé 
 subtitle : 'Les dragons existent-ils ?'
 layout: old_internet 
