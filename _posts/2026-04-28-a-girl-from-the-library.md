@@ -1,5 +1,5 @@
 ---
-title: Pretty librairy girl
+title: Pretty library girl
 show: 'true'
 subtitle: Non ils n'existent pas à priori
 author: chems
