@@ -31,7 +31,7 @@
         {%- if page.subtitle %}
         <p class="sub">{{ page.subtitle }}</p>
         {%- endif %}
-        <p class="posted">publié le <b>{{ page.date | date: "%Y-%m-%d" }}</b>{% if page.author %} par {{ page.author }}{% endif %}</p>
+        <!-- <p class="posted">publié le <b>{{ page.date | date: "%Y-%m-%d" }}</b>{% if page.author %} par {{ page.author }}{% endif %}</p> -->
         <hr class="rule">
 
         <div class="prose">
@@ -80,8 +80,6 @@
       </section>
 
       <footer class="foot">
-        <p>{{ site.title }}, écrit par chemslepro, 3vasily, blueboy, gary et ?</p>
-        <p><a href="{{ '/feed.xml' | relative_url }}">flux atom</a> · <a href="#">haut de page</a></p>
       </footer>
     </div>
   </main>
