@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap");
+
+/* Gabarit minimal (layout: minimal)
+   Une colonne de texte à chasse fixe d'environ 64 caractères, rien d'autre que le texte,
+   et une couverture tramée en 1 bit un peu plus large que la colonne.
+   Pour changer de palette, il suffit de modifier les cinq couleurs ci-dessous. */
+body.min{
+  --bg:#efefef;      /* fond */
+  --text:#1c1c1c;    /* texte, liens et titres */
+  --dim:#666666;     /* texte secondaire */
+  --rule:#cfcfcf;    /* filets et bordures */
+  --code:#e3e3e3;    /* fond des blocs de code */
+  --font:"Fira Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;
+
+  margin:0;
+  padding:0 24px 56px;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:16px;
+  line-height:1.35;
+  -webkit-text-size-adjust:100%;
+}
+
+/* Variante sépia : décommenter pour essayer
+body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e9dcc0; }
+*/
+
+.min ::selection{background:var(--text); color:var(--bg)}
+.min a{color:inherit; text-decoration:underline; text-underline-offset:2px}
+.min a:hover{background:var(--text); color:var(--bg); text-decoration:none}
+.min :focus-visible{outline:2px dashed var(--text); outline-offset:2px}
+
+/* main.css donne une police aux h3 : on la neutralise ici */
+.min h1,.min h2,.min h3,.min h4{font-family:inherit; color:inherit}
+
+.min .col{max-width:64ch; margin:0 auto}
+.min .wide{max-width:820px; margin:0 auto}
+
+/* En-tête */
+.min .top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 18px; padding:28px 0 0}
+.min .site{font-weight:700; text-decoration:none}
+.min .nav{display:flex; flex-wrap:wrap; gap:6px 16px}
+
+/* Couverture tramée : les pixels restent nets à l'agrandissement */
+.min .cover{
+  display:block; width:100%; height:auto;
+  aspect-ratio:16 / 7; object-fit:cover; object-position:50% 55%;
+  margin:28px 0 0;
+  image-rendering:crisp-edges; image-rendering:pixelated;
+}
+
+/* Titre de l'article */
+.min h1{margin:30px 0 8px; font-size:1.6em; line-height:1.2; text-wrap:balance}
+.min .sub{margin:0 0 16px}
+.min .posted{margin:0 0 10px; padding-left:12px}
+.min .rule{height:0; margin:0 0 22px; border:0; border-top:3px solid var(--rule)}
+
+/* Contenu Markdown */
+.min .prose p{margin:0 0 1.15em}
+.min .prose h2{margin:1.6em 0 0.7em; font-size:1.25em; line-height:1.25; text-wrap:balance}
+.min .prose h3{margin:1.4em 0 0.6em; font-size:1.05em; line-height:1.3}
+.min .prose ul,.min .prose ol{margin:1.6em 0; padding-left:4ch}
+.min .prose li{margin:0}
+.min .prose blockquote{margin:1.4em 0; padding:0 0 0 2ch; border-left:3px solid var(--rule); font-style:italic}
+.min .prose img,.min .prose video{max-width:100%; height:auto}
+.min .prose figure{margin:1.4em 0}
+.min .prose figcaption{margin-top:6px; color:var(--dim); font-size:0.9em}
+.min .prose hr{height:0; margin:2em 0; border:0; border-top:3px solid var(--rule)}
+.min .prose code{font-family:inherit; padding:0 0.2em; background:var(--code)}
+.min .prose pre,.min .prose .highlight{margin:1.4em 0; background:var(--code)}
+.min .prose pre{padding:12px 14px; overflow-x:auto; font-size:15px; line-height:1.45}
+.min .prose pre code{padding:0; background:none}
+.min .prose table{border-collapse:collapse; margin:1.4em 0}
+.min .prose th,.min .prose td{padding:4px 10px; border:1px solid var(--rule); text-align:left}
+.min .prose audio{width:100%}
+.min mjx-container{color:inherit}
+
+/* Après l'article */
+.min .after{margin-top:36px}
+.min .pager{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; margin:0 0 30px}
+.min h2.small{margin:0 0 14px; font-size:1.1em}
+.min #cusdis_thread{margin-top:8px}
+.min #cusdis_thread iframe{width:100%; border:0}
+.min .foot{margin-top:44px; padding-top:12px; border-top:3px solid var(--rule); color:var(--dim)}
+.min .foot p{margin:0 0 4px}
+
+/* Sur un écran plus étroit que l'image, la réduire « au pixel près » crée du moiré :
+   on laisse le navigateur la lisser, la trame reste visible. */
+@media (max-width: 767px){
+  .min .cover{image-rendering:auto}
+}
+
+@media (max-width: 640px){
+  body.min{font-size:15px; padding:0 16px 40px}
+  .min h1{font-size:1.45em}
+}

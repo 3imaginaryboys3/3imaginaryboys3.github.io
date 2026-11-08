@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "fr" }}">
+
+{%- include head.html extra_css="minimal.css" -%}
+
+<body class="min">
+  <script>
+    MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+  <header class="col top">
+    <a class="site" href="{{ '/' | relative_url }}">home</a>
+    <nav class="nav" aria-label="Site">
+      <a href="{{ '/' | relative_url }}">accueil</a>
+      <a href="{{ '/about' | relative_url }}">à propos</a>
+      <a href="{{ '/feed.xml' | relative_url }}">flux</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      {%- if page.cover %}
+      <div class="wide">
+        <img class="cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: '' | escape }}">
+      </div>
+      {%- endif %}
+
+      <div class="col">
+        <h1>{{ page.title }}</h1>
+        {%- if page.subtitle %}
+        <p class="sub">{{ page.subtitle }}</p>
+        {%- endif %}
+        <p class="posted">publié le <b>{{ page.date | date: "%Y-%m-%d" }}</b>{% if page.author %} par {{ page.author }}{% endif %}</p>
+        <hr class="rule">
+
+        <div class="prose">
+          {{ content }}
+        </div>
+      </div>
+    </article>
+
+    <div class="col after">
+      {%- comment -%}
+        Articles voisins : même logique que old_internet.html (posts avec show: true, triés par date).
+        Si l'article courant n'est pas dans la liste, on n'affiche pas de navigation.
+      {%- endcomment -%}
+      {%- assign posts = site.posts | where: "show", true | sort: "date" -%}
+      {%- assign current_index = nil -%}
+      {%- for post in posts -%}
+        {%- if post.url == page.url -%}{%- assign current_index = forloop.index0 -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if current_index -%}
+        {%- assign prev_index = current_index | minus: 1 -%}
+        {%- assign next_index = current_index | plus: 1 -%}
+        {%- assign next_post = posts[next_index] -%}
+      <nav class="pager" aria-label="Articles voisins">
+        {%- if current_index > 0 -%}
+          {%- assign prev_post = posts[prev_index] -%}
+        <a href="{{ prev_post.url | relative_url }}">← {{ prev_post.title }}</a>
+        {%- else -%}
+        <span></span>
+        {%- endif -%}
+        {%- if next_post -%}
+        <a href="{{ next_post.url | relative_url }}">{{ next_post.title }} →</a>
+        {%- endif -%}
+      </nav>
+      {%- endif %}
+
+      <section aria-labelledby="comments-title">
+        <h2 class="small" id="comments-title">Commentaires</h2>
+        <div id="cusdis_thread"
+             data-host="https://cusdis.com"
+             data-app-id="140b4ed8-8d4e-4089-9141-ff03b4a4f43e"
+             data-page-id="{{ page.url | slugify }}"
+             data-page-url="{{ page.url | absolute_url }}"
+             data-page-title="{{ page.title | escape }}"
+             data-theme="light">
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>{{ site.title }}, écrit par chemslepro, 3vasily, blueboy, gary et ?</p>
+        <p><a href="{{ '/feed.xml' | relative_url }}">flux atom</a> · <a href="#">haut de page</a></p>
+      </footer>
+    </div>
+  </main>
+
+  <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</body>
+
+</html>
