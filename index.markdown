@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 <section class="posts">
@@ -45,21 +42,20 @@ layout: default
   <h2>Blog</h2>
   {% assign visible_posts = site.posts | where: "show", true | sort: "date" | reverse %}
   {% for post in visible_posts %}
-  <article class="post"> 
-    <h3-post>
-    {% if post.logo %}
-    <img src="{{ '/images/post-logos/' | relative_url }}{{ post.logo }}"  
-        class="post-logo">
-    {% endif %} 
-    <time>{{ post.date | date: "%B %d, %Y" }}</time>
-    {% if post.author %}
-    <author-text>- by {{ post.author }}</author-text>
-    {% endif %}
-    </h3-post>
-    <h3-post>
+  <article class="post">
+    <div class="post-heading">
+      {% if post.logo %}
+      <img src="{{ '/images/post-logos/' | relative_url }}{{ post.logo }}" class="post-logo" alt="">
+      {% endif %}
+      <time>{{ post.date | date: "%B %d, %Y" }}</time>
+      {% if post.author %}
+      <span class="post-author">- by {{ post.author }}</span>
+      {% endif %}
+    </div>
+    <div class="post-heading">
       <a href="{{ post.url }}">{{ post.title }}</a>
-    </h3-post>
-    <p-post>{{ post.subtitle }} </p-post>
+    </div>
+    <p class="post-subtitle">{{ post.subtitle }}</p>
   </article>
   {% endfor %}
 </section>

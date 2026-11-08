@@ -1,0 +1,203 @@
+/* Layout des posts : fenêtre façon Windows 98 */
+
+:root {
+  --win-blue: #000080;
+  --win-gray: #c0c0c0;
+  --win-dark-gray: #808080;
+  --win-white: #ffffff;
+}
+
+.win98-container {
+  background: #ffffff;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  font-family: "Space Mono", monospace;
+}
+
+.paint-frame {
+  background: var(--win-gray);
+  border: 3px solid;
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* ---------- Barre de titre et menu ---------- */
+
+.title-bar {
+  background: #240073;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--win-white);
+  text-shadow: 1px 1px var(--win-blue);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.window-controls span {
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: var(--win-gray);
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+  margin-left: 4px;
+  text-align: center;
+  line-height: 14px;
+  cursor: pointer;
+  color: black;
+}
+
+.menu-bar {
+  background: var(--win-gray);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-item {
+  position: relative;
+  padding: 2px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  background: var(--win-blue);
+  color: var(--win-white);
+}
+
+.retro-header-img {
+  width: 70px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Contenu du post ---------- */
+
+.canvas-container {
+  flex-grow: 1;
+  background: #faf8e0;
+  border: 2px inset;
+  min-height: 500px;
+  padding: 1.5rem;
+  font-family: "Space Mono", monospace;
+  line-height: 1.5;
+  position: relative;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ---------- Navigation précédent / accueil / suivant ---------- */
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  background: var(--win-gray);
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+}
+
+.win98-link {
+  color: var(--win-blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.win98-link:hover {
+  background: var(--win-blue);
+  color: var(--win-white);
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.disabled {
+  color: var(--win-dark-gray);
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Commentaires (Cusdis) ---------- */
+
+.comment-section {
+  background: var(--win-white);
+  border: 2px solid;
+  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-title-bar {
+  background: #040b88;
+  padding: 4px 8px;
+  color: var(--win-white);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cusdis_thread {
+  font-family: "MS Sans Serif", sans-serif;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#cusdis_thread iframe {
+  height: 100% !important;
+  width: 100% !important;
+  border: none !important;
+}
+
+#cusdis_thread input,
+#cusdis_thread textarea {
+  width: 200px !important;
+  padding: 2px !important;
+  margin: 2px 0 !important;
+  font-size: 12px !important;
+}
+
+#cusdis_thread button[type="submit"] {
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  margin: 4px 0 !important;
+}
+
+/* Affiche la liste des commentaires avant le formulaire */
+#cusdis_thread > div {
+  order: 1;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#cusdis_thread form {
+  order: 2;
+  border-top: 2px solid var(--win-dark-gray);
+  padding: 8px;
+  background: var(--win-gray);
+}

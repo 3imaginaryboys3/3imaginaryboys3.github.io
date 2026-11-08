@@ -1,169 +1,18 @@
-<style>
-    .blog-list {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .post-item {
-      margin-bottom: 3rem;
-    }
-    h2 a {
-      color: #333;
-      text-decoration: none;
-      font-size: 1.8rem;
-    }
-    h2 a:hover {
-      color: #007acc;
-    }
-    .subtitle {
-      color: #666;
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
-    .site-header {
-        text-align: center;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        border-bottom: none;
-    }
-    
-    h3 {
-        font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-    }
-    
-    .site-header h1 {
-        font-size: 2.5rem;
-        margin: 0;
-    }
-    .posts {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-      
-    .inpost {
-      max-width: 50%;
-      padding: 15px;
-      margin-bottom: 2rem;
-      background-color: #97c2a9;
-    }
-    .post {
-      margin-bottom: 2rem;
-    }
-    
-    h3-post { 
-      display: block;
-      font-size: 1.17em;
-      margin-left: 0;
-      margin-right: 0; 
-     font-type: bold;
-        
-    }
-
-    time {
-        color: #666;
-        font-size: 0.9rem;
-    }
-    footer {
-        color: #323334;
-        text-align: center;
-        padding: 2rem;
-        margin-top: 4rem;
-    }
-
-    author-text{
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    p-post{
-      display: block;
-      margin-top: 0.6em;
-      margin-bottom: 2em;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    
-    .home {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      
-    .posts h2 {
-        font-size: 1.8rem;
-        margin: 2rem 0;
-    }
-      
-    .post-item {
-        margin-bottom: 2rem;
-    }
-      
-    .post-item time {
-        color: #666;
-        font-size: 0.9rem;
-    }
-    .header-logo {
-      height: 100px; 
-      width: auto;
-    }
-    
-    .post-logo {
-      height: 30px; 
-      width: auto;
-      object-fit: contain;
-    }
-
-    .wrapper{
-      display: flex;
-      justify-content: center;
-    }
-    
-
-
-    .music-section {
-      margin-top: 30px;
-      background: var(--background-alt);
-      border-radius: 8px;
-    }
-    
-    .music-player {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      margin-top: 1rem;
-    }
-    
-    .album-art img {
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-    
-    .album-art img:hover {
-      transform: scale(1.03);
-    }
-    
-    .track-info {
-      flex: 1;
-    }
-    
-    audio {
-      width: 100%;
-      margin-top: 1rem;
-    }
-    
-    audio::-webkit-media-controls-panel {
-      background-color: var(--background);
-    }
-
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | strip_html | escape }} | {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.subtitle | default: site.description | strip_html | normalize_whitespace | escape }}">
+  {%- feed_meta %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {%- if include.extra_css %}
+  <link rel="stylesheet" href="{{ include.extra_css | prepend: '/assets/css/' | relative_url }}">
+  {%- endif %}
+
   {% include analytics.html %}
 </head>

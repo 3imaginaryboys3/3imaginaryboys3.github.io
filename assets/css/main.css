@@ -1,0 +1,117 @@
+/* Styles communs : page d'accueil, header, footer, pages minima (about, 404) */
+
+h3 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: none;
+  background-color: #ffffff;
+}
+
+.header-logo {
+  height: 100px;
+  width: auto;
+}
+
+/* ---------- Liste des posts (accueil) ---------- */
+
+.posts {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.posts h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.post-heading {
+  font-size: 1.17em;
+}
+
+.post-logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+.post-author {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.post-subtitle {
+  margin: 0.6em 0 2em;
+}
+
+/* ---------- Music of the Week ---------- */
+
+.music-section {
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.music-player {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.album-art img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.album-art img:hover {
+  transform: scale(1.03);
+}
+
+.track-info {
+  flex: 1;
+}
+
+audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* ---------- Footer ---------- */
+
+.link-footer {
+  background-color: #ffffff;
+  color: #167217;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.credits {
+  opacity: 0.8;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
