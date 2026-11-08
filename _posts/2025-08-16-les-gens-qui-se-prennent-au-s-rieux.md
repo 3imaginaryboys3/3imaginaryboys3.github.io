@@ -2,7 +2,7 @@
 title: 'Les gens qui se prennent au sérieux '
 show: 'true'
 author: chems
-layout: old_internet
+layout: minimal
 logo: Perso_Chems.png
 subtitle: Comme l’absence d’une vision "relative" des choses
 ---
