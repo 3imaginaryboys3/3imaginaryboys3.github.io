@@ -5,7 +5,7 @@
    et une couverture tramée en 1 bit un peu plus large que la colonne.
    Pour changer de palette, il suffit de modifier les cinq couleurs ci-dessous. */
 body.min{
-  --bg:#efefef;      /* fond */
+  --bg:#ffffff;      /* fond */
   --text:#1c1c1c;    /* texte, liens et titres */
   --dim:#666666;     /* texte secondaire */
   --rule:#cfcfcf;    /* filets et bordures */
