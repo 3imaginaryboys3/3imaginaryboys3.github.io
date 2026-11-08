@@ -1,8 +1,8 @@
 ---
 title: 'Lab, Playground, $tage & Creativity'
-show: 'true'
+show: 'false'
 author: chems
-layout: old_internet
+layout: minimal
 logo: Perso_Chems.png
 ---
 ## Lab, Playground, $tage & Creativity

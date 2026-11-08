@@ -2,7 +2,7 @@
 title: ʕಠᴥಠʔ
 show: 'true'
 author: chems
-layout: old_internet
+layout: minimal
 logo: Perso_Chems.png
 ---
 

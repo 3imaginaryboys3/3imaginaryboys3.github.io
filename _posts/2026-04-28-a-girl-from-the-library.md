@@ -3,7 +3,7 @@ title: Pretty library girl
 show: 'true'
 subtitle: Non ils n'existent pas à priori
 author: chems
-layout: old_internet
+layout: minimal
 logo: Perso_Chems.png
 ---
 
