@@ -16,7 +16,7 @@ layout: default
   </script>
 
   <section class="music-section">
-    <h3>Music of the Week :</h3>
+    <!--<h3>Music of the Week :</h3>-->
     <div class="music-player">
       {% for track in site.data.music %}
       <div class="album-art">
@@ -39,7 +39,7 @@ layout: default
     </div>
   </section>
 
-  <h2>Blog</h2>
+  <!--<h2>Blog</h2>-->
   {% assign visible_posts = site.posts | where: "show", true | sort: "date" | reverse %}
   {% for post in visible_posts %}
   <article class="post">
