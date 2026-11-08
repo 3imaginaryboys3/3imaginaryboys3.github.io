@@ -2,7 +2,7 @@
 title: Du problème de transport à la distance de Gromov-Wassertein
 show: 'true'
 author: chems
-layout: old_internet
+layout: minimal
 logo: Perso_Chems.png
 subtitle: >-
   C’est l’été, vous êtes à la plage et vous vous retrouvez avec un certain
