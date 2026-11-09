@@ -3,7 +3,7 @@ title: CRR de Paris, CNSM et détresse psychologique
 show: 'true' 
 author: Noé 
 subtitle : '3 ans de scolarité dans un établissement toxique'
-layout: old_internet 
+layout: minimal
 logo: Perso_Noé.png 
 ---
 ## CRR de Paris, CNSM et détresse psychologique

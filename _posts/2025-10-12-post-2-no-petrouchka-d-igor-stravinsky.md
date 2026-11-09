@@ -3,7 +3,7 @@ title: Petrouchka d'Igor Stravinsky
 show: 'true'
 author: Noé
 subtitle: 'Exposé sur Petrouchka, sans nécessité d''être musicien.ne pour lire'
-layout: old_internet
+layout: minimal
 logo: Perso_Noé.png
 ---
 ## Post 2 : Petrouchka d'Igor Stravinsky

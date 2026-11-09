@@ -3,7 +3,7 @@ title: "Moment de vie pêché à l’épuisette\_: n°1"
 show: 'true'
 author: Noé
 subtitle: 'Le 1er Mai, cinéma et plénitude'
-layout: old_internet
+layout: minimal
 logo: Perso_Noé.png
 ---
 ## Moment de vie pêché à l’épuisette : n°1

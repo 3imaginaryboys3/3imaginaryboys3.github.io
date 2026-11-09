@@ -2,7 +2,7 @@
 title: Mr. Universe
 show: 'true'
 author: maxime
-layout: old_internet
+layout: minimal
 logo: Perso_Max.png
 ---
 Je voulais parler de Steven Universe, c’est une des choses qui m’a le plus marqué récemment en fait..  

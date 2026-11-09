@@ -2,7 +2,7 @@
 title: 'Premier post : test'
 subtitle: Là on met une description et on fait en sorte que le petit perso soit à coté
 logo: Perso_Chems.png
-layout: old_internet
+layout: minimal
 author: Chems
 show: 'false'
 ---

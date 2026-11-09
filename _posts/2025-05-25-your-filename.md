@@ -2,7 +2,7 @@
 title: 'Prélude, moments de vie pêchés à l''épuisette'
 author: noé
 subtitle: Introduction à la rubrique de mes souvenirs
-layout: old_internet
+layout: minimal
 logo: Perso_Noé.png
 show: 'true'
 ---

@@ -3,7 +3,7 @@ title: funambulisme de nuit
 show: 'true'
 author: cla
 subtitle: ma vie vue par mon cerveau à minuit
-layout: old_internet
+layout: minimal
 logo: Perso_Cla.png
 ---
 ## 1st 

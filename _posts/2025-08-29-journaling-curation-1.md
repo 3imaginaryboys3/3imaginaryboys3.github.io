@@ -3,7 +3,7 @@ title: Journaling curation 1
 show: 'true'
 author: maxime
 subtitle: mai & juin
-layout: old_internet
+layout: minimal
 logo: Perso_Max.png
 ---
 En fait j'écris régulièrement (même si ça se voit pas sur le blog). J’ai un journal zapbook parfait pour mon usage; c'est une activité quotidienne. Le contenu est un peu trop circulaire et trop plaintif pour que je le poste intégralement. Je veux pas avoir l'air trop névrosé haha.

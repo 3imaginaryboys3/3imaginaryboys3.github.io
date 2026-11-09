@@ -3,7 +3,7 @@ title: psalm87LOLcat
 show: 'true'
 author: maxime
 logo: Perso_Max.png
-layout: old_internet
+layout: minimal
 subtitle: J’ai appris aujourd’hui que la bible avait été traduit en LOLcat
 ---
 ## psalm87LOLcat

@@ -3,7 +3,7 @@ title: Journaling curation 2
 show: 'true'
 author: maxime
 subtitle: juillet & aout
-layout: old_internet
+layout: minimal
 logo: Perso_Max.png
 ---
 03/07
