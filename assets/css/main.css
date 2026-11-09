@@ -34,6 +34,9 @@ time {
 /* ---------- Liste des posts (accueil) ---------- */
 
 .posts {
+  /* width: 100% : sans ça, la colonne prend la largeur de son contenu
+     et rétrécit (musique comprise) quand le filtre par auteur masque des posts */
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -103,22 +106,20 @@ time {
 }
 
 .music-player {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
   margin-top: 1rem;
 }
 
-.album-art img {
-  transition: transform 0.3s ease;
-}
-
-.album-art img:hover {
-  transform: scale(1.03);
+/* Un morceau : la pochette à gauche, les infos et les boutons à droite */
+.lecteur {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .track-info {
   flex: 1;
+  min-width: 0;
 }
 
 /* Titre de la musique : police de la page d'accueil (au lieu de DM Serif des h3), en plus petit */
@@ -127,9 +128,156 @@ time {
   font-size: 1rem;
 }
 
-audio {
+/* Lecteur natif : ne sert que si le JavaScript ne se charge pas */
+.lecteur audio {
   width: 100%;
   margin-top: 1rem;
+}
+
+/* La pochette sert aussi de bouton lecture/pause */
+.lecteur-pochette {
+  position: relative;
+  flex: none;
+  width: 150px;
+  height: 150px;
+  margin: 7px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lecteur-pochette img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Le cadre qui fait le tour de la pochette pendant la lecture */
+.lecteur-anneau {
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Épaisseur en unités du dessin (100 de côté) : 1.8 donne environ 3 px autour d'une pochette de 150 px */
+.lecteur-anneau path {
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.lecteur-anneau-fond {
+  stroke: #dddddd;
+}
+
+.lecteur-anneau-avance {
+  stroke: #111111;
+  stroke-dasharray: 0 100;
+}
+
+.lecteur:not(.lecteur-actif) .lecteur-anneau {
+  display: none;
+}
+
+/* Bouton, temps et sauts de 10 s */
+.lecteur-controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  margin-top: 0.75rem;
+}
+
+.lecteur-controles[hidden] {
+  display: none;
+}
+
+.lecteur-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #111111;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lecteur-play svg {
+  width: 18px;
+  height: 18px;
+}
+
+.lecteur .icone-pause,
+.lecteur.lecture .icone-play {
+  display: none;
+}
+
+.lecteur.lecture .icone-pause {
+  display: block;
+}
+
+.lecteur-temps {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lecteur-sauts {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.lecteur-saut {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Survol seulement avec une souris : sur iPhone, il resterait collé après le toucher */
+@media (hover: hover) {
+  .lecteur-saut:hover {
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.lecteur button:focus-visible {
+  outline: 2px dashed #111111;
+  outline-offset: 3px;
+}
+
+.lecteur-pochette:focus-visible {
+  outline-offset: 10px;
+}
+
+@media (max-width: 480px) {
+  .lecteur {
+    gap: 1rem;
+  }
+
+  .lecteur-pochette {
+    width: 112px;
+    height: 112px;
+  }
 }
 
 /* ---------- Footer ---------- */
