@@ -5,13 +5,41 @@ description: >-
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: ""
-url: "" 
+# Adresse complète du site : nécessaire aux commentaires (le Worker vérifie l'adresse de la page).
+url: "https://3imaginaryboys3.github.io"
 twitter_username: jekyllrb
 github_username: Chemslepro
+# Fuseau horaire du site (dates des commentaires).
+timezone: Europe/Paris
 
 theme: minima
 plugins:
   - jekyll-feed
+
+# Fichiers à ne pas publier. comments-worker/ contient le code du Worker Cloudflare
+# (déployé à part avec wrangler) ; les autres lignes reprennent les exclusions par défaut de Jekyll.
+exclude:
+  - comments-worker/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Commentaires (voir comments-worker/README.md).
+comments:
+  # Adresse du Worker, affichée par « npx wrangler deploy », sans / final.
+  endpoint: "https://blog-comments.3imaginaryboys3.workers.dev"
+  # Clé de SITE Cloudflare Turnstile (publique).
+  turnstile_sitekey: "0x4AAAAAAF5_KVO1ttJyDklL"
+  # true : champ e-mail facultatif et avatars Gravatar. false : initiales, aucun e-mail demandé.
+  gravatar: false
+  # true : ferme les commentaires sur tout le site (les commentaires publiés restent visibles).
+  closed: false
+  # Page de politique de confidentialité, liée sous le formulaire (facultatif).
+  privacy_url: ""
 
 
 

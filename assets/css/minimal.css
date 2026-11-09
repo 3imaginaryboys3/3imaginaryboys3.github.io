@@ -100,8 +100,26 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 .min .after{margin-top:36px}
 .min .pager{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; margin:0 0 30px}
 .min h2.small{margin:0 0 14px; font-size:1.1em}
-.min #cusdis_thread{margin-top:8px}
-.min #cusdis_thread iframe{width:100%; border:0}
+
+/* Commentaires (_includes/comments/, styles de base dans assets/comments/comments.css) :
+   on reprend les couleurs du gabarit, en noir et blanc et à angles droits */
+.min .jc{
+  --jc-accent:var(--text); --jc-accent-contrast:var(--bg);
+  --jc-border:var(--rule); --jc-muted:var(--dim);
+  --jc-radius:0;
+  margin-top:0; padding-top:0; border-top:0; line-height:inherit;
+}
+.min .jc-title{margin:0 0 14px; font-size:1.1em}
+.min .jc-form-title{font-size:1em}
+.min .jc-form{background:none}
+.min .jc-avatar{background:var(--text); color:var(--bg)}
+.min .jc-form input[type='text'],
+.min .jc-form input[type='email'],
+.min .jc-form input[type='url'],
+.min .jc-form textarea{background:var(--bg); color:var(--text)}
+.min .jc-form [aria-invalid='true']{border-color:var(--jc-danger)}
+.min .jc-body pre,.min .jc-body code{background:var(--code)}
+
 .min .foot{margin-top:44px; padding-top:12px; border-top:3px solid var(--rule); color:var(--dim)}
 .min .foot p{margin:0 0 4px}
 

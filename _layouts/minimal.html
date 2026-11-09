@@ -61,24 +61,12 @@
       </nav>
       {%- endif %}
 
-      <section aria-labelledby="comments-title">
-        <h2 class="small" id="comments-title">Commentaires</h2>
-        <div id="cusdis_thread"
-             data-host="https://cusdis.com"
-             data-app-id="140b4ed8-8d4e-4089-9141-ff03b4a4f43e"
-             data-page-id="{{ page.url | slugify }}"
-             data-page-url="{{ page.url | absolute_url }}"
-             data-page-title="{{ page.title | escape }}"
-             data-theme="light">
-        </div>
-      </section>
+      {% include comments/section.html %}
 
       <footer class="foot">
       </footer>
     </div>
   </main>
-
-  <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </body>
 
 </html>

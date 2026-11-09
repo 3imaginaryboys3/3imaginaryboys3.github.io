@@ -101,14 +101,7 @@
             <span>×</span>
           </div>
         </div>
-        <div id="cusdis_thread"
-             data-host="https://cusdis.com"
-             data-app-id="140b4ed8-8d4e-4089-9141-ff03b4a4f43e"
-             data-page-id="{{ page.url | slugify }}"
-             data-page-url="{{ page.url | absolute_url }}"
-             data-page-title="{{ page.title }}"
-             data-theme="light">
-        </div>
+        {% include comments/section.html %}
       </div>
     </div>
   </div>
@@ -123,30 +116,8 @@
         }
       });
     });
-
-    // Remet la liste des commentaires Cusdis avant le formulaire
-    const cusdisObserver = new MutationObserver(() => {
-      const commentThread = document.querySelector('#cusdis_thread');
-      const commentForm = document.querySelector('#cusdis_thread form');
-      const commentList = document.querySelector('[data-testid="comment-list"]');
-
-      if (commentForm && commentList) {
-        commentThread.insertBefore(commentList, commentForm);
-        cusdisObserver.disconnect();
-      }
-    });
-
-    cusdisObserver.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    if (window.CUSDIS) {
-      CUSDIS.init();
-    }
   });
   </script>
-  <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </body>
 
 </html>

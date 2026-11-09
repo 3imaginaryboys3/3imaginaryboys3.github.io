@@ -1,0 +1,52 @@
+# Configuration du Worker de commentaires.
+# Documentation complète : voir README.md à la racine du projet.
+
+name = "blog-comments"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+
+[vars]
+# Dépôt du blog, au format compte/depot.
+GITHUB_REPO = "3imaginaryboys3/3imaginaryboys3.github.io"
+# Branche publiée par GitHub Pages.
+GITHUB_BRANCH = "main"
+# Dossier des commentaires dans le dépôt.
+COMMENTS_DIR = "_data/comments"
+# Sites autorisés à envoyer des commentaires, séparés par des virgules.
+# Gardez localhost pour tester avec « bundle exec jekyll serve ».
+ALLOWED_ORIGINS = "https://3imaginaryboys3.github.io,http://localhost:4000,http://127.0.0.1:4000"
+# Fuseau horaire des dates enregistrées.
+TIMEZONE = "Europe/Paris"
+# Noms des auteurs du blog, séparés par des virgules (majuscules indifférentes) :
+# un commentaire signé de l'un d'eux reçoit le badge « Auteur »
+# (la pull request demande de vérifier que c'est bien lui).
+AUTHOR_NAME = "Chems,Maxime,Noé,Cla"
+# Étiquette ajoutée aux pull requests (laisser vide pour aucune).
+PR_LABEL = "commentaire"
+# Compte GitHub à qui demander une relecture (garantit une notification).
+GITHUB_REVIEWER = ""
+# Anti-spam.
+MAX_LINKS = "3"
+MAX_MESSAGE_LENGTH = "5000"
+MIN_SUBMIT_DELAY_SECONDS = "3"
+# Mots ou expressions refusés, séparés par des virgules (insensible à la casse).
+BLOCKED_TERMS = ""
+
+# Secrets (à définir avec « npx wrangler secret put NOM », jamais ici) :
+#   GITHUB_APP_ID           identifiant de votre GitHub App
+#   GITHUB_APP_PRIVATE_KEY  contenu du fichier .pem de la GitHub App
+#   TURNSTILE_SECRET_KEY    clé secrète Cloudflare Turnstile
+# Alternative à la GitHub App (déconseillée, voir README) :
+#   GITHUB_TOKEN            jeton d'accès personnel à granularité fine
+
+# Limitation de débit facultative (5 commentaires par minute et par adresse IP).
+# Décommentez ce bloc pour l'activer (Wrangler 4.36 ou plus récent).
+# [[ratelimits]]
+# name = "RATE_LIMITER"
+# namespace_id = "1001"
+#   [ratelimits.simple]
+#   limit = 5
+#   period = 60
+
+[observability]
+enabled = true

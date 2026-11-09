@@ -1,0 +1,536 @@
+/*
+ * Commentaires Jekyll : styles.
+ * La section reprend la police et les couleurs de votre thème ; les teintes
+ * secondaires sont dérivées de la couleur du texte (currentColor), ce qui
+ * fonctionne sur fond clair comme sur fond sombre.
+ * Personnalisation : redéfinissez les variables --jc-* dans votre propre CSS
+ * (peu importe l'ordre de chargement), ex. :
+ *   .jc { --jc-accent: #b4361c; }
+ */
+
+:where(.jc) {
+  --jc-accent: #2563eb;
+  --jc-accent-contrast: #fff;
+  --jc-danger: #c62828;
+  --jc-success: #2e7d32;
+  --jc-radius: 10px;
+  --jc-avatar: 2.5rem;
+  --jc-border: rgba(127, 127, 127, 0.28);
+  --jc-subtle: rgba(127, 127, 127, 0.07);
+  --jc-muted: rgba(127, 127, 127, 1);
+}
+
+@supports (color: color-mix(in srgb, red 50%, blue)) {
+  :where(.jc) {
+    --jc-border: color-mix(in srgb, currentColor 16%, transparent);
+    --jc-subtle: color-mix(in srgb, currentColor 4%, transparent);
+    --jc-muted: color-mix(in srgb, currentColor 64%, transparent);
+  }
+}
+
+.jc {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--jc-border);
+  line-height: 1.6;
+}
+
+.jc *,
+.jc *::before,
+.jc *::after {
+  box-sizing: border-box;
+}
+
+.jc [hidden] {
+  display: none !important;
+}
+
+.jc-title {
+  margin: 0 0 1.5rem;
+}
+
+.jc-empty,
+.jc-closed {
+  color: var(--jc-muted);
+  margin: 0 0 2rem;
+}
+
+/* ---------- Liste ---------- */
+
+.jc-list,
+.jc-replies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jc-thread + .jc-thread {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--jc-border);
+}
+
+.jc-replies:not(:empty) {
+  margin: 1rem 0 0 calc(var(--jc-avatar) / 2);
+  padding-left: calc(var(--jc-avatar) / 2 + 0.75rem);
+  border-left: 2px solid var(--jc-border);
+}
+
+.jc-replies > li + li {
+  margin-top: 1rem;
+}
+
+/* ---------- Commentaire ---------- */
+
+.jc-comment {
+  position: relative;
+  scroll-margin-top: 5rem;
+  border-radius: var(--jc-radius);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.jc-comment:target,
+.jc-comment--replying {
+  background: var(--jc-subtle);
+  box-shadow: 0 0 0 0.6rem var(--jc-subtle);
+}
+
+.jc-comment--pending {
+  opacity: 0.85;
+}
+
+.jc-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.jc-avatar {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: var(--jc-avatar);
+  height: var(--jc-avatar);
+  border-radius: 50%;
+  object-fit: cover;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: #fff;
+  background: #64748b;
+  user-select: none;
+}
+
+.jc-avatar--0 { background: #2563eb; }
+.jc-avatar--1 { background: #7c3aed; }
+.jc-avatar--2 { background: #c026d3; }
+.jc-avatar--3 { background: #db2777; }
+.jc-avatar--4 { background: #c2410c; }
+.jc-avatar--5 { background: #0f766e; }
+.jc-avatar--6 { background: #15803d; }
+.jc-avatar--7 { background: #475569; }
+
+.jc-meta-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.6rem;
+  row-gap: 0.1rem;
+  min-width: 0;
+}
+
+.jc-author {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.jc-author a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.jc-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--jc-accent-contrast);
+  background: var(--jc-accent);
+}
+
+.jc-badge--pending {
+  color: inherit;
+  background: var(--jc-subtle);
+  border: 1px dashed var(--jc-border);
+  font-weight: 500;
+}
+
+.jc-date {
+  font-size: 0.85rem;
+  color: var(--jc-muted);
+  text-decoration: none;
+}
+
+.jc-date:hover,
+.jc-date:focus-visible {
+  text-decoration: underline;
+}
+
+.jc-reply-context {
+  margin: -0.25rem 0 0.4rem calc(var(--jc-avatar) + 0.75rem);
+  font-size: 0.85rem;
+  color: var(--jc-muted);
+}
+
+.jc-reply-context a {
+  color: inherit;
+}
+
+.jc-body {
+  margin-left: calc(var(--jc-avatar) + 0.75rem);
+  overflow-wrap: anywhere;
+}
+
+.jc-body > :first-child {
+  margin-top: 0;
+}
+
+.jc-body > :last-child {
+  margin-bottom: 0;
+}
+
+.jc-body p,
+.jc-body ul,
+.jc-body ol,
+.jc-body blockquote,
+.jc-body pre {
+  margin: 0 0 0.75rem;
+}
+
+.jc-body blockquote {
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  border-left: 3px solid var(--jc-border);
+  color: var(--jc-muted);
+}
+
+.jc-body pre {
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  border-radius: calc(var(--jc-radius) - 4px);
+  background: var(--jc-subtle);
+  font-size: 0.9em;
+}
+
+.jc-body code {
+  font-size: 0.92em;
+}
+
+.jc-actions {
+  margin: 0.35rem 0 0 calc(var(--jc-avatar) + 0.75rem);
+}
+
+.jc-reply-button,
+.jc-link-button {
+  padding: 0.15rem 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--jc-accent);
+  cursor: pointer;
+}
+
+.jc-reply-button:hover,
+.jc-link-button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Avis (sans JavaScript : affichés via l'ancre #comment-sent / #comment-error) ---------- */
+
+.jc-notice {
+  display: none;
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--jc-radius);
+  border: 1px solid currentColor;
+}
+
+.jc-notice:target,
+.jc-noscript {
+  display: block;
+}
+
+.jc-notice--success {
+  color: var(--jc-success);
+}
+
+.jc-notice--error {
+  color: var(--jc-danger);
+}
+
+/* ---------- Formulaire ---------- */
+
+.jc-form {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--jc-border);
+  border-radius: calc(var(--jc-radius) + 2px);
+  background: var(--jc-subtle);
+  scroll-margin-top: 4rem;
+}
+
+.jc-form-title {
+  margin: 0 0 1.25rem;
+}
+
+.jc-replying {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin: -0.25rem 0 1.25rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--jc-accent);
+  border-radius: 0 var(--jc-radius) var(--jc-radius) 0;
+  background: var(--jc-subtle);
+  font-size: 0.92rem;
+}
+
+.jc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0 1rem;
+}
+
+.jc-field {
+  margin-bottom: 1.1rem;
+}
+
+.jc-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.jc-required {
+  color: var(--jc-danger);
+}
+
+.jc-optional {
+  font-weight: 400;
+  color: var(--jc-muted);
+}
+
+.jc-form input[type='text'],
+.jc-form input[type='email'],
+.jc-form input[type='url'],
+.jc-form textarea {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--jc-border);
+  border-radius: calc(var(--jc-radius) - 4px);
+  background: Canvas;
+  color: CanvasText;
+  font: inherit;
+  line-height: 1.5;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.jc-form textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.jc-form input:focus,
+.jc-form textarea:focus {
+  outline: none;
+  border-color: var(--jc-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--jc-accent) 25%, transparent);
+}
+
+.jc-form [aria-invalid='true'] {
+  border-color: var(--jc-danger);
+}
+
+.jc-hint {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  color: var(--jc-muted);
+}
+
+.jc-hint a {
+  color: inherit;
+}
+
+.jc-counter--low {
+  color: var(--jc-danger);
+  font-weight: 600;
+}
+
+.jc-error {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--jc-danger);
+}
+
+/* Champ piège : hors écran, ignoré par les lecteurs d'écran. */
+.jc-hp {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.jc-turnstile {
+  margin: 0 0 1rem;
+}
+
+.jc-submit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.jc-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.jc-remember input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--jc-accent);
+}
+
+.jc-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border: 0;
+  border-radius: calc(var(--jc-radius) - 2px);
+  background: var(--jc-accent);
+  color: var(--jc-accent-contrast);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.05s ease;
+}
+
+.jc-submit:hover {
+  filter: brightness(1.08);
+}
+
+.jc-submit:active {
+  transform: translateY(1px);
+}
+
+.jc-submit:focus-visible,
+.jc-reply-button:focus-visible,
+.jc-link-button:focus-visible {
+  outline: 2px solid var(--jc-accent);
+  outline-offset: 2px;
+}
+
+.jc-submit:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.jc-submit--busy::before {
+  content: '';
+  width: 0.9em;
+  height: 0.9em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: jc-spin 0.7s linear infinite;
+}
+
+.jc-legal {
+  margin-top: 1rem;
+}
+
+.jc-status:not(:empty) {
+  margin-top: 1rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: calc(var(--jc-radius) - 4px);
+  border: 1px solid var(--jc-border);
+  font-size: 0.92rem;
+}
+
+.jc-status--success {
+  color: var(--jc-success);
+  border-color: currentColor !important;
+}
+
+.jc-status--error {
+  color: var(--jc-danger);
+  border-color: currentColor !important;
+}
+
+.jc-count {
+  font-size: 0.9em;
+}
+
+@keyframes jc-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 34rem) {
+  :where(.jc) {
+    --jc-avatar: 2.1rem;
+  }
+
+  .jc-form {
+    padding: 1.1rem;
+  }
+
+  .jc-replies:not(:empty) {
+    margin-left: 0.4rem;
+    padding-left: 0.9rem;
+  }
+
+  .jc-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jc-comment,
+  .jc-submit,
+  .jc-form input,
+  .jc-form textarea {
+    transition: none;
+  }
+
+  .jc-submit--busy::before {
+    animation-duration: 2s;
+  }
+}

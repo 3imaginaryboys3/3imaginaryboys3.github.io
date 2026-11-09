@@ -1,0 +1,17 @@
+{%- comment -%}
+  Nombre de commentaires d'un article, avec un lien vers la section.
+  Dans une liste d'articles :  {% include comments/count.html page=post %}
+  Dans un article :            {% include comments/count.html %}
+{%- endcomment -%}
+{%- assign jc_p = include.page | default: page -%}
+{%- if jc_p.comments != false -%}
+{%- assign jc_key = jc_p.comments_id | default: jc_p.id | default: jc_p.url | slugify: "latin" -%}
+{%- assign jc_n = site.data.comments[jc_key] | size -%}
+<a class="jc-count" href="{{ jc_p.url | relative_url }}#comments">
+  {%- case jc_n -%}
+    {%- when 0 -%}Aucun commentaire
+    {%- when 1 -%}1 commentaire
+    {%- else -%}{{ jc_n }} commentaires
+  {%- endcase -%}
+</a>
+{%- endif -%}

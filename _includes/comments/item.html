@@ -1,0 +1,46 @@
+{%- comment -%}
+  Un commentaire. Paramètres : comment (données), thread (identifiant du fil), closed (formulaire fermé).
+{%- endcomment -%}
+{%- assign c = include.comment -%}
+{%- assign jc_months = "janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre" | split: "|" -%}
+{%- assign jc_month = c.date | date: "%-m" | minus: 1 -%}
+<article class="jc-comment{% if c.author %} jc-comment--author{% endif %}" id="comment-{{ c.id }}" data-jc-id="{{ c.id }}" data-jc-thread="{{ include.thread | default: c.id }}">
+  <header class="jc-meta">
+    {%- if site.comments.gravatar and c.avatar %}
+    <img class="jc-avatar" src="https://www.gravatar.com/avatar/{{ c.avatar }}?s=96&amp;d=identicon" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer">
+    {%- else -%}
+    {%- assign jc_first = c.name | slice: 0 | upcase -%}
+    {%- assign jc_last = c.name | slice: -1 | upcase -%}
+    {%- assign jc_a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: jc_first | first | size -%}
+    {%- assign jc_b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: jc_last | first | size -%}
+    {%- assign jc_hue = c.name | size | plus: jc_a | plus: jc_b | modulo: 8 %}
+    <span class="jc-avatar jc-avatar--{{ jc_hue }}" aria-hidden="true">{{ jc_first }}</span>
+    {%- endif %}
+    <div class="jc-meta-text">
+      <span class="jc-author">
+        {%- if c.url -%}
+        <a href="{{ c.url | xml_escape }}" rel="nofollow ugc noopener noreferrer">{{ c.name | xml_escape }}</a>
+        {%- else -%}
+        {{ c.name | xml_escape }}
+        {%- endif -%}
+      </span>
+      {%- if c.author %} <span class="jc-badge">Auteur</span>{% endif %}
+      <a class="jc-date" href="#comment-{{ c.id }}"><time datetime="{{ c.date | date_to_xmlschema }}">{{ c.date | date: "%-d" }} {{ jc_months[jc_month] }} {{ c.date | date: "%Y" }} à {{ c.date | date: "%H:%M" }}</time></a>
+    </div>
+  </header>
+  {%- if c.reply_to_name %}
+  <p class="jc-reply-context">En réponse à <a href="#comment-{{ c.reply_to }}">{{ c.reply_to_name | xml_escape }}</a></p>
+  {%- endif %}
+  <div class="jc-body">
+    {%- if c.html -%}
+    {{ c.html }}
+    {%- else -%}
+    <p>{{ c.message | xml_escape | newline_to_br }}</p>
+    {%- endif -%}
+  </div>
+  {%- unless include.closed %}
+  <footer class="jc-actions">
+    <button type="button" class="jc-reply-button" data-jc-reply="{{ c.id }}" data-jc-name="{{ c.name | xml_escape }}" hidden>Répondre</button>
+  </footer>
+  {%- endunless %}
+</article>

@@ -139,15 +139,13 @@
   align-items: center;
 }
 
-/* ---------- Commentaires (Cusdis) ---------- */
+/* ---------- Commentaires ---------- */
+/* Styles de base dans assets/comments/comments.css ; ici, le relief Windows 98. */
 
 .comment-section {
   background: var(--win-white);
   border: 2px solid;
   border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
-  height: 600px;
-  display: flex;
-  flex-direction: column;
 }
 
 .comment-title-bar {
@@ -160,44 +158,79 @@
   align-items: center;
 }
 
-#cusdis_thread {
-  font-family: "MS Sans Serif", sans-serif;
-  flex-grow: 1;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.comment-section .jc {
+  --jc-accent: var(--win-blue);
+  --jc-border: var(--win-dark-gray);
+  --jc-radius: 0;
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  border: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-#cusdis_thread iframe {
-  height: 100% !important;
-  width: 100% !important;
-  border: none !important;
+.comment-section .jc-title {
+  margin: 0 0 1rem;
+  font-size: 14px;
 }
 
-#cusdis_thread input,
-#cusdis_thread textarea {
-  width: 200px !important;
-  padding: 2px !important;
-  margin: 2px 0 !important;
-  font-size: 12px !important;
+.comment-section .jc-form-title {
+  font-size: 13px;
 }
 
-#cusdis_thread button[type="submit"] {
-  padding: 4px 8px !important;
-  font-size: 12px !important;
-  margin: 4px 0 !important;
-}
-
-/* Affiche la liste des commentaires avant le formulaire */
-#cusdis_thread > div {
-  order: 1;
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-#cusdis_thread form {
-  order: 2;
-  border-top: 2px solid var(--win-dark-gray);
-  padding: 8px;
+/* Formulaire : panneau gris en relief */
+.comment-section .jc-form {
   background: var(--win-gray);
+  color: #000;
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+}
+
+/* Champs : creusés */
+.comment-section .jc-form input[type='text'],
+.comment-section .jc-form input[type='email'],
+.comment-section .jc-form input[type='url'],
+.comment-section .jc-form textarea {
+  background: var(--win-white);
+  color: #000;
+  border: 2px solid;
+  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
+}
+
+.comment-section .jc-form input:focus,
+.comment-section .jc-form textarea:focus {
+  outline: 1px dotted #000;
+  outline-offset: -5px;
+  box-shadow: none;
+}
+
+.comment-section .jc-form input[aria-invalid='true'],
+.comment-section .jc-form textarea[aria-invalid='true'] {
+  border-color: var(--jc-danger);
+}
+
+/* Bouton : relief, enfoncé au clic */
+.comment-section .jc-submit {
+  padding: 4px 16px;
+  background: var(--win-gray);
+  color: #000;
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.comment-section .jc-submit:hover {
+  filter: none;
+}
+
+.comment-section .jc-submit:active {
+  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
+  box-shadow: none;
+  transform: none;
+}
+
+.comment-section .jc-submit:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: -6px;
 }

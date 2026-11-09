@@ -1,0 +1,13 @@
+# Variables pour tester le Worker en local (npx wrangler dev).
+# Copiez ce fichier en « .dev.vars » (déjà ignoré par Git) et complétez-le.
+
+# Pour un blog servi en local par « bundle exec jekyll serve » :
+ALLOWED_ORIGINS=http://localhost:4000,http://127.0.0.1:4000
+
+# Accès GitHub : mêmes valeurs que les secrets de production.
+GITHUB_APP_ID=123456
+GITHUB_APP_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----\n...\n-----END RSA PRIVATE KEY-----"
+
+# Clés de test Turnstile fournies par Cloudflare (toujours valides).
+# Côté Jekyll, utilisez la clé de site 1x00000000000000000000AA.
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA

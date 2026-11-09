@@ -1,0 +1,25 @@
+# Supprime la branche d'un commentaire une fois sa pull request fusionnée ou fermée,
+# pour que le dépôt ne se remplisse pas de branches « comment-… ».
+name: Nettoyage des branches de commentaires
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    if: startsWith(github.head_ref, 'comment-') && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Supprimer la branche
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          gh api -X DELETE "repos/$REPO/git/refs/heads/$BRANCH" \
+            && echo "Branche $BRANCH supprimée." \
+            || echo "Branche $BRANCH déjà supprimée."

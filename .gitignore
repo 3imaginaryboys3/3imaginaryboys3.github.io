@@ -6,3 +6,6 @@ vendor
 
 # macOS
 .DS_Store
+
+# Clé privée de la GitHub App des commentaires : ne jamais la publier
+*.pem

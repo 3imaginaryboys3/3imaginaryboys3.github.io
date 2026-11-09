@@ -1,0 +1,76 @@
+{%- comment -%}
+  Section « Commentaires » : liste des commentaires publiés et formulaire.
+
+  Utilisation, dans _layouts/post.html (après le contenu de l'article) :
+    {% include comments/section.html %}
+
+  Options dans l'en-tête (front matter) d'un article :
+    comments: false          masque la section sur cet article
+    comments_closed: true    affiche les commentaires mais ferme le formulaire
+    comments_id: mon-id      identifiant fixe (utile si l'adresse de l'article change)
+{%- endcomment -%}
+{%- assign jc = site.comments -%}
+{%- if jc and jc.endpoint and page.comments != false -%}
+{%- assign jc_key = page.comments_id | default: page.id | default: page.url | slugify: "latin" -%}
+{%- assign jc_data = site.data.comments[jc_key] -%}
+{%- if jc_data -%}
+  {%- assign jc_all = jc_data | sort -%}
+{%- else -%}
+  {%- assign jc_all = "" | split: "" -%}
+{%- endif -%}
+{%- assign jc_count = jc_all | size -%}
+{%- assign jc_closed = false -%}
+{%- if jc.closed or page.comments_closed -%}{%- assign jc_closed = true -%}{%- endif -%}
+{%- capture jc_roots -%}{%- for jc_entry in jc_all -%}{%- if jc_entry[1].thread == nil or jc_entry[1].thread == "" -%}|{{ jc_entry[1].id }}|{%- endif -%}{%- endfor -%}{%- endcapture -%}
+<link rel="stylesheet" href="{{ '/assets/comments/comments.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<section id="comments" class="jc" aria-labelledby="jc-title" data-jc-endpoint="{{ jc.endpoint | append: '/api/comments' }}">
+  <h2 id="jc-title" class="jc-title">
+    {%- case jc_count -%}
+      {%- when 0 -%}Commentaires
+      {%- when 1 -%}1 commentaire
+      {%- else -%}{{ jc_count }} commentaires
+    {%- endcase -%}
+  </h2>
+
+  <p id="comment-sent" class="jc-notice jc-notice--success" tabindex="-1">Merci ! Votre commentaire a bien été reçu. Il sera publié après validation.</p>
+  <p id="comment-error" class="jc-notice jc-notice--error" tabindex="-1">Votre commentaire n'a pas pu être envoyé. Vérifiez les champs puis réessayez.</p>
+
+  {%- if jc_count == 0 %}
+  <p class="jc-empty" data-jc-empty>Aucun commentaire pour l'instant.{% unless jc_closed %} Lancez la discussion !{% endunless %}</p>
+  {%- endif %}
+
+  <ol class="jc-list" data-jc-list>
+    {%- for jc_entry in jc_all -%}
+      {%- assign jc_c = jc_entry[1] -%}
+      {%- assign jc_is_root = false -%}
+      {%- if jc_c.thread == nil or jc_c.thread == "" -%}
+        {%- assign jc_is_root = true -%}
+      {%- else -%}
+        {%- capture jc_needle -%}|{{ jc_c.thread }}|{%- endcapture -%}
+        {%- unless jc_roots contains jc_needle -%}{%- assign jc_is_root = true -%}{%- endunless -%}
+      {%- endif -%}
+      {%- if jc_is_root %}
+    <li class="jc-thread">
+      {% include comments/item.html comment=jc_c thread=jc_c.id closed=jc_closed %}
+      {%- capture jc_replies -%}
+        {%- for jc_entry2 in jc_all -%}
+          {%- assign jc_r = jc_entry2[1] -%}
+          {%- if jc_r.thread == jc_c.id and jc_r.id != jc_c.id %}
+        <li>{% include comments/item.html comment=jc_r thread=jc_c.id closed=jc_closed %}</li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture %}
+      <ol class="jc-replies" data-jc-replies="{{ jc_c.id }}">{{ jc_replies }}</ol>
+    </li>
+      {%- endif -%}
+    {%- endfor %}
+  </ol>
+
+  {% if jc_closed -%}
+  <p class="jc-closed">Les commentaires sont fermés pour cet article.</p>
+  {%- else -%}
+  {%- include comments/form.html key=jc_key -%}
+  {%- endif %}
+</section>
+<script src="{{ '/assets/comments/comments.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{%- endif -%}
