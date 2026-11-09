@@ -1,4 +1,4 @@
-/* Fira Mono est chargée dans _includes/head.html (commune à toutes les pages) */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap");
 
 /* Gabarit minimal (layout: minimal)
    Une colonne de texte à chasse fixe d'environ 64 caractères, rien d'autre que le texte,
