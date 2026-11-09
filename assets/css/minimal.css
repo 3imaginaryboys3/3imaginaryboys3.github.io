@@ -1,6 +1,8 @@
+/* Fira Mono est chargée dans _includes/head.html (commune à toutes les pages) */
+
 /* Gabarit minimal (layout: minimal)
-   Une colonne de texte, rien d'autre que le texte, dans la même police que la page d'accueil
-   (la police par défaut du navigateur), et une couverture tramée en 1 bit un peu plus large que la colonne.
+   Une colonne de texte à chasse fixe d'environ 64 caractères, rien d'autre que le texte,
+   et une couverture tramée en 1 bit un peu plus large que la colonne.
    Pour changer de palette, il suffit de modifier les cinq couleurs ci-dessous. */
 body.min{
   --bg:#ffffff;      /* fond */
@@ -8,7 +10,7 @@ body.min{
   --dim:#666666;     /* texte secondaire */
   --rule:#cfcfcf;    /* filets et bordures */
   --code:#e3e3e3;    /* fond des blocs de code */
-  --mono:ui-monospace,Menlo,Consolas,"DejaVu Sans Mono",monospace;  /* code uniquement */
+  --font:"Fira Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;
 
   /* 8px de marge comme sur l'accueil, pour que le menu tombe exactement au même endroit */
   margin:8px;
@@ -17,11 +19,11 @@ body.min{
   -webkit-text-size-adjust:100%;
 }
 
-/* Pas de font-family : l'article hérite de la même police que la page d'accueil.
-   Couleurs et interligne s'appliquent à l'article seulement, le menu (header.html)
-   garde le style de la page d'accueil. */
+/* La typo du gabarit s'applique à l'article seulement :
+   le menu (header.html) garde le style de la page d'accueil */
 .min main{
   color:var(--text);
+  font-family:var(--font);
   font-size:16px;
   line-height:1.35;
 }
@@ -38,8 +40,7 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 /* main.css donne une police aux h3 : on la neutralise ici */
 .min h1,.min h2,.min h3,.min h4{font-family:inherit; color:inherit}
 
-/* 38em ≈ la largeur qu'avait la colonne de 64 caractères en police à chasse fixe */
-.min .col{max-width:38em; margin:0 auto}
+.min .col{max-width:64ch; margin:0 auto}
 .min .wide{max-width:820px; margin:0 auto}
 
 /* Menu (header.html) : même position que sur l'accueil (2rem au-dessus),
@@ -72,7 +73,7 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 .min .prose figure{margin:1.4em 0}
 .min .prose figcaption{margin-top:6px; color:var(--dim); font-size:0.9em}
 .min .prose hr{height:0; margin:2em 0; border:0; border-top:3px solid var(--rule)}
-.min .prose code{font-family:var(--mono); padding:0 0.2em; background:var(--code)}
+.min .prose code{font-family:inherit; padding:0 0.2em; background:var(--code)}
 .min .prose pre,.min .prose .highlight{margin:1.4em 0; background:var(--code)}
 .min .prose pre{padding:12px 14px; overflow-x:auto; font-size:15px; line-height:1.45}
 .min .prose pre code{padding:0; background:none}

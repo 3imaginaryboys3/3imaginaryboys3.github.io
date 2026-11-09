@@ -1,6 +1,6 @@
-- title: "The Happy Dictator"
-  artist: "Gorillaz"
+- title: "Tears of the Star"
+  artist: "Cassiopea"
   subtitle:
   ref : # 
-  cover: "assets/img/gorillaz.jpeg"
-  audio: "assets/audio/gorillaz.mp3"
+  cover: "assets/img/cassiopea.jpg"
+  audio: "assets/audio/cassiopea.mp3"

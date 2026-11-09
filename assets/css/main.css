@@ -93,6 +93,11 @@ time {
   flex: 1;
 }
 
+/* Titre de la musique : même police que le layout minimal */
+.track-info h3 {
+  font-family: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+}
+
 audio {
   width: 100%;
   margin-top: 1rem;
