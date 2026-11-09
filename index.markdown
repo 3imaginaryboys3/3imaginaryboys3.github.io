@@ -40,6 +40,13 @@ layout: default
   </section>
 
   <!--<h2>Blog</h2>-->
+
+  <!-- Affiché seulement quand les posts sont filtrés par auteur (voir assets/js/author-filter.js) -->
+  <p class="author-filter" hidden>
+    <a href="{{ '/' | relative_url }}" class="author-filter-back">← Back</a>
+    <span class="author-filter-label">Posts by <strong class="author-filter-name"></strong></span>
+  </p>
+
   {% assign visible_posts = site.posts | where: "show", true | sort: "date" | reverse %}
   {% for post in visible_posts %}
   <article class="post">
@@ -49,7 +56,8 @@ layout: default
       {% endif %}
       <time>{{ post.date | date: "%B %d, %Y" }}</time>
       {% if post.author %}
-      <span class="post-author">- by {{ post.author }}</span>
+      {% assign author_key = post.author | strip | downcase %}
+      <span class="post-author">- by <a href="{{ '/' | relative_url }}?author={{ author_key | url_encode }}" class="post-author-link" data-author="{{ author_key | escape }}">{{ post.author | strip }}</a></span>
       {% endif %}
     </div>
     <div class="post-heading">
@@ -58,4 +66,6 @@ layout: default
     <p class="post-subtitle">{{ post.subtitle }}</p>
   </article>
   {% endfor %}
+
+  <script src="{{ '/assets/js/author-filter.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </section>

@@ -66,6 +66,34 @@ time {
   margin: 0.6em 0 2em;
 }
 
+/* ---------- Filtre par auteur ---------- */
+
+.post-author-link {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.post-author-link:hover {
+  color: #000;
+}
+
+.author-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin: 0 0 2rem;
+}
+
+/* display: flex écraserait l'attribut hidden */
+.author-filter[hidden] {
+  display: none;
+}
+
+.author-filter-label {
+  color: #666;
+}
+
 /* ---------- Music of the Week ---------- */
 
 .music-section {
