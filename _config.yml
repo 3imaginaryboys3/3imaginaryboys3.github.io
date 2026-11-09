@@ -38,8 +38,6 @@ comments:
   gravatar: false
   # true : ferme les commentaires sur tout le site (les commentaires publiés restent visibles).
   closed: false
-  # Page de politique de confidentialité, liée sous le formulaire (facultatif).
-  privacy_url: ""
 
 
 

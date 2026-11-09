@@ -232,8 +232,6 @@
     }
     item.append(article);
 
-    const empty = section.querySelector('[data-jc-empty]');
-    if (empty) empty.hidden = true;
     article.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'nearest' });
   }
 

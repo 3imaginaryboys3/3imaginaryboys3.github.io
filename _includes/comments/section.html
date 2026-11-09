@@ -35,10 +35,7 @@
   <p id="comment-sent" class="jc-notice jc-notice--success" tabindex="-1">Merci ! Votre commentaire a bien été reçu. Il sera publié après validation.</p>
   <p id="comment-error" class="jc-notice jc-notice--error" tabindex="-1">Votre commentaire n'a pas pu être envoyé. Vérifiez les champs puis réessayez.</p>
 
-  {%- if jc_count == 0 %}
-  <p class="jc-empty" data-jc-empty>Aucun commentaire pour l'instant.{% unless jc_closed %} Lancez la discussion !{% endunless %}</p>
-  {%- endif %}
-
+  {%- comment -%} Sans commentaire, la liste est rendue vide (<ol></ol>) : le CSS s'appuie sur :empty. {%- endcomment %}
   <ol class="jc-list" data-jc-list>
     {%- for jc_entry in jc_all -%}
       {%- assign jc_c = jc_entry[1] -%}
@@ -63,7 +60,7 @@
       <ol class="jc-replies" data-jc-replies="{{ jc_c.id }}">{{ jc_replies }}</ol>
     </li>
       {%- endif -%}
-    {%- endfor %}
+    {%- endfor -%}
   </ol>
 
   {% if jc_closed -%}

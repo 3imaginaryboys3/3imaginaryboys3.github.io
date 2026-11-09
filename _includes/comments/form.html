@@ -1,13 +1,12 @@
 {%- comment -%}
   Formulaire de commentaire. Paramètre : key (identifiant de la page).
+  Les étiquettes restent lues par les lecteurs d'écran (classe jc-sr) ; à l'écran, seuls les textes d'exemple s'affichent.
 {%- endcomment -%}
 {%- assign jc = site.comments -%}
 <form class="jc-form" id="comment-form" method="post" action="{{ jc.endpoint }}/api/comments" data-jc-form novalidate>
-  <h3 class="jc-form-title">Laisser un commentaire</h3>
-
   <div class="jc-replying" data-jc-replying hidden>
     <span>En réponse à <strong data-jc-replying-name></strong></span>
-    <button type="button" class="jc-link-button" data-jc-cancel-reply>Annuler la réponse</button>
+    <button type="button" class="jc-link-button" data-jc-cancel-reply>Annuler</button>
   </div>
 
   <input type="hidden" name="page" value="{{ include.key }}">
@@ -17,32 +16,28 @@
   <input type="hidden" name="t" value="" data-jc-started>
 
   <div class="jc-field">
-    <label for="jc-message">Commentaire <span class="jc-required" aria-hidden="true">*</span></label>
-    <textarea id="jc-message" name="message" rows="5" maxlength="5000" required aria-describedby="jc-message-hint jc-message-error"></textarea>
-    <p class="jc-hint" id="jc-message-hint">
-      <span>Mise en forme Markdown : **gras**, *italique*, `code`, [lien](https://…), &gt; citation.</span>
-      <span class="jc-counter" data-jc-counter aria-live="polite"></span>
-    </p>
+    <label class="jc-sr" for="jc-message">Commentaire</label>
+    <textarea id="jc-message" name="message" rows="5" maxlength="5000" required placeholder="Commentaire" aria-describedby="jc-message-error"></textarea>
+    <p class="jc-hint"><span class="jc-counter" data-jc-counter aria-live="polite"></span></p>
     <p class="jc-error" id="jc-message-error" data-jc-error="message" hidden></p>
   </div>
 
   <div class="jc-grid">
     <div class="jc-field">
-      <label for="jc-name">Nom <span class="jc-required" aria-hidden="true">*</span></label>
-      <input id="jc-name" type="text" name="name" maxlength="50" autocomplete="name" required aria-describedby="jc-name-error">
+      <label class="jc-sr" for="jc-name">Nom</label>
+      <input id="jc-name" type="text" name="name" maxlength="50" autocomplete="name" required placeholder="Nom" aria-describedby="jc-name-error">
       <p class="jc-error" id="jc-name-error" data-jc-error="name" hidden></p>
     </div>
     {%- if jc.gravatar %}
     <div class="jc-field">
-      <label for="jc-email">E-mail <span class="jc-optional">(facultatif, jamais affiché)</span></label>
-      <input id="jc-email" type="email" name="email" maxlength="254" autocomplete="email" aria-describedby="jc-email-hint jc-email-error">
-      <p class="jc-hint" id="jc-email-hint">Sert uniquement à afficher votre avatar <a href="https://gravatar.com/" rel="noopener">Gravatar</a>.</p>
+      <label class="jc-sr" for="jc-email">E-mail (facultatif, jamais affiché, sert uniquement à l'avatar Gravatar)</label>
+      <input id="jc-email" type="email" name="email" maxlength="254" autocomplete="email" placeholder="E-mail (facultatif)" aria-describedby="jc-email-error">
       <p class="jc-error" id="jc-email-error" data-jc-error="email" hidden></p>
     </div>
     {%- endif %}
     <div class="jc-field">
-      <label for="jc-url">Site web <span class="jc-optional">(facultatif)</span></label>
-      <input id="jc-url" type="url" name="url" maxlength="200" autocomplete="url" inputmode="url" placeholder="https://" aria-describedby="jc-url-error">
+      <label class="jc-sr" for="jc-url">Lien (facultatif)</label>
+      <input id="jc-url" type="url" name="url" maxlength="200" autocomplete="url" inputmode="url" placeholder="Lien (facultatif)" aria-describedby="jc-url-error">
       <p class="jc-error" id="jc-url-error" data-jc-error="url" hidden></p>
     </div>
   </div>
@@ -59,14 +54,10 @@
   <div class="jc-submit-row">
     <label class="jc-remember">
       <input type="checkbox" data-jc-remember>
-      <span>Se souvenir de moi sur cet appareil</span>
+      <span>Se souvenir de moi</span>
     </label>
-    <button type="submit" class="jc-submit" data-jc-submit>Envoyer le commentaire</button>
+    <button type="submit" class="jc-submit" data-jc-submit>Envoyer</button>
   </div>
-
-  <p class="jc-hint jc-legal">
-    Les commentaires sont relus avant publication. En envoyant ce formulaire, vous acceptez que votre nom{% if jc.gravatar %}, votre avatar{% endif %}, votre site et votre message soient publiés sur cette page.{% if jc.privacy_url %} <a href="{{ jc.privacy_url | relative_url }}">Confidentialité</a>{% endif %}
-  </p>
 
   <div class="jc-status" role="status" aria-live="polite" data-jc-status></div>
 
