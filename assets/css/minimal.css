@@ -12,24 +12,30 @@ body.min{
   --code:#e3e3e3;    /* fond des blocs de code */
   --font:"Fira Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;
 
-  margin:0;
-  padding:0 24px 56px;
+  /* 8px de marge comme sur l'accueil, pour que le menu tombe exactement au même endroit */
+  margin:8px;
+  padding:0 16px 48px;
   background:var(--bg);
+  -webkit-text-size-adjust:100%;
+}
+
+/* La typo du gabarit s'applique à l'article seulement :
+   le menu (header.html) garde le style de la page d'accueil */
+.min main{
   color:var(--text);
   font-family:var(--font);
   font-size:16px;
   line-height:1.35;
-  -webkit-text-size-adjust:100%;
 }
 
 /* Variante sépia : décommenter pour essayer
 body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e9dcc0; }
 */
 
-.min ::selection{background:var(--text); color:var(--bg)}
-.min a{color:inherit; text-decoration:underline; text-underline-offset:2px}
-.min a:hover{background:var(--text); color:var(--bg); text-decoration:none}
-.min :focus-visible{outline:2px dashed var(--text); outline-offset:2px}
+.min main ::selection{background:var(--text); color:var(--bg)}
+.min main a{color:inherit; text-decoration:underline; text-underline-offset:2px}
+.min main a:hover{background:var(--text); color:var(--bg); text-decoration:none}
+.min main :focus-visible{outline:2px dashed var(--text); outline-offset:2px}
 
 /* main.css donne une police aux h3 : on la neutralise ici */
 .min h1,.min h2,.min h3,.min h4{font-family:inherit; color:inherit}
@@ -37,10 +43,10 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 .min .col{max-width:64ch; margin:0 auto}
 .min .wide{max-width:820px; margin:0 auto}
 
-/* En-tête */
-.min .top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 18px; padding:28px 0 0}
-.min .site{font-weight:700; text-decoration:none}
-.min .nav{display:flex; flex-wrap:wrap; gap:6px 16px}
+/* Menu (header.html) : même position que sur l'accueil (2rem au-dessus),
+   mais 2rem en dessous seulement, pour que le sous-titre ne soit pas trop loin.
+   Fond transparent pour suivre la couleur de fond du gabarit. */
+.min .site-header{margin-bottom:0; background:none}
 
 /* Couverture tramée : les pixels restent nets à l'agrandissement */
 .min .cover{
@@ -92,6 +98,7 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 }
 
 @media (max-width: 640px){
-  body.min{font-size:15px; padding:0 16px 40px}
+  body.min{padding:0 8px 32px}
+  .min main{font-size:15px}
   .min h1{font-size:1.45em}
 }

@@ -9,14 +9,8 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
-  <header class="col top">
-    <a class="site" href="{{ '/' | relative_url }}">home</a>
-    <nav class="nav" aria-label="Site">
-      <a href="{{ '/' | relative_url }}">accueil</a>
-      <a href="{{ '/about' | relative_url }}">à propos</a>
-      <a href="{{ '/feed.xml' | relative_url }}">flux</a>
-    </nav>
-  </header>
+  {%- comment -%} Même menu que la page d'accueil {%- endcomment -%}
+  {%- include header.html -%}
 
   <main>
     <article>
