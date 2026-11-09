@@ -109,15 +109,26 @@ time {
   margin-top: 1rem;
 }
 
-/* Un morceau : la pochette à gauche, les infos et les boutons à droite */
+/* ---------- Lecteur : parties communes aux deux styles ----------
+   Le style se choisit pour chaque morceau dans _data/music.yml (style: cd | pochette) :
+   la page ajoute alors la classe .lecteur-style-cd ou .lecteur-style-pochette.
+   Volontairement écrit sans propriétés récentes (pas de gap en flexbox, pas de inset,
+   pas de masque) pour marcher aussi sur les vieux iPhone et les vieux navigateurs. */
+
+/* Un morceau : la pochette ou le boîtier à gauche, les infos et les boutons à droite */
 .lecteur {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  gap: 1.5rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
 .track-info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
   min-width: 0;
 }
@@ -134,20 +145,6 @@ time {
   margin-top: 1rem;
 }
 
-/* La pochette sert aussi de bouton lecture/pause */
-.lecteur-pochette {
-  position: relative;
-  flex: none;
-  width: 150px;
-  height: 150px;
-  margin: 7px;
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
 .lecteur-pochette img {
   display: block;
   width: 100%;
@@ -155,42 +152,23 @@ time {
   object-fit: cover;
 }
 
-/* Le cadre qui fait le tour de la pochette pendant la lecture */
-.lecteur-anneau {
-  position: absolute;
-  left: -7px;
-  top: -7px;
-  width: calc(100% + 14px);
-  height: calc(100% + 14px);
-  overflow: visible;
+/* Sans JavaScript, la pochette ou le boîtier n'est qu'une image */
+.lecteur:not(.lecteur-actif) [data-toggle] {
   pointer-events: none;
+  cursor: default;
 }
 
-/* Épaisseur en unités du dessin (100 de côté) : 1.8 donne environ 3 px autour d'une pochette de 150 px */
-.lecteur-anneau path {
-  fill: none;
-  stroke-width: 1.8;
-}
-
-.lecteur-anneau-fond {
-  stroke: #dddddd;
-}
-
-.lecteur-anneau-avance {
-  stroke: #111111;
-  stroke-dasharray: 0 100;
-}
-
-.lecteur:not(.lecteur-actif) .lecteur-anneau {
-  display: none;
-}
-
-/* Bouton, temps et sauts de 10 s */
+/* Bouton, temps et sauts de 10 s.
+   Pas de « display: -webkit-box » ici : cette très vieille syntaxe ne sait pas passer à la ligne.
+   Les navigateurs qui ne connaissent qu'elle affichent les éléments côte à côte (vertical-align),
+   et ils passent à la ligne naturellement sur un écran étroit. */
 .lecteur-controles {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
   align-items: center;
-  gap: 0.25rem 1rem;
   margin-top: 0.75rem;
 }
 
@@ -198,10 +176,22 @@ time {
   display: none;
 }
 
+.lecteur-controles > * {
+  margin: 2px 16px 2px 0;
+  vertical-align: middle;
+}
+
 .lecteur-play {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
   display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex: none;
   flex: none;
   width: 44px;
   height: 44px;
@@ -211,10 +201,14 @@ time {
   background: #111111;
   color: #ffffff;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .lecteur-play svg {
+  display: block;
   width: 18px;
   height: 18px;
 }
@@ -234,21 +228,28 @@ time {
 }
 
 .lecteur-sauts {
-  display: inline-flex;
-  gap: 1rem;
+  white-space: nowrap;
 }
 
 .lecteur-saut {
   min-height: 44px;
+  margin: 0 16px 0 0;
   padding: 0;
   border: 0;
+  border-radius: 0;
   background: none;
   color: inherit;
   font: inherit;
   cursor: pointer;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  -webkit-appearance: none;
+  appearance: none;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.lecteur-saut:last-child {
+  margin-right: 0;
 }
 
 /* Survol seulement avec une souris : sur iPhone, il resterait collé après le toucher */
@@ -260,23 +261,266 @@ time {
   }
 }
 
-.lecteur button:focus-visible {
+.lecteur button:focus {
   outline: 2px dashed #111111;
   outline-offset: 3px;
 }
 
-.lecteur-pochette:focus-visible {
+.lecteur button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ---------- Style « pochette » ----------
+   La pochette sert de bouton lecture/pause, un cadre en fait le tour au fil du morceau. */
+
+.lecteur-style-pochette .lecteur-pochette {
+  position: relative;
+  -webkit-flex: none;
+  flex: none;
+  width: 150px;
+  height: 150px;
+  /* 7 px tout autour pour le cadre, + 24 px d'espace avec les infos à droite */
+  margin: 7px 31px 7px 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Le cadre qui fait le tour de la pochette pendant la lecture */
+.lecteur-anneau {
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  /* Pochette de 150 px + 7 px de chaque côté (en px plutôt qu'avec calc(), pour les vieux navigateurs) */
+  width: 164px;
+  height: 164px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Épaisseur en unités du dessin (100 de côté) : 1.8 donne environ 3 px autour d'une pochette de 150 px */
+.lecteur-anneau path {
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.lecteur-anneau-fond {
+  stroke: #dddddd;
+}
+
+/* Le cadre est un carré de 97 de côté dans le dessin, donc 388 de tour.
+   Le script fait avancer le trait de 0 à 388 (sans pathLength, mal géré par les vieux Safari). */
+.lecteur-anneau-avance {
+  stroke: #111111;
+  stroke-dasharray: 0 388;
+}
+
+.lecteur:not(.lecteur-actif) .lecteur-anneau {
+  display: none;
+}
+
+.lecteur-style-pochette .lecteur-pochette:focus {
   outline-offset: 10px;
 }
 
 @media (max-width: 480px) {
-  .lecteur {
-    gap: 1rem;
-  }
-
-  .lecteur-pochette {
+  .lecteur-style-pochette .lecteur-pochette {
     width: 112px;
     height: 112px;
+    margin-right: 23px; /* 7 px pour le cadre + 16 px d'espace */
+  }
+
+  .lecteur-anneau {
+    width: 126px; /* 112 px + 7 px de chaque côté */
+    height: 126px;
+  }
+}
+
+/* ---------- Style « cd » ----------
+   Le boîtier sert de bouton lecture/pause : le CD en sort et tourne pendant la lecture.
+   Si un navigateur ne connaît pas les dégradés coniques, le CD reste gris argent. */
+
+.lecteur-scene {
+  position: relative;
+  -webkit-flex: none;
+  flex: none;
+  width: 254px;
+  height: 150px;
+  margin-right: 24px;
+}
+
+/* Le boîtier : une charnière sombre et la pochette, avec un reflet sur le plastique */
+.lecteur-boitier {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 162px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #1e1e21;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18), 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lecteur .lecteur-boitier:focus {
+  outline-offset: 6px;
+}
+
+.lecteur-charniere {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #2f2f33;
+  /* Ancienne syntaxe préfixée d'abord (iOS 6, vieux Android), puis la syntaxe standard */
+  background-image: -webkit-repeating-linear-gradient(top, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 4px),
+    -webkit-linear-gradient(left, #2b2b2e, #4a4a50 45%, #1e1e21);
+  background-image: repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 4px),
+    linear-gradient(90deg, #2b2b2e, #4a4a50 45%, #1e1e21);
+}
+
+.lecteur-style-cd .lecteur-pochette {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.lecteur-style-cd .lecteur-pochette:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+  /* -25deg en syntaxe préfixée = 115deg en syntaxe standard */
+  background-image: -webkit-linear-gradient(-25deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.28) 18%, rgba(255, 255, 255, 0) 34%);
+  background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.28) 18%, rgba(255, 255, 255, 0) 34%);
+}
+
+/* Le CD : il dépasse un peu du boîtier, et en sort pendant la lecture */
+.lecteur-cd {
+  position: absolute;
+  left: 16px;
+  top: 3px;
+  z-index: 1;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.22);
+  -webkit-transform: translateX(22px);
+  transform: translateX(22px);
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.lecteur.lecture .lecteur-cd {
+  -webkit-transform: translateX(88px);
+  transform: translateX(88px);
+}
+
+.lecteur-cd-surface,
+.lecteur-cd-centre,
+.lecteur-cd-rotation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Face gravée irisée (gris argent si le navigateur ne connaît pas conic-gradient) */
+.lecteur-cd-surface {
+  background-color: #dfe2e6;
+  background-image: conic-gradient(from 205deg, #dcdfe4, #efc2e2 6%, #b9d6fa 10.5%, #c4efc0 14.5%, #f8e7a2 18.5%, #f3c9b8 21.5%, #e1e4e8 27%, #f5f6f8 39%, #d5d9df 50%, #efc2e2 56%, #b9d6fa 60.5%, #c4efc0 64.5%, #f8e7a2 68.5%, #f3c9b8 71.5%, #e1e4e8 77%, #f7f8fa 89%, #dcdfe4);
+}
+
+/* Partie déjà lue : elle s'assombrit du centre vers le bord, comme un CD gravé.
+   Le script règle sa taille (de 39 % à 97 %). */
+.lecteur-cd-grave {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 39%;
+  height: 39%;
+  border-radius: 50%;
+  background: rgba(70, 60, 110, 0.12);
+  box-shadow: 0 0 0 1px rgba(60, 45, 100, 0.38);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Centre : trou, anneau transparent et bande miroir. Le trou prend la couleur du fond de la page. */
+.lecteur-cd-centre {
+  background-image: -webkit-radial-gradient(center, circle closest-side,
+    #ffffff 12.5%, #e2e7ed 13.2%, #e2e7ed 26.5%, #b2bac3 27%, #b2bac3 29.5%, #f3f5f7 30%, #f3f5f7 33%,
+    #cdd2d8 33.5%, #cdd2d8 37.6%, #b7bcc3 38%, #b7bcc3 38.8%, rgba(183, 188, 195, 0) 39.2%);
+  background-image: radial-gradient(circle closest-side,
+    #ffffff 12.5%, #e2e7ed 13.2%, #e2e7ed 26.5%, #b2bac3 27%, #b2bac3 29.5%, #f3f5f7 30%, #f3f5f7 33%,
+    #cdd2d8 33.5%, #cdd2d8 37.6%, #b7bcc3 38%, #b7bcc3 38.8%, rgba(183, 188, 195, 0) 39.2%);
+}
+
+.lecteur-cd-rotation {
+  -webkit-animation: lecteur-tourne 1.4s linear infinite;
+  animation: lecteur-tourne 1.4s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+.lecteur.lecture .lecteur-cd-rotation {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.lecteur-cd-rotation svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes lecteur-tourne {
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes lecteur-tourne {
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lecteur-cd { -webkit-transition: none; transition: none; }
+  .lecteur-cd-rotation { -webkit-animation: none; animation: none; }
+}
+
+/* Téléphone : le boîtier passe au-dessus des infos */
+@media (max-width: 560px) {
+  .lecteur-style-cd {
+    display: block;
+  }
+
+  .lecteur-style-cd .lecteur-scene {
+    margin: 0 0 14px 0;
   }
 }
 

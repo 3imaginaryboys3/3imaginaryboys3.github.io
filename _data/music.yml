@@ -1,6 +1,15 @@
+# Music of the Week (page d'accueil)
+#
+# style : apparence du lecteur
+#   cd       → boîtier de CD : le disque sort du boîtier et tourne pendant la lecture
+#   pochette → la pochette seule : un cadre en fait le tour au fil du morceau
+#   (si la ligne est absente, c'est « pochette »)
+# duree : facultatif, durée affichée avant que le MP3 soit chargé (ex. "3:42")
+
 - title: "Tears of the Star"
   artist: "Cassiopea"
   subtitle:
-  ref : # 
+  ref : #
   cover: "assets/img/cassiopea.jpg"
   audio: "assets/audio/cassiopea.mp3"
+  style: cd
