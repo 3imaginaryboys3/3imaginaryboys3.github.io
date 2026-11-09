@@ -26,6 +26,9 @@ body.min{
   font-family:var(--font);
   font-size:16px;
   line-height:1.35;
+  /* Les mots trop longs pour la colonne (URL écrites en entier…) passent à la ligne au lieu de déborder */
+  word-wrap:break-word;
+  overflow-wrap:break-word;
 }
 
 /* Variante sépia : décommenter pour essayer
@@ -70,6 +73,14 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 .min .prose li{margin:0}
 .min .prose blockquote{margin:1.4em 0; padding:0 0 0 2ch; border-left:3px solid var(--rule); font-style:italic}
 .min .prose img,.min .prose video{max-width:100%; height:auto}
+
+/* Intégrations (YouTube, Spotify…) : jamais plus larges que la colonne */
+.min .prose iframe,.min .prose embed,.min .prose object{max-width:100%}
+/* YouTube réduit sur petit écran : on garde le format 16:9 plutôt que la hauteur fixe de 315 px.
+   (Sans aspect-ratio, la hauteur reste fixe et YouTube ajoute des bandes noires : rien ne déborde.) */
+@supports (aspect-ratio: 16 / 9){
+  .min .prose iframe[src*="youtube"]{height:auto; aspect-ratio:16 / 9}
+}
 .min .prose figure{margin:1.4em 0}
 .min .prose figcaption{margin-top:6px; color:var(--dim); font-size:0.9em}
 .min .prose hr{height:0; margin:2em 0; border:0; border-top:3px solid var(--rule)}
@@ -77,10 +88,13 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
 .min .prose pre,.min .prose .highlight{margin:1.4em 0; background:var(--code)}
 .min .prose pre{padding:12px 14px; overflow-x:auto; font-size:15px; line-height:1.45}
 .min .prose pre code{padding:0; background:none}
-.min .prose table{border-collapse:collapse; margin:1.4em 0}
+/* Tableau trop large : il défile horizontalement au lieu de déborder */
+.min .prose table{display:block; max-width:100%; overflow-x:auto; border-collapse:collapse; margin:1.4em 0}
 .min .prose th,.min .prose td{padding:4px 10px; border:1px solid var(--rule); text-align:left}
 .min .prose audio{width:100%}
 .min mjx-container{color:inherit}
+/* Formule en bloc trop large (MathJax) : elle défile horizontalement au lieu de déborder */
+.min mjx-container[display="true"]{max-width:100%; overflow-x:auto; overflow-y:hidden}
 
 /* Après l'article */
 .min .after{margin-top:36px}
@@ -101,4 +115,6 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
   body.min{padding:0 8px 32px}
   .min main{font-size:15px}
   .min h1{font-size:1.45em}
+  /* Les lecteurs Spotify sont réglés à 50 % dans les posts : trop étroits sur téléphone */
+  .min .prose iframe[src*="spotify"]{width:100%}
 }
