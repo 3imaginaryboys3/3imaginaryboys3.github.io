@@ -71,7 +71,7 @@ export function loadConfig(env) {
     label: env.PR_LABEL === undefined ? 'commentaire' : String(env.PR_LABEL).trim(),
     reviewer: String(env.GITHUB_REVIEWER || '').trim(),
     maxLinks: int(env.MAX_LINKS, 3),
-    maxMessageLength: int(env.MAX_MESSAGE_LENGTH, 5000),
+    maxMessageLength: int(env.MAX_MESSAGE_LENGTH, 7000),
     minSubmitDelayMs: int(env.MIN_SUBMIT_DELAY_SECONDS, 3) * 1000,
     blockedTerms: list(env.BLOCKED_TERMS).map((term) => term.toLowerCase()),
     turnstileSecret: String(env.TURNSTILE_SECRET_KEY || '').trim(),

@@ -110,15 +110,34 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
   margin-top:0; padding-top:0; border-top:0; line-height:inherit;
 }
 .min .jc-title{margin:0 0 14px; font-size:1.1em}
-.min .jc-form-title{font-size:1em}
-.min .jc-form{background:none}
+.min .jc-list:not(:empty){margin-bottom:28px}
 .min .jc-avatar{background:var(--text); color:var(--bg)}
+.min .jc-body pre,.min .jc-body code{background:var(--code)}
+
+/* Formulaire : sans cadre, des champs à filet fin,
+   et un bouton qui s'inverse au survol comme les liens */
+.min .jc-form{margin:0; padding:0; border:0; background:none}
+.min .jc-form-title{font-size:1em}
+.min .jc-field{margin-bottom:10px}
+.min .jc-grid{gap:0 10px}
 .min .jc-form input[type='text'],
 .min .jc-form input[type='email'],
 .min .jc-form input[type='url'],
-.min .jc-form textarea{background:var(--bg); color:var(--text)}
+.min .jc-form textarea{padding:6px 8px; border:1px solid var(--rule); background:var(--bg); color:var(--text); line-height:inherit; transition:none}
+.min .jc-form textarea{min-height:7em}
+.min .jc-form input:focus,.min .jc-form textarea:focus{border-color:var(--text); box-shadow:none}
 .min .jc-form [aria-invalid='true']{border-color:var(--jc-danger)}
-.min .jc-body pre,.min .jc-body code{background:var(--code)}
+.min .jc-hint,.min .jc-error{margin-top:4px; font-size:0.9em}
+.min .jc-replying{margin:0 0 10px; padding:0 0 0 2ch; border-left:3px solid var(--rule); background:none; font-size:inherit}
+.min .jc-link-button{font-size:inherit; font-weight:400; text-decoration:underline; text-underline-offset:2px}
+.min .jc-link-button:hover{background:var(--text); color:var(--bg); text-decoration:none}
+.min .jc-turnstile{margin:0}
+.min .jc-submit-row{margin-top:4px; gap:10px 16px}
+.min .jc-remember{font-size:inherit; color:var(--dim)}
+.min .jc-submit{padding:5px 16px; border:1px solid var(--text); background:none; color:var(--text); font-weight:400; transition:none}
+.min .jc-submit:hover{background:var(--text); color:var(--bg); filter:none}
+.min .jc-submit:active{transform:none}
+.min .jc-status:not(:empty){margin-top:10px; padding:0; border:0; font-size:inherit}
 
 .min .foot{margin-top:44px; padding-top:12px; border-top:3px solid var(--rule); color:var(--dim)}
 .min .foot p{margin:0 0 4px}
@@ -133,6 +152,8 @@ body.min{ --bg:#f3e9d2; --text:#3b2a1a; --dim:#6b5a45; --rule:#d9c9a6; --code:#e
   body.min{padding:0 8px 32px}
   .min main{font-size:15px}
   .min h1{font-size:1.45em}
+  /* Sous 16px, iOS zoome sur le champ quand on le touche */
+  .min .jc-form input,.min .jc-form textarea{font-size:16px}
   /* Les lecteurs Spotify sont réglés à 50 % dans les posts : trop étroits sur téléphone */
   .min .prose iframe[src*="spotify"]{width:100%}
 }

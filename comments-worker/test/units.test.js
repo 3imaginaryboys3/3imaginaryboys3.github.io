@@ -47,7 +47,7 @@ describe('validation', () => {
   it('limite le nombre de liens et la longueur', () => {
     const links = 'https://a.fr https://b.fr https://c.fr https://d.fr';
     expect(validateComment(validInput({ message: links }), config).errors.message).toMatch(/3 liens/);
-    expect(validateComment(validInput({ message: 'a'.repeat(5001) }), config).errors.message).toMatch(/5000/);
+    expect(validateComment(validInput({ message: 'a'.repeat(7001) }), config).errors.message).toMatch(/7000/);
     expect(validateComment(validInput({ name: 'Voir https://spam.example' }), config).errors.name).toMatch(/lien/);
   });
 

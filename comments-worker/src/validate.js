@@ -5,7 +5,7 @@
 export const LIMITS = {
   pageKey: 150,
   pageTitle: 200,
-  name: 50,
+  name: 100,
   email: 254,
   url: 200,
   minMessage: 2,
@@ -130,7 +130,7 @@ export function validateComment(input, config, now = Date.now()) {
 
   const url = normalizeUrl(input.url);
   if (url === null || (url && url.length > LIMITS.url)) {
-    errors.url = "L'adresse du site doit commencer par http:// ou https://.";
+    errors.url = "Le lien doit commencer par http:// ou https://.";
   }
 
   const message = normalizeMessage(input.message);

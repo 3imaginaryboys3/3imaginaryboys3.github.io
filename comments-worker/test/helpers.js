@@ -24,7 +24,7 @@ export function makeEnv(overrides = {}) {
     PR_LABEL: 'commentaire',
     GITHUB_REVIEWER: '',
     MAX_LINKS: '3',
-    MAX_MESSAGE_LENGTH: '5000',
+    MAX_MESSAGE_LENGTH: '7000',
     MIN_SUBMIT_DELAY_SECONDS: '3',
     BLOCKED_TERMS: 'casino en ligne',
     GITHUB_APP_ID: '123456',

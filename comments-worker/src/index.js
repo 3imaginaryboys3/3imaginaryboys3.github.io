@@ -17,7 +17,7 @@ import { checkRateLimit, corsHeaders, isAllowedOrigin, verifyTurnstile } from '.
 import { buildPullRequest, commentFileName, formatDate, generateId, sha256Hex, toYaml } from './serialize.js';
 import { readBody, validateComment } from './validate.js';
 
-const MAX_BODY_BYTES = 64 * 1024; // un commentaire de 5000 caractères pèse bien moins
+const MAX_BODY_BYTES = 64 * 1024; // un commentaire de 7000 caractères pèse bien moins
 
 const MESSAGES = {
   success: 'Merci ! Votre commentaire a bien été reçu. Il sera publié après validation.',

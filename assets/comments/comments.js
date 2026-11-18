@@ -31,7 +31,7 @@
   const replying = $('[data-jc-replying]');
   const replyingName = $('[data-jc-replying-name]');
   const turnstileBox = $('.cf-turnstile');
-  const maxLength = Number(message.getAttribute('maxlength')) || 5000;
+  const maxLength = Number(message.getAttribute('maxlength')) || 7000;
 
   let busy = false;
 

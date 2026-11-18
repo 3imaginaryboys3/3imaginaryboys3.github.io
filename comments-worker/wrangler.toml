@@ -27,7 +27,7 @@ PR_LABEL = "commentaire"
 GITHUB_REVIEWER = ""
 # Anti-spam.
 MAX_LINKS = "3"
-MAX_MESSAGE_LENGTH = "5000"
+MAX_MESSAGE_LENGTH = "7000"
 MIN_SUBMIT_DELAY_SECONDS = "3"
 # Mots ou expressions refusés, séparés par des virgules (insensible à la casse).
 BLOCKED_TERMS = ""
