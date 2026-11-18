@@ -6,10 +6,10 @@
 #   (si la ligne est absente, c'est « pochette »)
 # duree : facultatif, durée affichée avant que le MP3 soit chargé (ex. "3:42")
 
-- title: "Tears of the Star"
-  artist: "Cassiopea"
+- title: "La rivière"
+  artist: "Pomme"
   subtitle:
   ref : #
-  cover: "assets/img/cassiopea.jpg"
-  audio: "assets/audio/cassiopea.mp3"
+  cover: "assets/img/rivière.jpg"
+  audio: "assets/audio/la rivière.mp3"
   style: cd
