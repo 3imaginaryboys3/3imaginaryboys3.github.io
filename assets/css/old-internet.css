@@ -203,10 +203,12 @@ html:not(.js) .oi-js-only {
   max-width: 100%;
 }
 
-/* Le titre de l'article (le # du Markdown) passe avant la ligne « par … » */
-.oi-prose > .oi-meta + h1 {
+/* Le titre écrit dans l'article (# ou ## en tête du Markdown) passe avant la ligne « by … » */
+.oi-prose > .oi-meta + h1,
+.oi-prose > .oi-meta + h2 {
   -webkit-order: -1;
   order: -1;
+  margin: 0 0 0.3em;
 }
 
 .taille-petit .oi-prose { font-size: 14px; }
@@ -217,11 +219,6 @@ html:not(.js) .oi-js-only {
   margin: 0 0 0.3em;
   font-size: 1.55em;
   line-height: 1.35;
-}
-
-.oi-prose h1:before {
-  content: "# ";
-  color: #7b4fd6;
 }
 
 .oi-prose h2,
@@ -235,10 +232,6 @@ html:not(.js) .oi-js-only {
 .oi-prose h2 { font-size: 1.25em; }
 .oi-prose h3 { font-size: 1.1em; }
 .oi-prose h4 { font-size: 1em; }
-
-.oi-prose h2:before { content: "## "; color: #7b4fd6; }
-.oi-prose h3:before { content: "### "; color: #7b4fd6; }
-.oi-prose h4:before { content: "#### "; color: #7b4fd6; }
 
 .oi-meta {
   margin: 0 0 1.8em;
@@ -405,8 +398,9 @@ html:not(.js) .oi-js-only {
   color: #a39b84;
 }
 
+/* Choix de la taille et de la police : en haut, sous le menu */
 .oi-ctl {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: #6a6352;
   font-size: 13px;
 }
@@ -538,7 +532,7 @@ html:not(.js) .oi-js-only {
   font-size: 12px;
 }
 
-/* Formulaire : sans cadre, titre en « ## » comme ceux des articles */
+/* Formulaire : sans cadre */
 .oi-com .jc-form {
   margin: 0;
   padding: 0;
@@ -552,11 +546,6 @@ html:not(.js) .oi-js-only {
   font-size: 1.1em;
   font-weight: 700;
   line-height: 1.4;
-}
-
-.oi-com .jc-form-title:before {
-  content: "## ";
-  color: #7b4fd6;
 }
 
 .oi-com .jc-field label {

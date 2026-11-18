@@ -23,10 +23,6 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
-  {%- assign mots = content | strip_html | number_of_words -%}
-  {%- assign minutes = mots | divided_by: 200 -%}
-  {%- if minutes < 1 -%}{%- assign minutes = 1 -%}{%- endif -%}
-
   {%- comment -%} Articles voisins : seuls ceux avec show: true, triés par date {%- endcomment -%}
   {%- assign posts = site.posts | where: "show", true | sort: "date" -%}
   {%- assign current_index = nil -%}
@@ -56,19 +52,33 @@
 
       <div class="oi-inner" id="oi-contenu">
         <nav class="oi-menu" aria-label="Site">
-          <a class="oi-home" href="{{ '/' | relative_url }}" aria-label="Accueil du blog"><img src="{{ 'images/Personnages-ligne.png' | relative_url }}" alt=""></a>
+          <span class="oi-home"><img src="{{ 'images/Personnages-ligne.png' | relative_url }}" alt=""></span>
           <span>[<a href="{{ '/' | relative_url }}">accueil</a>]</span>
           <span>[<a href="{{ '/about/' | relative_url }}">à propos</a>]</span>
-          <span>[<a href="{{ '/feed.xml' | relative_url }}">flux rss</a>]</span>
         </nav>
+
+        <p class="oi-ctl oi-js-only">
+          texte :
+          <button type="button" class="oi-t" data-taille="petit" aria-pressed="false">petit</button> /
+          <button type="button" class="oi-t" data-taille="normal" aria-pressed="false">normal</button> /
+          <button type="button" class="oi-t" data-taille="grand" aria-pressed="false">grand</button>
+          · police :
+          <button type="button" class="oi-t" data-police="mono" aria-pressed="false">space mono</button> /
+          <button type="button" class="oi-t" data-police="courier" aria-pressed="false">courier</button>
+        </p>
 
         <hr class="oi-regle">
 
+        {%- comment -%}
+          Titre : si l'article commence déjà par un titre (# ou ##, comme dans le layout minimal),
+          on ne l'ajoute pas une deuxième fois ; le CSS le remonte au-dessus de la ligne « by … ».
+        {%- endcomment -%}
+        {%- assign debut = content | strip | slice: 0, 3 %}
         <article class="oi-prose">
-          {%- unless content contains '<h1' %}
+          {%- unless content contains '<h1' or debut == '<h2' %}
           <h1>{{ page.title }}</h1>
           {%- endunless %}
-          <p class="oi-meta">par {{ page.author | default: "Anonyme" }} · {{ page.date | date: "%d/%m/%Y" }} · {{ minutes }} min de lecture</p>
+          <p class="oi-meta">by {{ page.author | default: "Anonyme" }} · {{ page.date | date: "%d/%m/%Y" }}</p>
           {{ content }}
         </article>
 
@@ -87,16 +97,6 @@
           <span class="oi-off">suivant &gt;&gt;</span>
           {%- endif %}
         </nav>
-
-        <p class="oi-ctl oi-js-only">
-          texte :
-          <button type="button" class="oi-t" data-taille="petit" aria-pressed="false">petit</button> /
-          <button type="button" class="oi-t" data-taille="normal" aria-pressed="false">normal</button> /
-          <button type="button" class="oi-t" data-taille="grand" aria-pressed="false">grand</button>
-          · police :
-          <button type="button" class="oi-t" data-police="mono" aria-pressed="false">space mono</button> /
-          <button type="button" class="oi-t" data-police="courier" aria-pressed="false">courier</button>
-        </p>
       </div>
     </div>
 
