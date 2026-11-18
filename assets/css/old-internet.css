@@ -1,236 +1,732 @@
-/* Layout des posts : fenêtre façon Windows 98 */
+/* Layout des articles « old internet » : une fenêtre dessinée au trait, intérieur crème,
+   barre de titre à rayures violettes, liens entre crochets.
+   Écrit sans propriétés récentes (pas de gap en flexbox, pas de inset) pour marcher
+   aussi sur les vieux iPhone et les vieux navigateurs. */
 
-:root {
-  --win-blue: #000080;
-  --win-gray: #c0c0c0;
-  --win-dark-gray: #808080;
-  --win-white: #ffffff;
-}
-
-.win98-container {
+.oi-body {
+  margin: 0;
   background: #ffffff;
-  padding: 2rem;
-  display: grid;
-  place-items: center;
-  font-family: "Space Mono", monospace;
 }
 
-.paint-frame {
-  background: var(--win-gray);
-  border: 3px solid;
-  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-  width: 100%;
+.oi-page {
+  padding: 40px 16px 56px;
+  color: #1a1a1a;
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
-/* ---------- Barre de titre et menu ---------- */
+.oi-page * {
+  box-sizing: border-box;
+}
 
-.title-bar {
-  background: #240073;
-  padding: 4px 8px;
+.oi-page a {
+  color: #240073;
+}
+
+.oi-page a:visited {
+  color: #5b2a86;
+}
+
+/* Sans JavaScript, on cache ce qui en a besoin */
+html:not(.js) .oi-js-only {
+  display: none !important;
+}
+
+/* ---------- Fenêtre ---------- */
+
+.oi-win {
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid #1a1a1a;
+  background: #faf8e2;
+}
+
+.oi-win.oi-enroulee > .oi-inner {
+  display: none;
+}
+
+/* Barre de titre : fines rayures violettes, titre au milieu */
+.oi-tb {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-align-items: center;
   align-items: center;
-  color: var(--win-white);
-  text-shadow: 1px 1px var(--win-blue);
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  height: 22px;
+  padding: 0 4px;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: #faf8e2;
+  background: linear-gradient(#faf8e2, #faf8e2) 0 0 / 100% 5px no-repeat,
+    linear-gradient(#faf8e2, #faf8e2) 0 100% / 100% 5px no-repeat,
+    repeating-linear-gradient(180deg, #240073 0, #240073 1px, #faf8e2 1px, #faf8e2 3px);
 }
 
-.window-controls span {
-  display: inline-block;
-  width: 18px;
-  height: 16px;
-  background: var(--win-gray);
-  border: 2px solid;
-  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
-  margin-left: 4px;
-  text-align: center;
-  line-height: 14px;
-  cursor: pointer;
-  color: black;
+.oi-win.oi-enroulee > .oi-tb {
+  border-bottom: 0;
 }
 
-.menu-bar {
-  background: var(--win-gray);
+.oi-ttl {
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #faf8e2;
+  color: #1a1a1a;
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.oi-boxes {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  -webkit-flex: none;
+  flex: none;
+  padding-left: 6px;
+  background: #faf8e2;
 }
 
-.menu-item {
+.oi-box {
   position: relative;
-  padding: 2px 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex: none;
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin: 0 0 0 3px;
+  padding: 0;
+  border: 1px solid #1a1a1a;
+  border-radius: 0;
+  background: #faf8e2;
+  color: #1a1a1a;
+  font: 700 10px/1 Tahoma, Verdana, sans-serif;
+  text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.menu-item:hover {
-  background: var(--win-blue);
-  color: var(--win-white);
+.oi-page a.oi-box,
+.oi-page a.oi-box:visited {
+  color: #1a1a1a;
 }
 
-.retro-header-img {
-  width: 70px;
+/* Zone de toucher plus grande que la case */
+.oi-box:before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: -8px;
+  bottom: -8px;
+}
+
+.oi-page a.oi-box:hover,
+.oi-box:hover {
+  background: #240073;
+  color: #ffffff;
+}
+
+.oi-inner {
+  padding: 16px 34px 22px;
+}
+
+/* ---------- Menu ---------- */
+
+.oi-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.oi-menu > * {
+  margin-right: 12px;
+}
+
+.oi-home img {
+  display: block;
+  width: 46px;
+  height: auto;
+}
+
+.oi-menu a,
+.oi-bas a,
+.oi-bas span {
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.oi-regle {
+  height: 0;
+  margin: 14px 0 24px;
+  border: 0;
+  border-top: 1px dashed #8a8270;
+}
+
+/* ---------- Article ---------- */
+
+.oi-prose {
+  /* Colonne pour pouvoir remettre le titre au-dessus de la ligne « par … » */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  max-width: 66ch;
+  margin: 0 auto;
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+.oi-prose > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Le titre de l'article (le # du Markdown) passe avant la ligne « par … » */
+.oi-prose > .oi-meta + h1 {
+  -webkit-order: -1;
+  order: -1;
+}
+
+.taille-petit .oi-prose { font-size: 14px; }
+.taille-grand .oi-prose { font-size: 17.5px; }
+.police-courier .oi-prose { font-family: "Courier New", Courier, monospace; }
+
+.oi-prose h1 {
+  margin: 0 0 0.3em;
+  font-size: 1.55em;
+  line-height: 1.35;
+}
+
+.oi-prose h1:before {
+  content: "# ";
+  color: #7b4fd6;
+}
+
+.oi-prose h2,
+.oi-prose h3,
+.oi-prose h4 {
+  margin: 0.6em 0 0.6em;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.oi-prose h2 { font-size: 1.25em; }
+.oi-prose h3 { font-size: 1.1em; }
+.oi-prose h4 { font-size: 1em; }
+
+.oi-prose h2:before { content: "## "; color: #7b4fd6; }
+.oi-prose h3:before { content: "### "; color: #7b4fd6; }
+.oi-prose h4:before { content: "#### "; color: #7b4fd6; }
+
+.oi-meta {
+  margin: 0 0 1.8em;
+  font-size: 0.85em;
+  color: #6a6352;
+}
+
+.oi-prose p,
+.oi-prose ul,
+.oi-prose ol,
+.oi-prose blockquote,
+.oi-prose figure,
+.oi-prose table {
+  margin: 0 0 1.5em;
+}
+
+/* Listes à tirets, comme dans un fichier texte */
+.oi-prose ul {
+  padding-left: 2ch;
+  list-style: none;
+}
+
+.oi-prose ul > li:before {
+  content: "- ";
+  margin-left: -2ch;
+  color: #7b4fd6;
+}
+
+.oi-prose ol {
+  padding-left: 3ch;
+}
+
+.oi-prose li + li {
+  margin-top: 0.3em;
+}
+
+.oi-prose blockquote {
+  padding: 0 0 0 1.5ch;
+  border-left: 1px dashed #8a8270;
+  color: #4d4738;
+}
+
+.oi-prose blockquote > :last-child,
+.oi-prose li > :last-child {
+  margin-bottom: 0;
+}
+
+.oi-prose hr {
+  height: 0;
+  margin: 0 0 1.5em;
+  border: 0;
+  border-top: 1px dashed #8a8270;
+}
+
+.oi-prose img,
+.oi-prose video {
   max-width: 100%;
   height: auto;
 }
 
-/* ---------- Contenu du post ---------- */
+/* Lecteurs intégrés (Spotify, YouTube) : on garde la hauteur donnée dans l'article,
+   sinon height: auto les écrase à 150 px */
+.oi-prose iframe {
+  max-width: 100%;
+}
 
-.canvas-container {
-  flex-grow: 1;
-  background: #faf8e0;
-  border: 2px inset;
-  min-height: 500px;
-  padding: 1.5rem;
-  font-family: "Space Mono", monospace;
+@supports (aspect-ratio: 16 / 9) {
+  .oi-prose iframe[src*="youtube"] {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.oi-prose figcaption {
+  font-size: 0.85em;
+  color: #6a6352;
+}
+
+.oi-prose code {
+  font-family: inherit;
+  font-size: 0.95em;
+  background: #efecd2;
+}
+
+.oi-prose pre,
+.oi-prose .highlight {
+  margin: 0 0 1.5em;
+  padding: 10px 12px;
+  overflow-x: auto;
+  background: #efecd2;
+  font-size: 0.9em;
   line-height: 1.5;
-  position: relative;
 }
 
-.cursor {
-  animation: blink 1s step-end infinite;
+.oi-prose .highlight pre {
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
+.oi-prose pre code {
+  background: none;
 }
 
-/* ---------- Navigation précédent / accueil / suivant ---------- */
+.oi-prose table {
+  border-collapse: collapse;
+}
 
-.nav-links {
+.oi-prose th,
+.oi-prose td {
+  padding: 4px 10px;
+  border: 1px dashed #8a8270;
+  text-align: left;
+}
+
+.oi-prose mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Le curseur clignote à la fin du dernier paragraphe */
+.oi-prose > p:last-child:after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 0.25em;
+  vertical-align: -0.12em;
+  background: currentColor;
+  -webkit-animation: oi-clignote 1.1s steps(1) infinite;
+  animation: oi-clignote 1.1s steps(1) infinite;
+}
+
+@-webkit-keyframes oi-clignote { 50% { opacity: 0; } }
+@keyframes oi-clignote { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .oi-prose > p:last-child:after {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+/* ---------- Bas de la fenêtre ---------- */
+
+.oi-bas {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
-  align-items: center;
-  font-family: "Courier New", Courier, monospace;
 }
 
-.nav-button {
-  display: flex;
-  align-items: center;
-  background: var(--win-gray);
-  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+.oi-bas > * {
+  margin-right: 16px;
 }
 
-.win98-link {
-  color: var(--win-blue);
+.oi-bas > *:last-child {
+  margin-right: 0;
+}
+
+.oi-off {
+  color: #a39b84;
+}
+
+.oi-ctl {
+  margin: 10px 0 0;
+  color: #6a6352;
+  font-size: 13px;
+}
+
+.oi-t {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.oi-t[aria-pressed="true"] {
+  font-weight: 700;
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  color: #1a1a1a;
 }
 
-.win98-link:hover {
-  background: var(--win-blue);
-  color: var(--win-white);
+/* Contour de focus au clavier */
+.oi-page a:focus,
+.oi-page button:focus {
+  outline: 1px dotted #1a1a1a;
+  outline-offset: 2px;
 }
 
-.nav-icon {
-  width: 16px;
-  height: 16px;
-}
-
-.disabled {
-  color: var(--win-dark-gray);
-  cursor: not-allowed;
-  display: flex;
-  align-items: center;
+.oi-page a:focus:not(:focus-visible),
+.oi-page button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* ---------- Commentaires ---------- */
-/* Styles de base dans assets/comments/comments.css ; ici, le relief Windows 98. */
+/* Système du site (_includes/comments/, styles de base dans assets/comments/comments.css) :
+   on l'habille en fichier texte, avec les couleurs de la fenêtre. */
 
-.comment-section {
-  background: var(--win-white);
-  border: 2px solid;
-  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
+.oi-com {
+  margin-top: 26px;
 }
 
-.comment-title-bar {
-  background: #040b88;
-  padding: 4px 8px;
-  color: var(--win-white);
-  font-size: 13px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.oi-com-inner {
+  padding-top: 8px;
 }
 
-.comment-section .jc {
-  --jc-accent: var(--win-blue);
-  --jc-border: var(--win-dark-gray);
+.oi-com .jc {
+  --jc-accent: #240073;
+  --jc-accent-contrast: #faf8e2;
+  --jc-border: #8a8270;
+  --jc-muted: #6a6352;
+  --jc-subtle: #efecd2;
   --jc-radius: 0;
+  --jc-avatar: 24px;
   margin: 0;
-  padding: 1rem 1.25rem 1.25rem;
+  padding: 0;
   border: 0;
-  font-family: "Space Mono", monospace;
-  font-size: 14px;
-  line-height: 1.5;
+  line-height: inherit;
 }
 
-.comment-section .jc-title {
-  margin: 0 0 1rem;
-  font-size: 14px;
+/* Le nombre de commentaires est déjà dans la barre de titre :
+   le titre reste lu par les lecteurs d'écran mais n'est pas affiché */
+.oi-com .jc-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
-.comment-section .jc-form-title {
+/* Liste : filets en tirets, comme les règles de la fenêtre */
+.oi-com .jc-list:not(:empty) {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #8a8270;
+}
+
+.oi-com .jc-thread + .jc-thread {
+  border-top: 1px dashed #8a8270;
+}
+
+.oi-com .jc-replies:not(:empty) {
+  border-left: 1px dashed #8a8270;
+}
+
+/* Initiale dans un carré violet, comme les cases de la barre de titre */
+.oi-com .jc-avatar {
+  border: 1px solid #1a1a1a;
+  border-radius: 0;
+  background: #240073;
+  color: #faf8e2;
+  font-family: inherit;
   font-size: 13px;
+  font-weight: 700;
 }
 
-/* Formulaire : panneau gris en relief */
-.comment-section .jc-form {
-  background: var(--win-gray);
-  color: #000;
-  border: 2px solid;
-  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
+.oi-com .jc-author {
+  font-weight: 700;
 }
 
-/* Champs : creusés */
-.comment-section .jc-form input[type='text'],
-.comment-section .jc-form input[type='email'],
-.comment-section .jc-form input[type='url'],
-.comment-section .jc-form textarea {
-  background: var(--win-white);
-  color: #000;
-  border: 2px solid;
-  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
+/* Badges « Auteur » et « En attente de validation » : texte entre crochets */
+.oi-com .jc-badge {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #7b4fd6;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
-.comment-section .jc-form input:focus,
-.comment-section .jc-form textarea:focus {
-  outline: 1px dotted #000;
-  outline-offset: -5px;
+.oi-com .jc-badge--pending {
+  color: #6a6352;
+  font-weight: 400;
+}
+
+.oi-com .jc-badge:before { content: "["; }
+.oi-com .jc-badge:after { content: "]"; }
+
+.oi-com a.jc-date,
+.oi-com a.jc-date:visited {
+  color: #6a6352;
+  font-size: 12px;
+}
+
+/* Formulaire : sans cadre, titre en « ## » comme ceux des articles */
+.oi-com .jc-form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.oi-com .jc-form-title {
+  margin: 0 0 0.8em;
+  font-family: inherit;
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.oi-com .jc-form-title:before {
+  content: "## ";
+  color: #7b4fd6;
+}
+
+.oi-com .jc-field label {
+  margin-bottom: 2px;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.oi-com .jc-form input[type='text'],
+.oi-com .jc-form input[type='email'],
+.oi-com .jc-form input[type='url'],
+.oi-com .jc-form textarea {
+  padding: 6px 8px;
+  border: 1px solid #1a1a1a;
+  border-radius: 0;
+  background: #faf8e2;
+  color: #1a1a1a;
+  line-height: 1.5;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.oi-com .jc-form input:focus,
+.oi-com .jc-form textarea:focus {
+  border-color: #240073;
+  box-shadow: inset 0 0 0 1px #240073;
+}
+
+.oi-com .jc-form input[aria-invalid='true'],
+.oi-com .jc-form textarea[aria-invalid='true'] {
+  border-color: #c62828;
+}
+
+.oi-com .jc-remember {
+  font-size: inherit;
+}
+
+/* « En réponse à … » : filet en tirets, comme les citations */
+.oi-com .jc-replying {
+  padding: 0 0 0 1.5ch;
+  border-left: 1px dashed #8a8270;
+  background: none;
+  font-size: inherit;
+}
+
+/* Boutons « Répondre », « Annuler la réponse » et « Envoyer le commentaire » :
+   des liens entre crochets, comme [accueil] dans le menu */
+.oi-com .jc-reply-button,
+.oi-com .jc-link-button,
+.oi-com .jc-submit {
+  display: inline-block;
+  width: auto;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
   box-shadow: none;
-}
-
-.comment-section .jc-form input[aria-invalid='true'],
-.comment-section .jc-form textarea[aria-invalid='true'] {
-  border-color: var(--jc-danger);
-}
-
-/* Bouton : relief, enfoncé au clic */
-.comment-section .jc-submit {
-  padding: 4px 16px;
-  background: var(--win-gray);
-  color: #000;
-  border: 2px solid;
-  border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
-  box-shadow: 1px 1px 0 #000;
-}
-
-.comment-section .jc-submit:hover {
+  color: #240073;
+  font: inherit;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+  -webkit-filter: none;
   filter: none;
-}
-
-.comment-section .jc-submit:active {
-  border-color: var(--win-dark-gray) var(--win-white) var(--win-white) var(--win-dark-gray);
-  box-shadow: none;
+  -webkit-transform: none;
   transform: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.comment-section .jc-submit:focus-visible {
-  outline: 1px dotted #000;
-  outline-offset: -6px;
+.oi-com .jc-reply-button:before,
+.oi-com .jc-link-button:before,
+.oi-com .jc-submit:before,
+.oi-com .jc-reply-button:after,
+.oi-com .jc-link-button:after,
+.oi-com .jc-submit:after {
+  /* inline-block : les crochets ne sont pas soulignés */
+  display: inline-block;
+  width: auto;
+  height: auto;
+  border: 0;
+  color: #1a1a1a;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.oi-com .jc-reply-button:before,
+.oi-com .jc-link-button:before,
+.oi-com .jc-submit:before {
+  content: "[";
+}
+
+.oi-com .jc-reply-button:after,
+.oi-com .jc-link-button:after,
+.oi-com .jc-submit:after {
+  content: "]";
+}
+
+.oi-com .jc-status:not(:empty) {
+  border: 1px dashed #8a8270;
+  font-size: inherit;
+}
+
+/* ---------- Téléphone ---------- */
+
+@media (max-width: 640px) {
+  .oi-page {
+    padding: 10px 8px 36px;
+  }
+
+  .oi-tb {
+    height: 30px;
+  }
+
+  .oi-ttl {
+    line-height: 29px;
+  }
+
+  .oi-box {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .oi-inner {
+    padding: 12px 14px 18px;
+  }
+
+  .oi-com-inner {
+    padding-top: 6px;
+  }
+
+  /* Les lecteurs Spotify sont réglés à 50 % dans les posts : trop étroits sur téléphone */
+  .oi-prose iframe[src*="spotify"] {
+    width: 100%;
+  }
+
+  .oi-menu a,
+  .oi-bas a,
+  .oi-bas span,
+  .oi-t {
+    padding: 9px 0;
+  }
+}
+
+/* À l'impression : seulement l'article */
+@media print {
+  .oi-tb,
+  .oi-menu,
+  .oi-regle,
+  .oi-bas,
+  .oi-ctl,
+  .oi-com {
+    display: none !important;
+  }
+
+  .oi-page {
+    padding: 0;
+  }
+
+  .oi-win {
+    border: 0;
+    background: none;
+  }
+
+  .oi-inner {
+    padding: 0;
+  }
+
+  .oi-prose > p:last-child:after {
+    display: none;
+  }
 }

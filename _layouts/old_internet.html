@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "fr" }}">
 
 {%- include head.html extra_css="old-internet.css" -%}
 
-<body>
+<body class="oi-body">
   <script>
+    /* Avant l'affichage : active les boutons JavaScript et reprend la taille et la police choisies par le lecteur */
+    (function (h) {
+      h.className += ' js';
+      try {
+        var t = localStorage.getItem('tbbe-taille'), p = localStorage.getItem('tbbe-police');
+        if (t === 'petit' || t === 'grand') h.className += ' taille-' + t;
+        if (p === 'courier') h.className += ' police-' + p;
+      } catch (e) {}
+    })(document.documentElement);
+
     MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -13,111 +23,109 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
-  <div class="win98-container">
-    <div class="paint-frame">
-      <div class="title-bar">
-        <span>{{ page.title | default: "Untitled Document" }} - {{ page.author | default: "Anonymous" }}</span>
-        <div class="window-controls">
-          <span>_</span>
-          <span>□</span>
-          <span>×</span>
+  {%- assign mots = content | strip_html | number_of_words -%}
+  {%- assign minutes = mots | divided_by: 200 -%}
+  {%- if minutes < 1 -%}{%- assign minutes = 1 -%}{%- endif -%}
+
+  {%- comment -%} Articles voisins : seuls ceux avec show: true, triés par date {%- endcomment -%}
+  {%- assign posts = site.posts | where: "show", true | sort: "date" -%}
+  {%- assign current_index = nil -%}
+  {%- for post in posts -%}
+    {%- if post.url == page.url -%}{%- assign current_index = forloop.index0 -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign prev_post = nil -%}
+  {%- assign next_post = nil -%}
+  {%- if current_index -%}
+    {%- if current_index > 0 -%}
+      {%- assign prev_i = current_index | minus: 1 -%}
+      {%- assign prev_post = posts[prev_i] -%}
+    {%- endif -%}
+    {%- assign next_i = current_index | plus: 1 -%}
+    {%- assign next_post = posts[next_i] -%}
+  {%- endif -%}
+
+  <div class="oi-page">
+    <div class="oi-win" id="oi-fenetre">
+      <div class="oi-tb">
+        <div class="oi-ttl">{{ page.title | default: "Sans titre" }} — {{ page.author | default: "Anonyme" }}</div>
+        <div class="oi-boxes">
+          <button type="button" class="oi-box oi-js-only" data-oi="enrouler" aria-label="Réduire" aria-controls="oi-contenu" aria-expanded="true">_</button>
+          <a class="oi-box" href="{{ '/' | relative_url }}" aria-label="Fermer et revenir à l’accueil">×</a>
         </div>
       </div>
 
-      <div class="menu-bar">
-        <div class="menu-item">
-          <a href="/">
-            <img src="{{ 'images/Personnages-ligne.png' | relative_url }}"
-                 alt="Blog Header"
-                 class="retro-header-img">
-          </a>
-        </div>
-        <a href="/about" class="menu-item">About</a>
-        <div class="menu-item">Edit</div>
-        <div class="menu-item">View</div>
-        <div class="menu-item">Help</div>
+      <div class="oi-inner" id="oi-contenu">
+        <nav class="oi-menu" aria-label="Site">
+          <a class="oi-home" href="{{ '/' | relative_url }}" aria-label="Accueil du blog"><img src="{{ 'images/Personnages-ligne.png' | relative_url }}" alt=""></a>
+          <span>[<a href="{{ '/' | relative_url }}">accueil</a>]</span>
+          <span>[<a href="{{ '/about/' | relative_url }}">à propos</a>]</span>
+          <span>[<a href="{{ '/feed.xml' | relative_url }}">flux rss</a>]</span>
+        </nav>
+
+        <hr class="oi-regle">
+
+        <article class="oi-prose">
+          {%- unless content contains '<h1' %}
+          <h1>{{ page.title }}</h1>
+          {%- endunless %}
+          <p class="oi-meta">par {{ page.author | default: "Anonyme" }} · {{ page.date | date: "%d/%m/%Y" }} · {{ minutes }} min de lecture</p>
+          {{ content }}
+        </article>
+
+        <hr class="oi-regle">
+
+        <nav class="oi-bas" aria-label="Articles voisins">
+          {%- if prev_post %}
+          <a href="{{ prev_post.url | relative_url }}" title="{{ prev_post.title | escape }}" aria-label="Article précédent : {{ prev_post.title | escape }}">&lt;&lt; précédent</a>
+          {%- else %}
+          <span class="oi-off">&lt;&lt; précédent</span>
+          {%- endif %}
+          <a href="{{ '/' | relative_url }}">accueil</a>
+          {%- if next_post %}
+          <a href="{{ next_post.url | relative_url }}" title="{{ next_post.title | escape }}" aria-label="Article suivant : {{ next_post.title | escape }}">suivant &gt;&gt;</a>
+          {%- else %}
+          <span class="oi-off">suivant &gt;&gt;</span>
+          {%- endif %}
+        </nav>
+
+        <p class="oi-ctl oi-js-only">
+          texte :
+          <button type="button" class="oi-t" data-taille="petit" aria-pressed="false">petit</button> /
+          <button type="button" class="oi-t" data-taille="normal" aria-pressed="false">normal</button> /
+          <button type="button" class="oi-t" data-taille="grand" aria-pressed="false">grand</button>
+          · police :
+          <button type="button" class="oi-t" data-police="mono" aria-pressed="false">space mono</button> /
+          <button type="button" class="oi-t" data-police="courier" aria-pressed="false">courier</button>
+        </p>
       </div>
+    </div>
 
-      <div class="canvas-container">
-        {{ content }}
-        <span class="cursor">_</span>
-      </div>
-
-      <div class="post-navigation">
-        <div class="nav-links">
-          {% assign posts = site.posts | where: "show", true | sort: 'date' %}
-
-          {% for post in posts %}
-            {% if post.id == page.id %}
-              {% assign current_index = forloop.index0 %}
-            {% endif %}
-          {% endfor %}
-
-          <span class="nav-button">
-            {% if current_index > 0 %}
-              {% assign previous = current_index | minus: 1 %}
-              <a href="{{ posts[previous].url }}" class="win98-link">
-                <img src="{{ 'images/left_arrow.png' | relative_url }}" class="nav-icon">
-                Previous
-              </a>
-            {% else %}
-              <span class="disabled">
-                <img src="{{ 'images/left_arrow.png' | relative_url }}" class="nav-icon">
-                Previous
-              </span>
-            {% endif %}
-          </span>
-
-          <span class="nav-button">
-            <a href="/" class="win98-link">
-              <img src="{{ 'images/home.png' | relative_url }}" class="nav-icon">
-              Home
-            </a>
-          </span>
-
-          <span class="nav-button">
-            {% assign next = current_index | plus: 1 %}
-            {% if posts[next] %}
-              <a href="{{ posts[next].url }}" class="win98-link">
-                Next
-                <img src="{{ 'images/right_arrow.png' | relative_url }}" class="nav-icon">
-              </a>
-            {% else %}
-              <span class="disabled">
-                Next
-                <img src="{{ 'images/right_arrow.png' | relative_url }}" class="nav-icon">
-              </span>
-            {% endif %}
-          </span>
+    {%- comment -%}
+      Commentaires du site (_includes/comments/, envoyés au Worker Cloudflare).
+      Même condition que section.html : pas de fenêtre vide si les commentaires sont désactivés.
+    {%- endcomment -%}
+    {%- if site.comments.endpoint and page.comments != false %}
+    {%- comment -%} Nombre de commentaires dans la barre de titre (même clé que section.html) {%- endcomment -%}
+    {%- assign oi_key = page.comments_id | default: page.id | default: page.url | slugify: "latin" -%}
+    {%- assign oi_n = site.data.comments[oi_key] | size %}
+    <div class="oi-win oi-com">
+      <div class="oi-tb">
+        <div class="oi-ttl">
+          {%- case oi_n -%}
+            {%- when 0 -%}commentaires
+            {%- when 1 -%}1 commentaire
+            {%- else -%}{{ oi_n }} commentaires
+          {%- endcase -%}
         </div>
       </div>
-
-      <div class="comment-section">
-        <div class="comment-title-bar">
-          <span>Commentaires</span>
-          <div class="window-controls">
-            <span>_</span>
-            <span>□</span>
-            <span>×</span>
-          </div>
-        </div>
+      <div class="oi-inner oi-com-inner">
         {% include comments/section.html %}
       </div>
     </div>
+    {%- endif %}
   </div>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Le bouton × de la fenêtre cache le post
-    document.querySelectorAll('.window-controls span').forEach((btn, index) => {
-      btn.addEventListener('click', () => {
-        if (index === 2) {
-          document.querySelector('.paint-frame').style.display = 'none';
-        }
-      });
-    });
-  });
-  </script>
+  <script src="{{ '/assets/js/old-internet.js' | relative_url }}" defer></script>
 </body>
 
 </html>
