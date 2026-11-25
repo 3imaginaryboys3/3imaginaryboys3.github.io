@@ -1,7 +1,6 @@
 ---
 title: Ingénieurs à la con, romantisme et cheminement vers la machine stochastique
 show: 'true'
-subtitle: Non ils n'existent pas à priori
 author: chems
 layout: minimal
 logo: Perso_Chems.png
