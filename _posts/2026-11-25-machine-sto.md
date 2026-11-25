@@ -36,7 +36,7 @@ Ce que j’essaie d’exposer traduit peut être une sorte de romantisme ou au m
 Il ne serait plus question de flamme ou de fruit. Il s'agirait de demander à la machine. Mais peut-être que de là apparaîtra de nouveaux fruits, de nature différente, une nouvelle flamme.  
 
 
-En attendant je me contente de poser ces pensées. Si il faut tout abandonner, j'emporterai avec moi quelques pensées dans un petit cahier. Un kinder bueno.  
+En attendant je me contente de poser ces pensées. Si il faut tout abandonner, j'emporterai avec moi quelques dessins dans un petit cahier. Un kinder bueno.  
 Je rapporterai un bouquet de sphères, et des photos.
 
 
