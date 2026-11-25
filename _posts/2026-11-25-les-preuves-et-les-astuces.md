@@ -1,7 +1,8 @@
 ---
-title: Les preuves et les astuces
-show: 'false'
+title: Apanian Quoicoubeh
+show: 'true'
 author: mattheo
+subtitle: Les astuces dans les preuves en maths
 layout: minimal
 perso: Perso_Mattheo.png
 ---
