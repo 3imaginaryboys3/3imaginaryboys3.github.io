@@ -7,9 +7,9 @@
 # duree : facultatif, durée affichée avant que le MP3 soit chargé (ex. "3:42")
 
 - title: "La rivière"
-  artist: "Pomme"
+  artist: "Men I trust"
   subtitle:
-  ref : "https://open.spotify.com/playlist/1kbsHhlU9adh1XiQToACvH?si=2e5e27f852c94288&pt=0553e8537c2a585127092c3f446b7b52"
-  cover: "assets/img/rivière.jpg"
-  audio: "assets/audio/la rivière.mp3"
+  ref : ""
+  cover: "assets/img/Menit.jpeg"
+  audio: "assets/audio/Numb.mp3"
   style: cd
