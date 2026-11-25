@@ -1,5 +1,5 @@
 ---
-title: Ingénieurs à la con, romantisme et cheminement vers la machine stochastique
+title: Ingénieurs, romantisme et cheminement vers la machine stochastique
 show: 'true'
 author: chems
 layout: minimal
