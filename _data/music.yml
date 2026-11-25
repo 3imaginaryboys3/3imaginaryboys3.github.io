@@ -6,10 +6,10 @@
 #   (si la ligne est absente, c'est « pochette »)
 # duree : facultatif, durée affichée avant que le MP3 soit chargé (ex. "3:42")
 
-- title: "La rivière"
+- title: "Numb"
   artist: "Men I trust"
   subtitle:
-  ref : ""
+  ref : 
   cover: "assets/img/Menit.jpeg"
   audio: "assets/audio/Numb.mp3"
   style: cd
