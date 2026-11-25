@@ -10,12 +10,12 @@ Au départ cette entrée était une note qui réunissait quelques pensées sur q
 
 Ces quelques lignes éclairaient deux points que j'associe finalement à deux parties d'un même concept : de rigidité vis à vis de la relation à la vérité, en opposition à un certain relâchement. Ici vérité peut être remplacé par "réponse", "solution". Tout est interchangeable.
 
-Le premier point concerne un comportement "stochastique", qui consiste à régurgiter un produit extérieur à soi, sans réellement en faire connaissance personnellement afin de le transformer, de réellement « se l’approprier ». C'est un versant "de surface"
-Peut-on dire que le processus est "rigide" ? Enfaite c'est plutôt comme si l'information était contenu dans une coquille, mais que l'on ne s'attardais pas à casser la coquille afin d'en manger le fruit et d'en faire sien. Mais on délivre la coquille, toute brute, et sans vraiment de matière apparente. C'est la coquille l'aspect rigide ici. C'est de là qu'on se retrouve avec une sorte de "machine stochastique". Machine qui produit des situations stochastiques, des échanges/discussions stochastiques et toute sortes de choses stochastiques.
+Le premier point concerne un comportement qui consiste à régurgiter un produit extérieur à soi, sans réellement en faire connaissance personnellement afin de le transformer, de réellement "se l’approprier". C'est un versant "de surface".
+Peut-on dire que le processus est "rigide" ? Enfaite c'est plutôt comme si l'information était contenu dans une coquille, mais que l'on ne s'attardait pas à casser la coquille afin d'en manger le fruit et de le faire sien. Mais on délivre cette coquille, toute brute. C'est la coquille l'aspect rigide ici. C'est de là qu'on se retrouve avec une sorte de "machine stochastique". Machine qui produit des situations stochastiques, des échanges/discussions stochastiques et toute sortes de choses stochastiques.
 
-*J'entends enfaite par stochastique quelque chose comme "impersonnel et maximisant la probabilité d'être juste", toujours par analogie à la "machine stochastique" et selon ce que l'on entend par "maximiser la probabilité" et par "juste"*
+*J'entends en fait par stochastique quelque chose comme "impersonnel et maximisant la probabilité d'être juste", toujours par analogie à la "machine stochastique" et selon ce que l'on entend par "maximiser la probabilité" et par "juste"*
 
-L'autre versant, c'est enfaite autre chose finalement, peut-être pas de même nature. C'est une rigidité quant aux nuances de vérités, ou peut-être une attitude qui reflète une conception inaltérable du vrai. C’est (peut-être) la croyance que la solution est atteignable, sans définir la limite du cadre dans lequel elle se place. C'est la pensée délivrée qui est inconsciente de sa position vis à vis d'un processus de convergence, et des faits établis qui permettent effectivement d'accepter et de relativiser l'existence de points d'arrivée. 
+L'autre versant, c'est en fait autre chose finalement, peut-être pas de même nature. C'est une rigidité quant aux nuances de vérités, ou peut-être une attitude qui reflète une conception inaltérable du vrai. C’est (peut-être) la croyance que la solution est atteignable, sans définir la limite du cadre dans lequel elle se place. C'est la pensée délivrée qui est inconsciente de sa position vis à vis d'un processus de convergence, et des faits établis qui permettent effectivement d'accepter et de relativiser l'existence de points d'arrivée. 
 
 Au contraire il m'est admirable de constater celui qui pièce par pièce cartographie le pays, se construit des représentations, les vérifie constamment et essaie toujours de comprendre les objets qui se présentent dans chaque excursion. C'est celui qui continuellement ouvre la coque et en mange le fruit. Et conscient du processus - du fait que sa carte n'est pas complète -  peut-être a assez de force pour accéder a des plaines plus reculées, a des forets plus hostiles, des plages encores vierges. Celui-ci - explorateur - qui enfin obtiendra, après beaucoup d’efforts, le pouvoir de mettre le doigt sur les choses nouvelles. 
 
@@ -25,7 +25,7 @@ Cependant, tout le monde ne cherche pas à être explorateur.
 
 Néanmoins il me semble que les points cités précédemment sondent un état plus profond. 
 Cette relation de rigidité apparaît comme une sorte de mesure universelle d'une certaine "flamme", si on s'autorise à catégoriser ainsi.
-Il me semble possible pense que cette rigidité mène à un conformisme, une forme d'obéissance, la non-abilité de nommer. Tout ça que je résumerai par "une forme de stérilité".
+Il me semble possible que cette rigidité mène à un conformisme, une forme d'obéissance, la non-abilité de nommer. Tout ça que je résumerai par "une forme de stérilité".
 
 Qu’est ce que la flamme alors chez l’ingénieur ? 
 Est-ce l'esprit vif, bâtisseur, qui craque des systèmes ou les construit ? Joueur, enfant ?
