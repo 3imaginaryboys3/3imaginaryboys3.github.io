@@ -75,7 +75,7 @@ prose:
       - name: "logo"
         field:
           element: "text"
-          label: "Ptit perso : Perso_Chems.png | Perso_Max.png | Perso_Noé.png | Perso_Cla.png"
+          label: "Ptit perso : Perso_Chems.png | Perso_Max.png | Perso_Noé.png | Perso_Cla.png | Perso_Mattheo.png"
 
 
       
