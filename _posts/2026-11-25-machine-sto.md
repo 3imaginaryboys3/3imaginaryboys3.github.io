@@ -1,7 +1,7 @@
 ---
 title: Ingénieurs à la con, romantisme et cheminement vers la machine stochastique
 show: 'true'
-subtitle: ❀𓇢𓆸˖᯽ ݁˖⚘
+subtitle: ❀𓇢𓆸˖᯽ ݁˖⚘ (ﾒ` ﾛ ´)︻デ═一 C= C=(っ°Д°;)っ
 author: chems
 layout: minimal
 logo: Perso_Chems.png
