@@ -4,7 +4,7 @@ show: 'true'
 author: mattheo
 subtitle: Les astuces dans les preuves en maths
 layout: minimal
-perso: Perso_Mattheo.png
+logo: Perso_Mattheo.png
 ---
 
 ### 1. coucou
